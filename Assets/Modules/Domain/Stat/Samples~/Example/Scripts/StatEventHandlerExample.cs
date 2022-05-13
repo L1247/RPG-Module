@@ -1,12 +1,12 @@
 #region
 
+using rStar.Modules.Stat.Installer;
 using rStarUtility.DDD.Event;
-using Stat.Installer;
 using Zenject;
 
 #endregion
 
-namespace Stat.Example.Scripts
+namespace rStar.Modules.Stat.Example.Scripts
 {
     public class StatEventHandlerExample : StatEventHandler
     {

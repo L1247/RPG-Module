@@ -4,7 +4,7 @@ using rStarUtility.DDD.Model;
 
 #endregion
 
-namespace Stat.Infrastructure
+namespace rStar.Modules.Stat.Infrastructure
 {
     public interface IModifier : IEntity<string>
     {

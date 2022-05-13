@@ -1,11 +1,11 @@
 #region
 
-using Stat.Infrastructure;
+using rStar.Modules.Stat.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace Stat.Example.Scripts
+namespace rStar.Modules.Stat.Example.Scripts
 {
     public class StatSampleFlow : IInitializable
     {

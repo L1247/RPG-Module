@@ -1,13 +1,13 @@
 #region
 
 using AutoBot.Utilities.Extensions;
-using Stat.Infrastructure;
+using rStar.Modules.Stat.Infrastructure;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace Stat.Example.Scripts
+namespace rStar.Modules.Stat.Example.Scripts
 {
     public class StatExamplePresenter : IInitializable
     {

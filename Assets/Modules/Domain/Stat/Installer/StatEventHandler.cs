@@ -1,12 +1,12 @@
 #region
 
+using rStar.Modules.Stat.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
-using Stat.Infrastructure.Events;
 
 #endregion
 
-namespace Stat.Installer
+namespace rStar.Modules.Stat.Installer
 {
     public class StatEventHandler : DomainEventHandler
     {

@@ -4,7 +4,7 @@ using rStarUtility.DDD.Implement.Core;
 
 #endregion
 
-namespace Stat.Infrastructure.Events
+namespace rStar.Modules.Stat.Infrastructure.Events
 {
     public class ModifierRemoved : DomainEvent
     {

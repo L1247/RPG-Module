@@ -1,17 +1,17 @@
 #region
 
 using System.Collections.Generic;
+using rStar.Modules.Stat.Infrastructure;
+using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
 using rStarUtility.Utilities;
-using Stat.Infrastructure;
-using Stat.UseCase;
 using Utilities.Contract;
 using Zenject;
 
 #endregion
 
-namespace Stat.Core.UseCase.Controller
+namespace rStar.Modules.Stat.Core.UseCase.Controller
 {
     public class StatController : IStatController
     {

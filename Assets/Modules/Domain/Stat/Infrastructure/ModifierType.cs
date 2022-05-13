@@ -1,4 +1,4 @@
-namespace Stat.Infrastructure
+namespace rStar.Modules.Stat.Infrastructure
 {
     public enum ModifierType
     {

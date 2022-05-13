@@ -1,11 +1,11 @@
 #region
 
-using Stat.Entity;
-using Stat.Infrastructure;
+using rStar.Modules.Stat.Entity;
+using rStar.Modules.Stat.Infrastructure;
 
 #endregion
 
-namespace Stat.UseCase.Extensions
+namespace rStar.Modules.Stat.UseCase.Extensions
 {
     public static class StatExtensions
     {

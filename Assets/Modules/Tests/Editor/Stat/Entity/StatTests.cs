@@ -3,13 +3,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using rStar.Modules.Stat.Infrastructure;
+using rStar.Modules.Stat.Infrastructure.Events;
 using rStarUtility.DDD.DDDTestFrameWork;
-using Stat.Infrastructure;
-using Stat.Infrastructure.Events;
 
 #endregion
 
-namespace Stat.Tests.Entity
+namespace rStar.Modules.Stat.Tests.Entity
 {
     [TestFixture]
     public class StatTests : DDDUnitTestFixture

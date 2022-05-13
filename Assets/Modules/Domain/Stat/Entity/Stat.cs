@@ -3,14 +3,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using rStar.Modules.Stat.Infrastructure;
+using rStar.Modules.Stat.Infrastructure.Events;
 using rStarUtility.DDD.Implement.Core;
-using Stat.Infrastructure;
-using Stat.Infrastructure.Events;
 using Utilities.Contract;
 
 #endregion
 
-namespace Stat.Entity
+namespace rStar.Modules.Stat.Entity
 {
     public class Stat : AggregateRoot , IStat
     {

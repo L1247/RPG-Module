@@ -2,15 +2,15 @@
 
 using NSubstitute;
 using NUnit.Framework;
+using rStar.Modules.Stat.Infrastructure;
+using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
-using Stat.Infrastructure;
-using Stat.UseCase;
 
 #endregion
 
-namespace Stat.Tests.UseCase
+namespace rStar.Modules.Stat.Tests.UseCase
 {
     public class CreateStatUseCaseTests : DDDUnitTestFixture
     {

@@ -1,16 +1,16 @@
 #region
 
+using rStar.Modules.Stat.Infrastructure;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
-using Stat.Infrastructure;
 using Utilities.Contract;
 
 #endregion
 
-namespace Stat.UseCase
+namespace rStar.Modules.Stat.UseCase
 {
     public class DeleteStatUseCase : UseCase<DeleteStatInput , CqrsCommandPresenter , IStatRepository>
     {

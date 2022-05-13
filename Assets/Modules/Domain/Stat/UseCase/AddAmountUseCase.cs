@@ -1,16 +1,16 @@
 #region
 
+using rStar.Modules.Stat.Infrastructure;
+using rStar.Modules.Stat.UseCase.Extensions;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
-using Stat.Infrastructure;
-using Stat.UseCase.Extensions;
 
 #endregion
 
-namespace Stat.UseCase
+namespace rStar.Modules.Stat.UseCase
 {
     public class AddAmountUseCase : UseCase<AddAmountInput , CqrsCommandPresenter , IStatRepository>
     {

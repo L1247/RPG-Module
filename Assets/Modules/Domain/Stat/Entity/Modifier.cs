@@ -1,11 +1,11 @@
 #region
 
+using rStar.Modules.Stat.Infrastructure;
 using rStarUtility.DDD.Implement.Core;
-using Stat.Infrastructure;
 
 #endregion
 
-namespace Stat.Entity
+namespace rStar.Modules.Stat.Entity
 {
     public class Modifier : Entity<string> , IModifier
     {

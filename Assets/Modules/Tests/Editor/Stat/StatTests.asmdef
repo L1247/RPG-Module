@@ -2,27 +2,28 @@
   "name": "StatTests",
   "rootNamespace": "StatTests",
   "references": [
-    "GUID:0acc523941302664db1f4e527237feb3",
-    "GUID:b18a16a3dcf3d01428b99057a0d9b91e",
-    "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-    "GUID:6bb5f159d8a1c6940a4bc99f2a1fe7f3",
-    "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
-    "GUID:79c30704f8922d24bb101cc1297f71c9",
-    "GUID:d3fb8bff81294c54fbfaefec2ecd3d74",
-    "GUID:665a1ab786ac19549bb86fe168fa7a3e"
+      "DDD",
+      "Zenject",
+      "DDDTestFramework",
+      "MessagePipe",
+      "StatInfrastructure",
+      "StatEntity",
+      "StatUseCase"
   ],
   "includePlatforms": [
-    "Editor"
+      "Editor"
   ],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": true,
-  "precompiledReferences": [
-    "NSubstitute.dll",
-    "nunit.framework.dll"
-  ],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "NSubstitute.dll",
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -73,12 +73,12 @@ namespace rStar.Modules.Stat.Entity.Tests
         [TestCase(5 ,  5)]
         [TestCase(0 ,  0)]
         [TestCase(-1 , 0)]
-        public void SetAmount(int caseAmount , int expectedAmount)
+        public void SetAmount(int baseAmount , int expectedAmount)
         {
             Stat stat = null;
             Scenario("Add BaseAmount")
                 .Given("give a Stat" , () => { stat = new Stat(id , ownerId , dataId , amount); })
-                .When("modify the Stat" , () => stat.SetBaseAmount(caseAmount))
+                .When("modify the Stat" , () => stat.SetBaseAmount(baseAmount))
                 .Then("stat amount will be modified" ,
                       () => { Assert.AreEqual(expectedAmount , stat.BaseAmount , "stat's amount is not equal"); })
                 .And("stat will have modifyAmount event" , () =>
@@ -112,7 +112,7 @@ namespace rStar.Modules.Stat.Entity.Tests
                     var amounts = new List<int>() { 33 , 34 , 31 , 26 , 3 , 10 };
                     stat.AddModifiers(modifierIds , modifierTypes , amounts);
                 })
-                .Then("stat amount will be modified" ,
+                .Then("stat's CalculateAmount will be modified" ,
                       () =>
                       {
                           Assert.AreEqual(expectedModifierCount , stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
@@ -138,7 +138,7 @@ namespace rStar.Modules.Stat.Entity.Tests
                     var amounts       = new List<int>() { 33 , 34 };
                     stat.AddModifiers(modifierIds , modifierTypes , amounts);
                 })
-                .Then("stat amount will be modified" ,
+                .Then("stat's CalculateAmount will be modified" ,
                       () =>
                       {
                           Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
@@ -149,7 +149,7 @@ namespace rStar.Modules.Stat.Entity.Tests
         }
 
         [Test]
-        public void AddModifiers_With_MultiAdd()
+        public void AddModifiers_With_PercentAdd()
         {
             Stat stat                    = null;
             var  baseAmount              = 6;
@@ -164,7 +164,33 @@ namespace rStar.Modules.Stat.Entity.Tests
                     var amounts       = new List<int>() { 31 , 26 };
                     stat.AddModifiers(modifierIds , modifierTypes , amounts);
                 })
-                .Then("stat amount will be modified" ,
+                .Then("stat's CalculateAmount will be modified" ,
+                      () =>
+                      {
+                          Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                          Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                          Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                      })
+                .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
+        }
+
+        [Test]
+        public void AddModifiers_With_PercentMulti()
+        {
+            Stat stat                    = null;
+            var  baseAmount              = 5;
+            var  expectedModifierCount   = 2;
+            var  exceptedCalculateAmount = 6;
+            Scenario("Add Modifiers")
+                .Given("give a Stat" , () => stat = new Stat(id , ownerId , dataId , baseAmount))
+                .When("modify the Stat" , () =>
+                {
+                    var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
+                    var modifierTypes = new List<ModifierType> { ModifierType.PercentMulti , ModifierType.PercentMulti };
+                    var amounts       = new List<int>() { 3 , 10 };
+                    stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                })
+                .Then("stat's CalculateAmount will be modified" ,
                       () =>
                       {
                           Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");

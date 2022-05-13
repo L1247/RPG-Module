@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace RPGCore.Stat.Example.Scripts
+namespace Stat.Example.Scripts
 {
     public class StatReference : MonoBehaviour
     {

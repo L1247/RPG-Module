@@ -1,13 +1,13 @@
 #region
 
-using RPGCore.Stat.Installer;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
+using Stat.Installer;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Stat.Example.Scripts
+namespace Stat.Example.Scripts
 {
     public class StatExampleInstaller : MonoInstaller
     {

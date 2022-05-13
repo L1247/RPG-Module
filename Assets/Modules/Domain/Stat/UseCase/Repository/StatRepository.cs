@@ -2,12 +2,12 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using RPGCore.Stat.Infrastructure;
 using rStarUtility.DDD.Implement.Abstract;
+using Stat.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Stat.UseCase.Repository
+namespace Stat.UseCase.Repository
 {
     public class StatRepository : AbstractRepository<IStatReadModel> , IStatRepository
     {

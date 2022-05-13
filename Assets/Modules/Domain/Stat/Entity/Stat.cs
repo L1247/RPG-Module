@@ -3,14 +3,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.Infrastructure.Events;
 using rStarUtility.DDD.Implement.Core;
+using Stat.Infrastructure;
+using Stat.Infrastructure.Events;
 using Utilities.Contract;
 
 #endregion
 
-namespace RPGCore.Stat.Entity
+namespace Stat.Entity
 {
     public class Stat : AggregateRoot , IStat
     {

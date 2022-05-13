@@ -1,17 +1,17 @@
 #region
 
-using RPGCore.Stat.Infrastructure;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
 using rStarUtility.Utilities;
+using Stat.Infrastructure;
 using Utilities.Contract;
 
 #endregion
 
-namespace RPGCore.Stat.UseCase
+namespace Stat.UseCase
 {
     public class CreateStatUseCase : UseCase<CreateStatInput , CqrsCommandPresenter , IStatRepository>
     {

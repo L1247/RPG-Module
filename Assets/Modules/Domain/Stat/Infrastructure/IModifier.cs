@@ -4,7 +4,7 @@ using rStarUtility.DDD.Model;
 
 #endregion
 
-namespace RPGCore.Stat.Infrastructure
+namespace Stat.Infrastructure
 {
     public interface IModifier : IEntity<string>
     {

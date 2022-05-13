@@ -3,14 +3,14 @@
 using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
-using RPGCore.Stat.Entity;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.UseCase.Repository;
 using rStarUtility.DDD.DDDTestFrameWork;
+using Stat.Entity;
+using Stat.Infrastructure;
+using Stat.UseCase.Repository;
 
 #endregion
 
-namespace RPGCore.Stat.Tests.Repository
+namespace Stat.Tests.Repository
 {
     public class StatRepositoryTests : DDDUnitTestFixture
     {

@@ -3,16 +3,16 @@
 using System.Collections.Generic;
 using NSubstitute;
 using NUnit.Framework;
-using RPGCore.Stat.Entity;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.UseCase;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
+using Stat.Entity;
+using Stat.Infrastructure;
+using Stat.UseCase;
 
 #endregion
 
-namespace RPGCore.Stat.Tests.UseCase
+namespace Stat.Tests.UseCase
 {
     public class AddModifierUseCaseTests : DDDUnitTestFixture
     {

@@ -1,14 +1,14 @@
 #region
 
-using RPGCore.Stat.Core.UseCase.Controller;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.UseCase;
-using RPGCore.Stat.UseCase.Repository;
+using Stat.Core.UseCase.Controller;
+using Stat.Infrastructure;
+using Stat.UseCase;
+using Stat.UseCase.Repository;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Stat.Installer
+namespace Stat.Installer
 {
     public class StatInstaller : Installer<StatInstaller>
     {

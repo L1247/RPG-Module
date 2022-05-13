@@ -1,4 +1,4 @@
-namespace RPGCore.Stat.Infrastructure
+namespace Stat.Infrastructure
 {
     public enum ModifierType
     {

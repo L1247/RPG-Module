@@ -1,16 +1,16 @@
 #region
 
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.UseCase.Extensions;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
+using Stat.Infrastructure;
+using Stat.UseCase.Extensions;
 
 #endregion
 
-namespace RPGCore.Stat.UseCase
+namespace Stat.UseCase
 {
     public class AddAmountUseCase : UseCase<AddAmountInput , CqrsCommandPresenter , IStatRepository>
     {

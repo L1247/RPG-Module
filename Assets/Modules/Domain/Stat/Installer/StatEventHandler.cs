@@ -1,13 +1,12 @@
 #region
 
-using RPGCore.Stat.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
+using Stat.Infrastructure.Events;
 
 #endregion
 
-namespace RPGCore.Stat.Installer
-
+namespace Stat.Installer
 {
     public class StatEventHandler : DomainEventHandler
     {

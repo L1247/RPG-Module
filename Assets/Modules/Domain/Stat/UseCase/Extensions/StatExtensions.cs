@@ -1,11 +1,11 @@
 #region
 
-using RPGCore.Stat.Entity;
-using RPGCore.Stat.Infrastructure;
+using Stat.Entity;
+using Stat.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Stat.UseCase.Extensions
+namespace Stat.UseCase.Extensions
 {
     public static class StatExtensions
     {

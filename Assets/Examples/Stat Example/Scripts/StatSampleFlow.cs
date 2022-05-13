@@ -1,11 +1,11 @@
 #region
 
-using RPGCore.Stat.Infrastructure;
+using Stat.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Stat.Example.Scripts
+namespace Stat.Example.Scripts
 {
     public class StatSampleFlow : IInitializable
     {

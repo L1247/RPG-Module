@@ -1,13 +1,13 @@
 #region
 
 using AutoBot.Utilities.Extensions;
-using RPGCore.Stat.Infrastructure;
+using Stat.Infrastructure;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Stat.Example.Scripts
+namespace Stat.Example.Scripts
 {
     public class StatExamplePresenter : IInitializable
     {

@@ -1,11 +1,11 @@
 #region
 
 using System.Collections.Generic;
-using RPGCore.Stat.Infrastructure;
+using Stat.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Stat.Entity
+namespace Stat.Entity
 {
     public interface IStat : IStatReadModel
     {

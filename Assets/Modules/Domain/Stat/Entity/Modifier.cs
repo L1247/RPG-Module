@@ -1,11 +1,11 @@
 #region
 
-using RPGCore.Stat.Infrastructure;
 using rStarUtility.DDD.Implement.Core;
+using Stat.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Stat.Entity
+namespace Stat.Entity
 {
     public class Modifier : Entity<string> , IModifier
     {

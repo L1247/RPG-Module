@@ -2,7 +2,7 @@
 
 #endregion
 
-namespace RPGCore.Stat.Infrastructure
+namespace Stat.Infrastructure
 {
     public interface IStatController
     {

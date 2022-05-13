@@ -1,18 +1,18 @@
 #region
 
 using System.Collections.Generic;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.UseCase.Extensions;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
+using Stat.Infrastructure;
+using Stat.UseCase.Extensions;
 using Utilities.Contract;
 
 #endregion
 
-namespace RPGCore.Stat.UseCase
+namespace Stat.UseCase
 {
     /// <summary>
     ///     節省計算，可一次傳新增多個Modifier

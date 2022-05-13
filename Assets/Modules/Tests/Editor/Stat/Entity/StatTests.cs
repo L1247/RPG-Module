@@ -3,13 +3,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using RPGCore.Stat.Infrastructure;
-using RPGCore.Stat.Infrastructure.Events;
 using rStarUtility.DDD.DDDTestFrameWork;
+using Stat.Infrastructure;
+using Stat.Infrastructure.Events;
 
 #endregion
 
-namespace RPGCore.Stat.Tests.Entity
+namespace Stat.Tests.Entity
 {
     [TestFixture]
     public class StatTests : DDDUnitTestFixture

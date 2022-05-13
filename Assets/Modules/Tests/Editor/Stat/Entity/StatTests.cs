@@ -93,7 +93,7 @@ namespace rStar.Modules.Stat.Entity.Tests
         }
 
         [Test]
-        public void AddModifiers()
+        public void AddModifiers_All_ModifierType()
         {
             Stat stat                  = null;
             var  baseAmount            = 6;
@@ -119,16 +119,61 @@ namespace rStar.Modules.Stat.Entity.Tests
                           Assert.AreEqual(baseAmount ,            stat.BaseAmount ,       "BaseAmount is not equal");
                           Assert.AreEqual(130 ,                   stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
                       })
-                .And("stat will have CalculatedAmountModified event" , () =>
-                {
-                    var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
-                    Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
-                    Assert.AreEqual(id ,      calculatedAmountModified.id ,      "id is not equal");
-                    Assert.AreEqual(ownerId , calculatedAmountModified.ownerId , "ownerId is not equal");
-                    var modifierAdded = stat.FindDomainEvents<ModifierAdded>();
-                    Assert.AreEqual(expectedModifierCount , modifierAdded.Count() , "event count is not equal");
-                });
+                .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
         }
+
+        [Test]
+        public void AddModifiers_With_Flat()
+        {
+            Stat stat                    = null;
+            var  baseAmount              = 6;
+            var  expectedModifierCount   = 2;
+            var  exceptedCalculateAmount = 73;
+            Scenario("Add Modifiers")
+                .Given("give a Stat" , () => stat = new Stat(id , ownerId , dataId , baseAmount))
+                .When("modify the Stat" , () =>
+                {
+                    var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
+                    var modifierTypes = new List<ModifierType> { ModifierType.Flat , ModifierType.Flat };
+                    var amounts       = new List<int>() { 33 , 34 };
+                    stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                })
+                .Then("stat amount will be modified" ,
+                      () =>
+                      {
+                          Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                          Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                          Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                      })
+                .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
+        }
+
+        [Test]
+        public void AddModifiers_With_MultiAdd()
+        {
+            Stat stat                    = null;
+            var  baseAmount              = 6;
+            var  expectedModifierCount   = 2;
+            var  exceptedCalculateAmount = 9;
+            Scenario("Add Modifiers")
+                .Given("give a Stat" , () => stat = new Stat(id , ownerId , dataId , baseAmount))
+                .When("modify the Stat" , () =>
+                {
+                    var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
+                    var modifierTypes = new List<ModifierType> { ModifierType.PercentAdd , ModifierType.PercentAdd };
+                    var amounts       = new List<int>() { 31 , 26 };
+                    stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                })
+                .Then("stat amount will be modified" ,
+                      () =>
+                      {
+                          Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                          Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                          Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                      })
+                .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
+        }
+
 
         [Test]
         public void RemoveModifiers()
@@ -217,6 +262,20 @@ namespace rStar.Modules.Stat.Entity.Tests
             dataId  = NewGuid();
             ownerId = NewGuid();
             amount  = 100;
+        }
+
+    #endregion
+
+    #region Private Methods
+
+        private void AssertModiferAddEvent(Stat stat , int expectedModifierCount)
+        {
+            var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
+            Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
+            Assert.AreEqual(id ,      calculatedAmountModified.id ,      "id is not equal");
+            Assert.AreEqual(ownerId , calculatedAmountModified.ownerId , "ownerId is not equal");
+            var modifierAdded = stat.FindDomainEvents<ModifierAdded>();
+            Assert.AreEqual(expectedModifierCount , modifierAdded.Count() , "event count is not equal");
         }
 
     #endregion

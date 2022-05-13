@@ -48,8 +48,12 @@ namespace rStar.Modules.Stat.Entity
         public void AddModifiers(List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts)
         {
             var wantToAddCount = modifierIds.Count;
+            Contract.Require(0 != wantToAddCount ,                   "modifierId's count is zero");
+            Contract.Require(0 != modifierTypes.Count ,              "modifierType's count is zero");
+            Contract.Require(0 != amounts.Count ,                    "amount's count is zero");
             Contract.Require(wantToAddCount == modifierTypes.Count , "id with type count is not equal.");
             Contract.Require(wantToAddCount == amounts.Count ,       "id with amount count is not equal.");
+
             var modifiersCount = Modifiers.Count;
             for (var i = 0 ; i < wantToAddCount ; i++)
             {
@@ -118,7 +122,7 @@ namespace rStar.Modules.Stat.Entity
             if (percentAddModifiers.Count > 0)
             {
                 var multiplyAdd    = 1f + sumPercentAdd / 100f;
-                var multiplyResult = Math.Round(calculateResult * multiplyAdd);
+                var multiplyResult = Math.Round(calculateResult * multiplyAdd , MidpointRounding.AwayFromZero);
                 calculateResult = (int)multiplyResult;
             }
 

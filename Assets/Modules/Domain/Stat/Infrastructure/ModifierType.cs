@@ -10,6 +10,11 @@ namespace rStar.Modules.Stat.Infrastructure
         /// <summary>
         ///     百分比加
         /// </summary>
-        PercentAdd = 2
+        PercentAdd = 2 ,
+
+        /// <summary>
+        ///     百分比乘
+        /// </summary>
+        PercentMulti = 3
     }
 }

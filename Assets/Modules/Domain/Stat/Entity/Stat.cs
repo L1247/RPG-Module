@@ -48,8 +48,8 @@ namespace rStar.Modules.Stat.Entity
         public void AddModifiers(List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts)
         {
             var wantToAddCount = modifierIds.Count;
-            Contract.Require(wantToAddCount == modifierTypes.Count , "count is not equal.");
-            Contract.Require(wantToAddCount == amounts.Count ,       "count is not equal.");
+            Contract.Require(wantToAddCount == modifierTypes.Count , "id with type count is not equal.");
+            Contract.Require(wantToAddCount == amounts.Count ,       "id with amount count is not equal.");
             var modifiersCount = Modifiers.Count;
             for (var i = 0 ; i < wantToAddCount ; i++)
             {
@@ -107,17 +107,31 @@ namespace rStar.Modules.Stat.Entity
 
         private void Calculate()
         {
-            var flatModifiers       = Modifiers.FindAll(modifier => modifier.Type.Equals(ModifierType.Flat));
-            var percentAddModifiers = Modifiers.FindAll(modifier => modifier.Type.Equals(ModifierType.PercentAdd));
-            var sumFlat             = flatModifiers.Sum(modifier => modifier.Amount);
-            var sumPercentAdd       = percentAddModifiers.Sum(modifier => modifier.Amount);
-            var calculateResult     = BaseAmount + sumFlat;
-            // Percent add calculate
+            var flatModifiers         = Modifiers.FindAll(modifier => modifier.Type.Equals(ModifierType.Flat));
+            var percentAddModifiers   = Modifiers.FindAll(modifier => modifier.Type.Equals(ModifierType.PercentAdd));
+            var percentMultiModifiers = Modifiers.FindAll(modifier => modifier.Type.Equals(ModifierType.PercentMulti));
+            // calculate Flat
+            var sumFlat         = flatModifiers.Sum(modifier => modifier.Amount);
+            var sumPercentAdd   = percentAddModifiers.Sum(modifier => modifier.Amount);
+            var calculateResult = BaseAmount + sumFlat;
+            // calculate Percent add
             if (percentAddModifiers.Count > 0)
             {
                 var multiplyAdd    = 1f + sumPercentAdd / 100f;
                 var multiplyResult = Math.Round(calculateResult * multiplyAdd);
                 calculateResult = (int)multiplyResult;
+            }
+
+            // calculate Percent multi
+            if (percentMultiModifiers.Count > 0)
+            {
+                var aggregatePercentMulti = percentMultiModifiers.Aggregate(1f , (x , y) =>
+                {
+                    var result = x * (1f + y.Amount / 100f);
+                    return result;
+                });
+                if (aggregatePercentMulti != 0)
+                    calculateResult = (int)Math.Round(calculateResult * aggregatePercentMulti);
             }
 
             if (calculateResult < 0) calculateResult = 0;

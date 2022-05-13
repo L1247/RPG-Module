@@ -16,5 +16,12 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/L1247/RPG-Module.git"
-    }
+    },
+    "samples": [
+      {
+        "displayName": "Stat Example",
+        "description": "Example for Stat",
+        "path": "Stat/Samples~/Example"
+      }
+    ]
 }

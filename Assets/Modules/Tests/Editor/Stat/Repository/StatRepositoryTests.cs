@@ -10,7 +10,7 @@ using rStarUtility.DDD.DDDTestFrameWork;
 
 #endregion
 
-namespace rStar.Modules.Stat.Tests.Repository
+namespace rStar.Modules.Stat.Repository.Tests
 {
     public class StatRepositoryTests : DDDUnitTestFixture
     {

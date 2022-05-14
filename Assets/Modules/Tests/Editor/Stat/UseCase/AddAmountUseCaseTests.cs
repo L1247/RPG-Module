@@ -6,14 +6,13 @@ using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
 using rStar.Modules.Stat.Entity;
 using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
 
 #endregion
 
-namespace rStar.Modules.Stat.Tests.UseCase
+namespace rStar.Modules.Stat.UseCase.Tests
 {
     [TestFixture]
     public class AddAmountUseCaseTests : DDDUnitTestFixture

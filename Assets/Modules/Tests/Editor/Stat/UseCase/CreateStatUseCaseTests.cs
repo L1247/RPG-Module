@@ -3,14 +3,13 @@
 using NSubstitute;
 using NUnit.Framework;
 using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
 
 #endregion
 
-namespace rStar.Modules.Stat.Tests.UseCase
+namespace rStar.Modules.Stat.UseCase.Tests
 {
     public class CreateStatUseCaseTests : DDDUnitTestFixture
     {
@@ -24,8 +23,8 @@ namespace rStar.Modules.Stat.Tests.UseCase
             var createStatUseCase = Resolve<CreateStatUseCase>();
             var repository        = Resolve<IStatRepository>();
 
-            Stat.Entity.Stat stat = null;
-            repository.Save(Arg.Do<Stat.Entity.Stat>(s => stat = s));
+            Entity.Stat stat = null;
+            repository.Save(Arg.Do<Entity.Stat>(s => stat = s));
 
             var input  = new CreateStatInput();
             var output = CqrsCommandPresenter.NewInstance();

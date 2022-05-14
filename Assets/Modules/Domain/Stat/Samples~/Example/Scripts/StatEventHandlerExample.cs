@@ -28,7 +28,7 @@ namespace rStar.Modules.Stat.Example.Scripts
 
     #region Protected Methods
 
-        protected override void WhenBaseAmountModified(string statId , string ownerId)
+        protected override void WhenBaseAmountModified(string statId , string ownerId , string dataId)
         {
             statExamplePresenter.UpdateStatView(statId);
         }

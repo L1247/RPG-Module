@@ -15,7 +15,7 @@ namespace rStar.Modules.Stat.Installer
         protected StatEventHandler(IDomainEventBus domainEventBus) : base(domainEventBus)
         {
             Register<StatCreated>(created => WhenStatCreated(created.id , created.dataId , created.ownerId));
-            Register<BaseAmountModified>(modified => WhenBaseAmountModified(modified.Id , modified.OwnerId));
+            Register<BaseAmountModified>(modified => WhenBaseAmountModified(modified.Id , modified.OwnerId , modified.DataId));
             Register<CalculatedAmountModified>(modified => WhenCalculatedAmountModified(modified.id , modified.ownerId));
             Register<ModifierAdded>(added => WhenModifierAdded(added.statId , added.modifierId));
             Register<ModifierRemoved>(removed => WhenModifierRemoved(removed.statId , removed.modifierId));
@@ -25,7 +25,7 @@ namespace rStar.Modules.Stat.Installer
 
     #region Protected Methods
 
-        protected virtual void WhenBaseAmountModified(string statId , string ownerId) { }
+        protected virtual void WhenBaseAmountModified(string statId , string ownerId , string dataId) { }
 
         protected virtual void WhenCalculatedAmountModified(string statId , string ownerId) { }
 

@@ -64,8 +64,9 @@ namespace rStar.Modules.Stat.Entity.Tests
                     Assert.AreEqual(1 , stat.FindDomainEvents<BaseAmountModified>().Count() , "event count is not equal");
                     var amountModified = stat.FindDomainEvent<BaseAmountModified>();
                     Assert.NotNull(amountModified , "amountModified is null");
-                    Assert.AreEqual(id ,      amountModified.id ,      "id is not equal");
-                    Assert.AreEqual(ownerId , amountModified.ownerId , "ownerId is not equal");
+                    Assert.AreEqual(id ,      amountModified.Id ,      "id is not equal");
+                    Assert.AreEqual(ownerId , amountModified.OwnerId , "ownerId is not equal");
+                    Assert.AreEqual(dataId ,  amountModified.DataId ,  "message is not equal");
                 });
         }
 
@@ -85,8 +86,8 @@ namespace rStar.Modules.Stat.Entity.Tests
                 {
                     var amountModified = stat.FindDomainEvent<BaseAmountModified>();
                     Assert.NotNull(amountModified , "amountModified is null");
-                    Assert.AreEqual(id ,      amountModified.id ,      "id is not equal");
-                    Assert.AreEqual(ownerId , amountModified.ownerId , "ownerId is not equal");
+                    Assert.AreEqual(id ,      amountModified.Id ,      "id is not equal");
+                    Assert.AreEqual(ownerId , amountModified.OwnerId , "ownerId is not equal");
                     var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
                     Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
                 });

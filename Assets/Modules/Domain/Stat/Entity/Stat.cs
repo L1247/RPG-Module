@@ -94,7 +94,7 @@ namespace rStar.Modules.Stat.Entity
         {
             BaseAmount = amount;
             if (BaseAmount < 0) BaseAmount = 0;
-            AddDomainEvent(new BaseAmountModified(GetId() , OwnerId));
+            AddDomainEvent(new BaseAmountModified(GetId() , OwnerId , DataId));
             Calculate();
         }
 

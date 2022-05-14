@@ -15,7 +15,7 @@ namespace rStar.Modules.Stat.Infrastructure
 
         IModifier      GetModifier(string statId , string modifierId);
         IStatReadModel GetStat(string     statId);
-        IStatReadModel GetStat(string     actorId , string dataId);
+        IStatReadModel GetStat(string     ownerId , string dataId);
 
         void RemoveModifier(string statId , string modifierId);
 

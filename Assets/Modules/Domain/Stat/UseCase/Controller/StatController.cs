@@ -6,7 +6,6 @@ using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
 using rStarUtility.Utilities;
-using Utilities.Contract;
 using Zenject;
 
 #endregion
@@ -104,14 +103,12 @@ namespace rStar.Modules.Stat.Core.UseCase.Controller
         public IStatReadModel GetStat(string statId)
         {
             var statReadModel = repository.FindStat(statId);
-            Contract.RequireNotNull(statReadModel , "statReadModel");
             return statReadModel;
         }
 
-        public IStatReadModel GetStat(string actorId , string dataId)
+        public IStatReadModel GetStat(string ownerId , string dataId)
         {
-            var statReadModel = repository.FindStat(actorId , dataId);
-            // Contract.RequireNotNull(statReadModel , $"{dataId} , stat ");
+            var statReadModel = repository.FindStat(ownerId , dataId);
             return statReadModel;
         }
 

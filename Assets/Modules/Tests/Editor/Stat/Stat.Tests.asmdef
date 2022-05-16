@@ -17,8 +17,7 @@
   "allowUnsafeCode": false,
   "overrideReferences": true,
   "precompiledReferences": [
-    "NSubstitute.dll",
-    "nunit.framework.dll"
+    "NSubstitute.dll"
   ],
   "autoReferenced": false,
   "defineConstraints": [

@@ -5,7 +5,7 @@ using rStar.Modules.Stat.Infrastructure;
 using rStar.Modules.Stat.UseCase;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
-using rStarUtility.Utilities;
+using rStarUtility.Util;
 using Zenject;
 
 #endregion

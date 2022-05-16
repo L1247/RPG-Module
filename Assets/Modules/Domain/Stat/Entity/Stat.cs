@@ -6,7 +6,7 @@ using System.Linq;
 using rStar.Modules.Stat.Infrastructure;
 using rStar.Modules.Stat.Infrastructure.Events;
 using rStarUtility.DDD.Implement.Core;
-using Utilities.Contract;
+using rStarUtility.Util;
 
 #endregion
 

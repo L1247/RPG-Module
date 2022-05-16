@@ -7,7 +7,7 @@ using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase;
 using rStarUtility.DDD.Usecase.CQRS;
-using Utilities.Contract;
+using rStarUtility.Util;
 
 #endregion
 

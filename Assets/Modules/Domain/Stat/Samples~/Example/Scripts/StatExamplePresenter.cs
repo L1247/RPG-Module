@@ -1,7 +1,7 @@
 #region
 
-using AutoBot.Utilities.Extensions;
 using rStar.Modules.Stat.Infrastructure;
+using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
 

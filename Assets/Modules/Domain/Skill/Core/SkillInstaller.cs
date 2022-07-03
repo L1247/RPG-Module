@@ -12,6 +12,7 @@ namespace rStar.Modules.Skill.Core
 
         public override void InstallBindings()
         {
+            Container.Bind<SkillRegistry>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
         }
 

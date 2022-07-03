@@ -37,7 +37,7 @@ namespace rStar.Modules.Skill.Core
 
         public void Execute()
         {
-            domainEventBus.Post(new Executed(Guid.NewGuid().ToString()));
+            domainEventBus.Post(new Executed(OwnerId));
         }
 
         public void Init(string ownerId)

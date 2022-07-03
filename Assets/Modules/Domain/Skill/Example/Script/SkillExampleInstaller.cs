@@ -14,6 +14,7 @@ namespace rStar.Modules.Skill.Example
         public override void InstallBindings()
         {
             SkillInstaller.Install(Container);
+            Container.BindInterfacesTo<Main>().AsSingle();
         }
 
     #endregion

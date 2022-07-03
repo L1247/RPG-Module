@@ -10,7 +10,10 @@ namespace rStar.Modules.Skill.Core
     {
     #region Public Methods
 
-        public override void InstallBindings() { }
+        public override void InstallBindings()
+        {
+            Container.Bind<SkillSpawner>().AsSingle();
+        }
 
     #endregion
     }

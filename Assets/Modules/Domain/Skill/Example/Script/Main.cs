@@ -1,5 +1,6 @@
 #region
 
+using System.Linq;
 using rStar.Modules.Skill.Core;
 using UnityEngine;
 using Zenject;
@@ -13,7 +14,10 @@ namespace rStar.Modules.Skill.Example
     #region Private Variables
 
         [Inject]
-        private SkillSpawner skillSpawner;
+        private SkillSpawner spawner;
+
+        [Inject]
+        private SkillRegistry registry;
 
     #endregion
 
@@ -23,8 +27,9 @@ namespace rStar.Modules.Skill.Example
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("CreateSkill");
-                skillSpawner.CreateSkill();
+                spawner.CreateSkill();
+                var count = registry.Skills.Count();
+                Debug.Log($"CreateSkill , skill count: {count}");
             }
         }
 

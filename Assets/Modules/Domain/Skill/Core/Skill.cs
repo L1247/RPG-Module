@@ -11,7 +11,9 @@ namespace rStar.Modules.Skill.Core
     {
     #region Private Variables
 
-        private IMemoryPool   pool;
+        private IMemoryPool pool;
+
+        [Inject]
         private SkillRegistry skillRegistry;
 
     #endregion
@@ -34,6 +36,12 @@ namespace rStar.Modules.Skill.Core
             this.pool = pool;
             skillRegistry.AddSkill(this);
         }
+
+    #endregion
+
+    #region Nested Types
+
+        public class Factory : PlaceholderFactory<Skill> { }
 
     #endregion
     }

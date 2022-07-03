@@ -14,6 +14,8 @@ namespace rStar.Modules.Skill.Core
         {
             Container.Bind<SkillRegistry>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
+
+            Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();
         }
 
     #endregion

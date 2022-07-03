@@ -13,6 +13,7 @@ namespace rStar.Modules.Skill.Core
         public override void InstallBindings()
         {
             Container.Bind<SkillRegistry>().AsSingle();
+            Container.Bind<SkillManager>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
 
             Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();

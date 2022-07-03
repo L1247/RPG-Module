@@ -17,9 +17,11 @@ namespace rStar.Modules.Skill.Core
 
     #region Public Methods
 
-        public Skill CreateSkill()
+        public Skill CreateSkill(string ownerId)
         {
-            return factory.Create();
+            var skill = factory.Create();
+            skill.Init(ownerId);
+            return skill;
         }
 
     #endregion

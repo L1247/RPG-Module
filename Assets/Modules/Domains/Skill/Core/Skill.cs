@@ -10,6 +10,12 @@ namespace rStar.Modules.Skill.Core
 {
     public class Skill : IPoolable<IMemoryPool> , IDisposable
     {
+    #region Public Variables
+
+        public string OwnerId { get; private set; }
+
+    #endregion
+
     #region Private Variables
 
         private IMemoryPool pool;
@@ -32,6 +38,11 @@ namespace rStar.Modules.Skill.Core
         public void Execute()
         {
             domainEventBus.Post(new Executed(Guid.NewGuid().ToString()));
+        }
+
+        public void Init(string ownerId)
+        {
+            OwnerId = ownerId;
         }
 
         public void OnDespawned()

@@ -27,9 +27,10 @@ namespace rStar.Modules.Skill.Example
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                spawner.CreateSkill();
+                var skill = spawner.CreateSkill();
                 var count = registry.Skills.Count();
                 Debug.Log($"CreateSkill , skill count: {count}");
+                skill.Execute();
             }
         }
 

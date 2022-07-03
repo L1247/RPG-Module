@@ -1,6 +1,7 @@
 #region
 
 using System;
+using rStarUtility.DDD.Event;
 using Zenject;
 
 #endregion
@@ -16,6 +17,9 @@ namespace rStar.Modules.Skill.Core
         [Inject]
         private SkillRegistry skillRegistry;
 
+        [Inject]
+        private IDomainEventBus domainEventBus;
+
     #endregion
 
     #region Public Methods
@@ -23,6 +27,11 @@ namespace rStar.Modules.Skill.Core
         public void Dispose()
         {
             pool.Despawn(this);
+        }
+
+        public void Execute()
+        {
+            domainEventBus.Post(new Executed(Guid.NewGuid().ToString()));
         }
 
         public void OnDespawned()

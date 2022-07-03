@@ -17,9 +17,9 @@ namespace rStar.Modules.Skill.Core
 
     #region Public Methods
 
-        public void CreateSkill()
+        public Skill CreateSkill()
         {
-            factory.Create();
+            return factory.Create();
         }
 
     #endregion

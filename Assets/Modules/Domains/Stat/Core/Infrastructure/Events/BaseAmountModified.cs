@@ -10,6 +10,8 @@ namespace rStar.Modules.Stat.Infrastructure.Events
     {
     #region Public Variables
 
+        public int BaseAmount { get; }
+
         public string DataId { get; }
 
         public string Id { get; }
@@ -20,11 +22,12 @@ namespace rStar.Modules.Stat.Infrastructure.Events
 
     #region Constructor
 
-        public BaseAmountModified(string id , string ownerId , string dataId)
+        public BaseAmountModified(string id , string ownerId , string dataId , int baseAmount)
         {
-            Id      = id;
-            OwnerId = ownerId;
-            DataId  = dataId;
+            Id         = id;
+            OwnerId    = ownerId;
+            DataId     = dataId;
+            BaseAmount = baseAmount;
         }
 
     #endregion

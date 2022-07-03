@@ -13,15 +13,17 @@ namespace rStar.Modules.Stat.Infrastructure.Events
         public readonly string id;
 
         public readonly string ownerId;
+        public          int    CalculatedAmount { get; }
 
     #endregion
 
     #region Constructor
 
-        public CalculatedAmountModified(string id , string ownerId)
+        public CalculatedAmountModified(string id , string ownerId , int calculatedAmount)
         {
-            this.id      = id;
-            this.ownerId = ownerId;
+            this.id          = id;
+            this.ownerId     = ownerId;
+            CalculatedAmount = calculatedAmount;
         }
 
     #endregion

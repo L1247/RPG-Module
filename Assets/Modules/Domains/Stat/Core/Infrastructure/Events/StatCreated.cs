@@ -14,13 +14,15 @@ namespace rStar.Modules.Stat.Infrastructure.Events
         public readonly string id;
 
         public readonly string ownerId;
+        public          int    BaseAmount { get; }
 
     #endregion
 
     #region Constructor
 
-        public StatCreated(string id , string dataId , string ownerId)
+        public StatCreated(string id , string dataId , string ownerId , int baseAmount)
         {
+            BaseAmount   = baseAmount;
             this.id      = id;
             this.dataId  = dataId;
             this.ownerId = ownerId;

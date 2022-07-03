@@ -33,7 +33,7 @@ namespace rStar.Modules.Stat.Entity
             CalculatedAmount = baseAmount;
             OwnerId          = ownerId;
             Modifiers        = new List<IModifier>();
-            AddDomainEvent(new StatCreated(id , statDataId , ownerId));
+            AddDomainEvent(new StatCreated(id , statDataId , ownerId , BaseAmount));
         }
 
     #endregion
@@ -94,7 +94,7 @@ namespace rStar.Modules.Stat.Entity
         {
             BaseAmount = amount;
             if (BaseAmount < 0) BaseAmount = 0;
-            AddDomainEvent(new BaseAmountModified(GetId() , OwnerId , DataId));
+            AddDomainEvent(new BaseAmountModified(GetId() , OwnerId , DataId , BaseAmount));
             Calculate();
         }
 
@@ -152,7 +152,7 @@ namespace rStar.Modules.Stat.Entity
         private void SetCalculatedAmount(int amount)
         {
             CalculatedAmount = amount;
-            AddDomainEvent(new CalculatedAmountModified(GetId() , OwnerId));
+            AddDomainEvent(new CalculatedAmountModified(GetId() , OwnerId , CalculatedAmount));
         }
 
     #endregion

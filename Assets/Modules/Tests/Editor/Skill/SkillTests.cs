@@ -23,6 +23,7 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(0 ,       skill.Cd ,          "cd is not equal");
         Assert.AreEqual(cast ,    skill.DefaultCast , "DefaultCast is not equal");
         Assert.AreEqual(cd ,      skill.DefaultCd ,   "DefaultCd is not equal");
+        Assert.AreEqual(false ,   skill.IsCd ,        "iscd is not equal");
     }
 
 #endregion

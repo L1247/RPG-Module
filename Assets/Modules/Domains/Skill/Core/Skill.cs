@@ -13,6 +13,8 @@ namespace rStar.Modules.Skill.Core
     {
     #region Public Variables
 
+        public bool IsCd { get; private set; }
+
         public float Cast { get; private set; }
 
         public float Cd { get; private set; }
@@ -55,6 +57,7 @@ namespace rStar.Modules.Skill.Core
             OwnerId     = ownerId;
             Cd          = 0;
             Cast        = DefaultCast;
+            IsCd        = false;
         }
 
         public void OnDespawned()

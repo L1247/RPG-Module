@@ -13,6 +13,10 @@ namespace rStar.Modules.Skill.Core
     {
     #region Public Variables
 
+        public float Cast { get; private set; }
+
+        public float Cd { get; private set; }
+
         public float DefaultCast { get; private set; }
         public float DefaultCd   { get; private set; }
 
@@ -29,9 +33,6 @@ namespace rStar.Modules.Skill.Core
 
         [Inject]
         private IDomainEventBus domainEventBus;
-
-        private float cd;
-        private float cast;
 
     #endregion
 
@@ -52,8 +53,8 @@ namespace rStar.Modules.Skill.Core
             DefaultCd   = cd;
             DefaultCast = cast;
             OwnerId     = ownerId;
-            this.cd     = DefaultCd;
-            this.cast   = DefaultCast;
+            Cd          = 0;
+            Cast        = DefaultCast;
         }
 
         public void OnDespawned()

@@ -15,6 +15,7 @@ namespace rStar.Modules.Skill.Core
             Container.Bind<SkillRegistry>().AsSingle();
             Container.Bind<SkillManager>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
+            Container.BindInterfacesTo<SkillTicker>().AsSingle();
 
             Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();
         }

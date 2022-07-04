@@ -2,6 +2,7 @@
 
 using System;
 using rStarUtility.DDD.Event;
+using UnityEngine;
 using Zenject;
 
 #endregion
@@ -11,6 +12,9 @@ namespace rStar.Modules.Skill.Core
     public class Skill : IPoolable<IMemoryPool> , IDisposable
     {
     #region Public Variables
+
+        public float DefaultCast { get; private set; }
+        public float DefaultCd   { get; private set; }
 
         public string OwnerId { get; private set; }
 
@@ -26,6 +30,9 @@ namespace rStar.Modules.Skill.Core
         [Inject]
         private IDomainEventBus domainEventBus;
 
+        private float cd;
+        private float cast;
+
     #endregion
 
     #region Public Methods
@@ -40,9 +47,13 @@ namespace rStar.Modules.Skill.Core
             domainEventBus.Post(new Executed(OwnerId));
         }
 
-        public void Init(string ownerId)
+        public void Init(string ownerId , float cast , float cd)
         {
-            OwnerId = ownerId;
+            DefaultCd   = cd;
+            DefaultCast = cast;
+            OwnerId     = ownerId;
+            this.cd     = DefaultCd;
+            this.cast   = DefaultCast;
         }
 
         public void OnDespawned()
@@ -55,6 +66,11 @@ namespace rStar.Modules.Skill.Core
         {
             this.pool = pool;
             skillRegistry.AddSkill(this);
+        }
+
+        public void Tick(float deltaTime)
+        {
+            Debug.Log($"{deltaTime}");
         }
 
     #endregion

@@ -83,7 +83,7 @@ public class SkillTests : DDDUnitTestFixture
     [Test(Description = "CD中使用技能不會有效果")]
     public void DoNoting_When_UseSkill_With_CDIng()
     {
-        Given_IsCd_Skill();
+        Given_IsCd_Skill(3);
         ClearEventBus();
         CacheExecuted();
         UseSkill();
@@ -100,6 +100,14 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(true , skill.IsCast , "IsCast is not equal");
         Assert.AreEqual(cast , skill.Cast ,   "cast is not equal");
         ShouldEnterCast();
+    }
+
+    [Test]
+    public void Reduce_CD_When_Tick_Skill()
+    {
+        Given_IsCd_Skill(3);
+        Tick(1);
+        Assert.AreEqual(2 , skill.Cd , "cd is not equal");
     }
 
 #endregion
@@ -138,9 +146,9 @@ public class SkillTests : DDDUnitTestFixture
         skill.Execute();
     }
 
-    private void Given_IsCd_Skill()
+    private void Given_IsCd_Skill(int cd)
     {
-        BindSkill(0 , 3);
+        BindSkill(0 , cd);
         UseSkill();
     }
 
@@ -160,6 +168,11 @@ public class SkillTests : DDDUnitTestFixture
         Assert.NotNull(executed);
         Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
         Assert.AreEqual(id ,      executed.ID ,      "id is not equal");
+    }
+
+    private void Tick(int time)
+    {
+        skill.Tick(time);
     }
 
     private void UseSkill()

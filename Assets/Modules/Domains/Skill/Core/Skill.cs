@@ -84,7 +84,10 @@ namespace rStar.Modules.Skill.Core
             skillRegistry.AddSkill(this);
         }
 
-        public void Tick(float deltaTime) { }
+        public void Tick(float time)
+        {
+            Cd -= time;
+        }
 
         public void UseSkill()
         {

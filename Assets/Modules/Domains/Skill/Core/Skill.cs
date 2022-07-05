@@ -83,13 +83,20 @@ namespace rStar.Modules.Skill.Core
         public void UseSkill()
         {
             if (IsCd) return;
-            Execute();
+            if (DefaultCast <= 0) Execute();
+            else if (IsCast == false) EnterCast();
             if (DefaultCd > 0) EnterCd();
         }
 
     #endregion
 
     #region Private Methods
+
+        private void EnterCast()
+        {
+            Cast   = DefaultCast;
+            IsCast = true;
+        }
 
         private void EnterCd()
         {

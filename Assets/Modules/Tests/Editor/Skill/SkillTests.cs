@@ -56,7 +56,7 @@ public class SkillTests : DDDUnitTestFixture
     }
 
     [Test(Description = "使用技能並執行")]
-    public void UseSkill_And_Will_Execute()
+    public void UseSkill_And_Execute()
     {
         BindSkill();
         CacheExecuted();
@@ -67,7 +67,7 @@ public class SkillTests : DDDUnitTestFixture
     [Test(Description = "使用技能，進入CD")]
     [TestCase(0 , false)]
     [TestCase(2 , true)]
-    public void UseSkill_And_Should_IsCd_Be(int cd , bool expectedIsCd)
+    public void UseSkill_And_EnterCD(int cd , bool expectedIsCd)
     {
         BindSkill(0 , cd);
         UseSkill();
@@ -75,13 +75,23 @@ public class SkillTests : DDDUnitTestFixture
     }
 
     [Test(Description = "CD中使用技能不會有效果")]
-    public void DoNoting_When_UseSkill_WithCDIng()
+    public void DoNoting_When_UseSkill_With_CDIng()
     {
         Given_IsCd_Skill();
         ClearEventBus();
         CacheExecuted();
         UseSkill();
         Should_Did_Not_Execute();
+    }
+
+    [Test(Description = "使用技能，進入詠唱")]
+    public void UseSkill_And_EnterCast()
+    {
+        var cast = 3;
+        BindSkill(cast);
+        UseSkill();
+        Assert.AreEqual(true , skill.IsCast , "IsCast is not equal");
+        Assert.AreEqual(cast , skill.Cast ,   "cast is not equal");
     }
 
 #endregion

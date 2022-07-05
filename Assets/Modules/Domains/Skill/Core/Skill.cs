@@ -13,6 +13,8 @@ namespace rStar.Modules.Skill.Core
     {
     #region Public Variables
 
+        public bool IsCast { get; private set; }
+
         public bool IsCd { get; private set; }
 
         public float Cast { get; private set; }
@@ -58,6 +60,7 @@ namespace rStar.Modules.Skill.Core
             Cd          = 0;
             Cast        = DefaultCast;
             IsCd        = false;
+            IsCast      = false;
         }
 
         public void OnDespawned()
@@ -80,6 +83,17 @@ namespace rStar.Modules.Skill.Core
         public void UseSkill()
         {
             Execute();
+            if (DefaultCd > 0) EnterCd();
+        }
+
+    #endregion
+
+    #region Private Methods
+
+        private void EnterCd()
+        {
+            IsCd = true;
+            Cd   = DefaultCd;
         }
 
     #endregion

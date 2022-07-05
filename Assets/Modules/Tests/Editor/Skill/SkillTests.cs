@@ -29,7 +29,8 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(0 ,       skill.Cd ,          "cd is not equal");
         Assert.AreEqual(cast ,    skill.DefaultCast , "DefaultCast is not equal");
         Assert.AreEqual(cd ,      skill.DefaultCd ,   "DefaultCd is not equal");
-        Assert.AreEqual(false ,   skill.IsCd ,        "iscd is not equal");
+        Assert.AreEqual(false ,   skill.IsCd ,        "isCd is not equal");
+        Assert.AreEqual(false ,   skill.IsCast ,      "isCast is not equal");
     }
 
     [Test]
@@ -49,8 +50,18 @@ public class SkillTests : DDDUnitTestFixture
         BindSkill();
         Executed executed = null;
         domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
-        skill.UseSkill();
+        UseSkill();
         Assert.NotNull(executed);
+    }
+
+    [Test]
+    [TestCase(0 , false)]
+    [TestCase(2 , true)]
+    public void UseSkill_And_Should_IsCd_Be(int cd , bool expectedIsCd)
+    {
+        BindSkill(0 , cd);
+        UseSkill();
+        Assert.AreEqual(expectedIsCd , skill.IsCd , "isCd is not equal");
     }
 
 #endregion
@@ -64,6 +75,11 @@ public class SkillTests : DDDUnitTestFixture
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();
         skill.Init(ownerId , cast , cd);
+    }
+
+    private void UseSkill()
+    {
+        skill.UseSkill();
     }
 
 #endregion

@@ -86,7 +86,8 @@ namespace rStar.Modules.Skill.Core
 
         public void Tick(float time)
         {
-            Cd -= time;
+            Cd   -= time;
+            Cast -= time;
         }
 
         public void UseSkill()

@@ -103,11 +103,13 @@ public class SkillTests : DDDUnitTestFixture
     }
 
     [Test]
-    public void Reduce_CD_When_Tick_Skill()
+    public void Reduce_CD_And_Cast_When_Tick_Skill()
     {
-        Given_IsCd_Skill(3);
+        BindSkill(3 , 3);
+        UseSkill();
         Tick(1);
-        Assert.AreEqual(2 , skill.Cd , "cd is not equal");
+        Assert.AreEqual(2 , skill.Cd ,   "cd is not equal");
+        Assert.AreEqual(2 , skill.Cast , "cast is not equal");
     }
 
 #endregion

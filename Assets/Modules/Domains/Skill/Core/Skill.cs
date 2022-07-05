@@ -4,7 +4,6 @@ using System;
 using rStar.Modules.Skill.Core.Event;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Model;
-using UnityEngine;
 using Zenject;
 
 #endregion
@@ -85,10 +84,7 @@ namespace rStar.Modules.Skill.Core
             skillRegistry.AddSkill(this);
         }
 
-        public void Tick(float deltaTime)
-        {
-            Debug.Log($"{deltaTime}");
-        }
+        public void Tick(float deltaTime) { }
 
         public void UseSkill()
         {

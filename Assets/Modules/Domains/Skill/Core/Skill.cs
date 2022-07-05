@@ -1,7 +1,9 @@
 #region
 
 using System;
+using rStar.Modules.Skill.Core.Event;
 using rStarUtility.DDD.Event;
+using rStarUtility.DDD.Model;
 using UnityEngine;
 using Zenject;
 
@@ -9,7 +11,7 @@ using Zenject;
 
 namespace rStar.Modules.Skill.Core
 {
-    public class Skill : IPoolable<IMemoryPool> , IDisposable
+    public class Skill : IPoolable<IMemoryPool> , IDisposable , IEntity<string>
     {
     #region Public Variables
 
@@ -38,6 +40,8 @@ namespace rStar.Modules.Skill.Core
         [Inject]
         private IDomainEventBus domainEventBus;
 
+        private string id;
+
     #endregion
 
     #region Public Methods
@@ -49,11 +53,17 @@ namespace rStar.Modules.Skill.Core
 
         public void Execute()
         {
-            domainEventBus.Post(new Executed(OwnerId));
+            domainEventBus.Post(new Executed(GetId() , OwnerId));
+        }
+
+        public string GetId()
+        {
+            return id;
         }
 
         public void Init(string ownerId , float cast , float cd)
         {
+            id          = Guid.NewGuid().ToString();
             DefaultCd   = cd;
             DefaultCast = cast;
             OwnerId     = ownerId;
@@ -96,6 +106,7 @@ namespace rStar.Modules.Skill.Core
         {
             Cast   = DefaultCast;
             IsCast = true;
+            domainEventBus.Post(new CastEntered(GetId()));
         }
 
         private void EnterCd()

@@ -3,6 +3,7 @@
 using NSubstitute;
 using NUnit.Framework;
 using rStar.Modules.Skill.Core;
+using rStar.Modules.Skill.Core.Event;
 using rStarUtility.DDD.DDDTestFrameWork;
 
 #endregion
@@ -11,9 +12,11 @@ public class SkillTests : DDDUnitTestFixture
 {
 #region Private Variables
 
-    private string   ownerId;
-    private Skill    skill;
-    private Executed executed;
+    private string      ownerId;
+    private Skill       skill;
+    private Executed    executed;
+    private CastEntered castEntered;
+    private string      id;
 
 #endregion
 
@@ -22,9 +25,11 @@ public class SkillTests : DDDUnitTestFixture
     [SetUp]
     public void SetUp()
     {
-        executed = null;
-        ownerId  = null;
-        skill    = null;
+        id          = null;
+        ownerId     = null;
+        skill       = null;
+        executed    = null;
+        castEntered = null;
     }
 
 #endregion
@@ -37,6 +42,7 @@ public class SkillTests : DDDUnitTestFixture
         var cast = 2;
         var cd   = 3;
         BindSkill(cast , cd);
+        Assert.NotNull(skill.GetId() , "skill's is null");
         Assert.AreEqual(ownerId , skill.OwnerId ,     "OwnerId is not equal");
         Assert.AreEqual(cast ,    skill.Cast ,        "Cast is not equal");
         Assert.AreEqual(0 ,       skill.Cd ,          "cd is not equal");
@@ -89,9 +95,11 @@ public class SkillTests : DDDUnitTestFixture
     {
         var cast = 3;
         BindSkill(cast);
+        CacheCastEntered();
         UseSkill();
         Assert.AreEqual(true , skill.IsCast , "IsCast is not equal");
         Assert.AreEqual(cast , skill.Cast ,   "cast is not equal");
+        ShouldEnterCast();
     }
 
 #endregion
@@ -105,6 +113,13 @@ public class SkillTests : DDDUnitTestFixture
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();
         skill.Init(ownerId , cast , cd);
+        id = skill.GetId();
+    }
+
+    private void CacheCastEntered()
+    {
+        castEntered = null;
+        domainEventBus.Post(Arg.Do<CastEntered>(e => castEntered = e));
     }
 
     private void CacheExecuted()
@@ -134,10 +149,17 @@ public class SkillTests : DDDUnitTestFixture
         Assert.IsNull(executed);
     }
 
+    private void ShouldEnterCast()
+    {
+        Assert.NotNull(castEntered , "castEntered is null");
+        Assert.AreEqual(id , castEntered.ID , "id is not equal");
+    }
+
     private void ShouldExecute()
     {
         Assert.NotNull(executed);
         Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
+        Assert.AreEqual(id ,      executed.ID ,      "id is not equal");
     }
 
     private void UseSkill()

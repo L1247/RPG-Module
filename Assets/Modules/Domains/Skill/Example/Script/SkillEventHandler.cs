@@ -1,6 +1,6 @@
 #region
 
-using rStar.Modules.Skill.Core;
+using rStar.Modules.Skill.Core.Event;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using UnityEngine;

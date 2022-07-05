@@ -11,8 +11,21 @@ public class SkillTests : DDDUnitTestFixture
 {
 #region Private Variables
 
-    private string ownerId;
-    private Skill  skill;
+    private string   ownerId;
+    private Skill    skill;
+    private Executed executed;
+
+#endregion
+
+#region Setup/Teardown Methods
+
+    [SetUp]
+    public void SetUp()
+    {
+        executed = null;
+        ownerId  = null;
+        skill    = null;
+    }
 
 #endregion
 
@@ -37,21 +50,18 @@ public class SkillTests : DDDUnitTestFixture
     public void ExecuteSkill()
     {
         BindSkill();
-        Executed executed = null;
-        domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
-        skill.Execute();
-        Assert.NotNull(executed , "executed is null");
-        Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
+        CacheExecuted();
+        Execute();
+        ShouldExecute();
     }
 
     [Test]
     public void UseSkill_And_Will_Execute()
     {
         BindSkill();
-        Executed executed = null;
-        domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
+        CacheExecuted();
         UseSkill();
-        Assert.NotNull(executed);
+        ShouldExecute();
     }
 
     [Test]
@@ -62,6 +72,12 @@ public class SkillTests : DDDUnitTestFixture
         BindSkill(0 , cd);
         UseSkill();
         Assert.AreEqual(expectedIsCd , skill.IsCd , "isCd is not equal");
+    }
+
+    [Test]
+    public void DoNoting_When_UseSkill_WithCDIng()
+    {
+        // BindSkill(0 ,);
     }
 
 #endregion
@@ -75,6 +91,23 @@ public class SkillTests : DDDUnitTestFixture
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();
         skill.Init(ownerId , cast , cd);
+    }
+
+    private void CacheExecuted()
+    {
+        executed = null;
+        domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
+    }
+
+    private void Execute()
+    {
+        skill.Execute();
+    }
+
+    private void ShouldExecute()
+    {
+        Assert.NotNull(executed);
+        Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
     }
 
     private void UseSkill()

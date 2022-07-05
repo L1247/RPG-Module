@@ -43,6 +43,16 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
     }
 
+    [Test]
+    public void UseSkill_And_Will_Execute()
+    {
+        BindSkill();
+        Executed executed = null;
+        domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
+        skill.UseSkill();
+        Assert.NotNull(executed);
+    }
+
 #endregion
 
 #region Private Methods

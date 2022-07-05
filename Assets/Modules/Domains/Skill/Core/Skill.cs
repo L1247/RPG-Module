@@ -77,6 +77,11 @@ namespace rStar.Modules.Skill.Core
             Debug.Log($"{deltaTime}");
         }
 
+        public void UseSkill()
+        {
+            Execute();
+        }
+
     #endregion
 
     #region Nested Types

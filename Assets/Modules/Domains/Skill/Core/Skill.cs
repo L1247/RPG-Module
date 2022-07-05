@@ -82,6 +82,7 @@ namespace rStar.Modules.Skill.Core
 
         public void UseSkill()
         {
+            if (IsCd) return;
             Execute();
             if (DefaultCd > 0) EnterCd();
         }

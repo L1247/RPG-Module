@@ -31,7 +31,7 @@ public class SkillTests : DDDUnitTestFixture
 
 #region Test Methods
 
-    [Test]
+    [Test(Description = "建立技能")]
     public void CreateSkill()
     {
         var cast = 2;
@@ -46,7 +46,7 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(false ,   skill.IsCast ,      "isCast is not equal");
     }
 
-    [Test]
+    [Test(Description = "執行技能")]
     public void ExecuteSkill()
     {
         BindSkill();
@@ -55,7 +55,7 @@ public class SkillTests : DDDUnitTestFixture
         ShouldExecute();
     }
 
-    [Test]
+    [Test(Description = "使用技能並執行")]
     public void UseSkill_And_Will_Execute()
     {
         BindSkill();
@@ -64,7 +64,7 @@ public class SkillTests : DDDUnitTestFixture
         ShouldExecute();
     }
 
-    [Test]
+    [Test(Description = "使用技能，進入CD")]
     [TestCase(0 , false)]
     [TestCase(2 , true)]
     public void UseSkill_And_Should_IsCd_Be(int cd , bool expectedIsCd)
@@ -74,10 +74,14 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(expectedIsCd , skill.IsCd , "isCd is not equal");
     }
 
-    [Test]
+    [Test(Description = "CD中使用技能不會有效果")]
     public void DoNoting_When_UseSkill_WithCDIng()
     {
-        // BindSkill(0 ,);
+        Given_IsCd_Skill();
+        ClearEventBus();
+        CacheExecuted();
+        UseSkill();
+        Should_Did_Not_Execute();
     }
 
 #endregion
@@ -99,9 +103,25 @@ public class SkillTests : DDDUnitTestFixture
         domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
     }
 
+    private void ClearEventBus()
+    {
+        domainEventBus.ClearReceivedCalls();
+    }
+
     private void Execute()
     {
         skill.Execute();
+    }
+
+    private void Given_IsCd_Skill()
+    {
+        BindSkill(0 , 3);
+        UseSkill();
+    }
+
+    private void Should_Did_Not_Execute()
+    {
+        Assert.IsNull(executed);
     }
 
     private void ShouldExecute()

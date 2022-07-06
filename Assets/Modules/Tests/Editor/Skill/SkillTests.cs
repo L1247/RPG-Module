@@ -94,22 +94,20 @@ public class SkillTests : DDDUnitTestFixture
     public void UseSkill_And_EnterCast()
     {
         var cast = 3;
-        BindSkill(cast);
         CacheCastEntered();
-        UseSkill();
-        Assert.AreEqual(true , skill.IsCast , "IsCast is not equal");
-        Assert.AreEqual(cast , skill.Cast ,   "cast is not equal");
+        CreateIsCastSkill(cast);
+        ShouldCast(cast);
         ShouldEnterCast();
     }
 
-    [Test]
+    [Test(Description = "Tick會減少技能冷卻跟詠唱")]
     public void Reduce_CD_And_Cast_When_Tick_Skill()
     {
         BindSkill(3 , 3);
         UseSkill();
         Tick(1);
-        Assert.AreEqual(2 , skill.Cd ,   "cd is not equal");
-        Assert.AreEqual(2 , skill.Cast , "cast is not equal");
+        ShouldCd(2);
+        ShouldCast(2);
     }
 
     [Test]
@@ -117,12 +115,11 @@ public class SkillTests : DDDUnitTestFixture
     [TestCase(3 , Description = "剛好詠唱時間")]
     public void ExitCast(int time)
     {
-        BindSkill(3 , 3);
         CacheExecuted();
-        UseSkill();
+        CreateIsCastSkill(3);
         Tick(time);
         ShouldExecute();
-        Assert.AreEqual(false , skill.IsCast , "IsCast is not equal");
+        ShouldIsCast(false);
     }
 
 #endregion
@@ -156,6 +153,12 @@ public class SkillTests : DDDUnitTestFixture
         domainEventBus.ClearReceivedCalls();
     }
 
+    private void CreateIsCastSkill(int cast)
+    {
+        BindSkill(cast);
+        UseSkill();
+    }
+
     private void Execute()
     {
         skill.Execute();
@@ -172,10 +175,21 @@ public class SkillTests : DDDUnitTestFixture
         Assert.IsNull(executed);
     }
 
+    private void ShouldCast(int cast)
+    {
+        Assert.AreEqual(cast , skill.Cast , "cast is not equal");
+    }
+
+    private void ShouldCd(int expectedValue)
+    {
+        Assert.AreEqual(expectedValue , skill.Cd , "cd is not equal");
+    }
+
     private void ShouldEnterCast()
     {
         Assert.NotNull(castEntered , "castEntered is null");
         Assert.AreEqual(id , castEntered.ID , "id is not equal");
+        ShouldIsCast(true);
     }
 
     private void ShouldExecute()
@@ -183,6 +197,11 @@ public class SkillTests : DDDUnitTestFixture
         Assert.NotNull(executed);
         Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
         Assert.AreEqual(id ,      executed.ID ,      "id is not equal");
+    }
+
+    private void ShouldIsCast(bool expectedValue)
+    {
+        Assert.AreEqual(expectedValue , skill.IsCast , "IsCast is not equal");
     }
 
     private void Tick(int time)

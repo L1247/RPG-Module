@@ -62,7 +62,7 @@ public class SkillTests : DDDUnitTestFixture
     }
 
     [Test(Description = "使用技能並執行")]
-    public void UseSkill_And_Execute()
+    public void Execute_When_Use_Skill()
     {
         BindSkill();
         CacheExecuted();
@@ -73,7 +73,7 @@ public class SkillTests : DDDUnitTestFixture
     [Test(Description = "使用技能，進入CD")]
     [TestCase(0 , false)]
     [TestCase(2 , true)]
-    public void UseSkill_And_EnterCD(int cd , bool expectedIsCd)
+    public void EnterCD_When_Use_Skill(int cd , bool expectedIsCd)
     {
         BindSkill(0 , cd);
         UseSkill();
@@ -91,7 +91,7 @@ public class SkillTests : DDDUnitTestFixture
     }
 
     [Test(Description = "使用技能，進入詠唱")]
-    public void UseSkill_And_EnterCast()
+    public void EnterCast_When_Use_Skill()
     {
         var cast = 3;
         CacheCastEntered();
@@ -113,7 +113,7 @@ public class SkillTests : DDDUnitTestFixture
     [Test]
     [TestCase(4 , Description = "超過詠唱時間")]
     [TestCase(3 , Description = "剛好詠唱時間")]
-    public void ExitCast(int time)
+    public void ExitCast_When_Tick_Skill(int time)
     {
         CacheExecuted();
         CreateIsCastSkill(3);

@@ -2,7 +2,6 @@
 
 using rStar.Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
-using UnityEngine;
 using Zenject;
 
 #endregion
@@ -27,7 +26,7 @@ namespace rStar.Modules.Skill.Example
 
         public void Initialize()
         {
-            skill = skillSpawner.CreateSkill("OwnerId" , 3 , 3);
+            skill = skillSpawner.CreateSkill("OwnerId" , 2 , 5);
             reference.useSkill.BindClick(UseSkill);
             reference.tickSkill.BindClick(TickSkill);
             UpdateInfo();
@@ -39,7 +38,7 @@ namespace rStar.Modules.Skill.Example
 
         private void TickSkill()
         {
-            skill.Tick(Time.deltaTime);
+            skill.Tick(1);
             UpdateInfo();
         }
 

@@ -86,7 +86,6 @@ namespace rStar.Modules.Skill.Core
 
         public void Tick(float time)
         {
-            if (time < 0) throw new ArgumentException($"Tick Time {time} , 不可為負數");
             Cd   -= time;
             Cast -= time;
             if (IsCast)

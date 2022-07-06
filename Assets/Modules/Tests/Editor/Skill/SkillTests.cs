@@ -1,6 +1,5 @@
 #region
 
-using System;
 using NSubstitute;
 using NUnit.Framework;
 using rStar.Modules.Skill.Core;
@@ -131,16 +130,6 @@ public class SkillTests : DDDUnitTestFixture
         Given_IsCd_Skill(3);
         Tick(time);
         ShouldIsCd(false);
-    }
-
-    [Test]
-    public void Argument_Error_When_Tick()
-    {
-        BindSkill();
-        var time              = -1;
-        var argumentException = Assert.Throws<ArgumentException>(() => Tick(time));
-        Assert.NotNull(argumentException , "argumentOutOfRangeException is null");
-        Assert.AreEqual($"Tick Time {time} , 不可為負數" , argumentException.Message , "message is not equal");
     }
 
 #endregion

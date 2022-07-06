@@ -17,6 +17,7 @@ namespace rStar.Modules.Skill.Example2
         public Button     execute;
         public Button     tick;
         public Button     use;
+        public Image      coolDownImage;
         public Projectile projectilePrefab;
         public TMP_Text   info;
         public Transform  shootPoint;

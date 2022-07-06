@@ -12,9 +12,14 @@ namespace rStar.Modules.Skill.Example2
     {
     #region Public Variables
 
-        public Button   execute;
-        public Button   use;
-        public TMP_Text info;
+        public Animator enemyAnimator;
+
+        public Button     execute;
+        public Button     tick;
+        public Button     use;
+        public Projectile projectilePrefab;
+        public TMP_Text   info;
+        public Transform  shootPoint;
 
     #endregion
     }

@@ -16,6 +16,9 @@ namespace rStar.Modules.Skill.Example2
         {
             DDDInstaller.Install(Container);
             SkillInstaller.Install(Container);
+            Container.UnbindInterfacesTo<SkillTicker>();
+            Container.BindInterfacesAndSelfTo<SkillExample2Presenter>().AsSingle();
+            Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
         }
 
     #endregion

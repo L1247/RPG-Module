@@ -1722,7 +1722,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Golem_Armor_Full_FX_49: 8762644879769916076
+      Golem_Armor_Full_FX_20: -2461189714425045605
       Golem_Armor_Full_FX_3: 2581895881764190331
       Golem_Armor_Full_FX_12: -1054172000229028521
       Golem_Armor_Full_FX_18: 8201838440051660995
@@ -1758,8 +1758,9 @@ TextureImporter:
       Golem_Armor_Full_FX_64: 5887044061115349028
       Golem_Armor_Full_FX_9: 8661377642604775244
       Golem_Armor_Full_FX_8: 680890853514005983
-      Golem_Armor_Full_FX_34: 8172814382977650230
       Golem_Armor_Full_FX_35: -1186408408322994669
+      Golem_Armor_Full_FX_61: -7748564399159138654
+      Golem_Armor_Full_FX_34: 8172814382977650230
       Golem_Armor_Full_FX_0: 6753996268325372770
       Golem_Armor_Full_FX_1: -7344197050217420989
       Golem_Armor_Full_FX_21: -2035136893123937750
@@ -1767,7 +1768,6 @@ TextureImporter:
       Golem_Armor_Full_FX_38: 507562888978163061
       Golem_Armor_Full_FX_15: 2132981188032874165
       Golem_Armor_Full_FX_30: 710813166902598613
-      Golem_Armor_Full_FX_61: -7748564399159138654
       Golem_Armor_Full_FX_45: -5165715128601406083
       Golem_Armor_Full_FX_65: -8439961075457090570
       Golem_Armor_Full_FX_25: -6161043280285859336
@@ -1787,7 +1787,7 @@ TextureImporter:
       Golem_Armor_Full_FX_51: 4087786673554300872
       Golem_Armor_Full_FX_26: 4653416395845303069
       Golem_Armor_Full_FX_19: 2069218797181606544
-      Golem_Armor_Full_FX_20: -2461189714425045605
+      Golem_Armor_Full_FX_49: 8762644879769916076
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

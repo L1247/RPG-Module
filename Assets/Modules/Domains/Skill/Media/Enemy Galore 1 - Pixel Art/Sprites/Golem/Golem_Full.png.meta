@@ -1914,8 +1914,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Golem_Full_52: -2940916062444521281
-      Golem_Full_69: -194085950180906761
+      Golem_Full_34: 3510605286146195061
+      Golem_Full_22: -7079238868888815171
       Golem_Full_9: 6285933618878887918
       Golem_Full_55: 4283822245080740986
       Golem_Full_51: 540094086836670724
@@ -1926,8 +1926,8 @@ TextureImporter:
       Golem_Full_58: 6048603422492926744
       Golem_Full_67: 1731400657347262679
       Golem_Full_0: -6017490860483724875
-      Golem_Full_72: -2504471473932805799
       Golem_Full_6: -7267032783744351846
+      Golem_Full_63: -6102898650208477931
       Golem_Full_43: -8329056741425902225
       Golem_Full_54: -7548631079007126661
       Golem_Full_59: -1406270275154208144
@@ -1947,14 +1947,15 @@ TextureImporter:
       Golem_Full_23: 6075969909584307493
       Golem_Full_36: 3711763843719386077
       Golem_Full_62: 4492782964842093577
-      Golem_Full_25: -6602594352998446073
       Golem_Full_49: -4770099231610841333
+      Golem_Full_25: -6602594352998446073
       Golem_Full_37: 2005409751097035225
       Golem_Full_57: -2837787230306943975
       Golem_Full_13: -1583637849748410591
       Golem_Full_7: -5792997115539285718
-      Golem_Full_11: 588724299599531987
       Golem_Full_40: -6114262441888866840
+      Golem_Full_50: -3391512159206153257
+      Golem_Full_11: 588724299599531987
       Golem_Full_17: 3039971599116455348
       Golem_Full_26: -5037722411935454334
       Golem_Full_48: 6831615246360969603
@@ -1963,7 +1964,6 @@ TextureImporter:
       Golem_Full_1: 7826814248820880609
       Golem_Full_19: -2470194156222153895
       Golem_Full_45: 1340286298371936612
-      Golem_Full_50: -3391512159206153257
       Golem_Full_21: 3838213687639013976
       Golem_Full_61: 8364015768766955885
       Golem_Full_73: -6096186968202000389
@@ -1981,13 +1981,13 @@ TextureImporter:
       Golem_Full_38: -4090250175122369612
       Golem_Full_70: -7630514465778954011
       Golem_Full_35: -7422888589472058108
+      Golem_Full_72: -2504471473932805799
+      Golem_Full_52: -2940916062444521281
+      Golem_Full_69: -194085950180906761
       Golem_Full_2: 4463346520189974070
       Golem_Full_10: 8720520468919917045
       Golem_Full_16: 606979793319043027
       Golem_Full_53: -6785134439540604625
-      Golem_Full_34: 3510605286146195061
-      Golem_Full_22: -7079238868888815171
-      Golem_Full_63: -6102898650208477931
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

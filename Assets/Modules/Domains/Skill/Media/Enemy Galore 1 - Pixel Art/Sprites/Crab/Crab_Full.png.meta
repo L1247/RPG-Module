@@ -1266,7 +1266,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crab_Full_27: 561825171914736798
+      Crab_Full_31: 3121195757732449799
       Crab_Full_37: -2840484047120808567
       Crab_Full_20: -7336123797693490175
       Crab_Full_23: 6038771997599778311
@@ -1290,8 +1290,8 @@ TextureImporter:
       Crab_Full_6: -6223271445663882612
       Crab_Full_35: 1885865435993454121
       Crab_Full_9: -3815500650277373750
-      Crab_Full_11: -1900158105477226737
       Crab_Full_34: -417651144554181672
+      Crab_Full_11: -1900158105477226737
       Crab_Full_32: 3814422432139318962
       Crab_Full_44: -7373304957289921102
       Crab_Full_41: 6097629554323936317
@@ -1312,7 +1312,7 @@ TextureImporter:
       Crab_Full_30: -322081080966537977
       Crab_Full_19: 254069419793696521
       Crab_Full_39: -4171885312531944212
-      Crab_Full_31: 3121195757732449799
+      Crab_Full_27: 561825171914736798
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

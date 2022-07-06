@@ -2,11 +2,12 @@
 
 using rStar.Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
+using TMPro;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example
+namespace rStar.Modules.Skill.Example1
 {
     public class SkillExamplePresenter : IInitializable
     {
@@ -18,7 +19,7 @@ namespace rStar.Modules.Skill.Example
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private Core.Skill skill;
+        private Core.Skill skill1;
 
     #endregion
 
@@ -26,33 +27,33 @@ namespace rStar.Modules.Skill.Example
 
         public void Initialize()
         {
-            skill = skillSpawner.CreateSkill("OwnerId" , 2 , 5);
-            reference.useSkill.BindClick(UseSkill);
-            reference.tickSkill.BindClick(TickSkill);
-            UpdateInfo();
+            skill1 = skillSpawner.CreateSkill("OwnerId" , 2 , 5);
+            reference.useSkill1.BindClick(UseSkill);
+            reference.tickAllSkill.BindClick(TickAllSkill);
+            UpdateInfo(skill1 , reference.skillInfo1);
         }
 
     #endregion
 
     #region Private Methods
 
-        private void TickSkill()
+        private void TickAllSkill()
         {
-            skill.Tick(1);
-            UpdateInfo();
+            skill1.Tick(1);
+            UpdateInfo(skill1 , reference.skillInfo1);
         }
 
-        private void UpdateInfo()
+        private void UpdateInfo(Core.Skill skill , TMP_Text skillInfo)
         {
             var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
                        $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
-            reference.skillInfo.text = info;
+            skillInfo.text = info;
         }
 
         private void UseSkill()
         {
-            skill.UseSkill();
-            UpdateInfo();
+            skill1.UseSkill();
+            UpdateInfo(skill1 , reference.skillInfo1);
         }
 
     #endregion

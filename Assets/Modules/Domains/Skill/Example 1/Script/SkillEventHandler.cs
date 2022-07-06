@@ -7,7 +7,7 @@ using UnityEngine;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example
+namespace rStar.Modules.Skill.Example1
 {
     public class SkillEventHandler : DomainEventHandler
     {

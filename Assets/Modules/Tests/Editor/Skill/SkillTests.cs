@@ -44,12 +44,12 @@ public class SkillTests : DDDUnitTestFixture
         BindSkill(cast , cd);
         Assert.NotNull(skill.GetId() , "skill's is null");
         Assert.AreEqual(ownerId , skill.OwnerId ,     "OwnerId is not equal");
-        Assert.AreEqual(cast ,    skill.Cast ,        "Cast is not equal");
-        Assert.AreEqual(0 ,       skill.Cd ,          "cd is not equal");
         Assert.AreEqual(cast ,    skill.DefaultCast , "DefaultCast is not equal");
         Assert.AreEqual(cd ,      skill.DefaultCd ,   "DefaultCd is not equal");
-        Assert.AreEqual(false ,   skill.IsCd ,        "isCd is not equal");
-        Assert.AreEqual(false ,   skill.IsCast ,      "isCast is not equal");
+        ShouldCd(0);
+        ShouldCast(cast);
+        ShouldIsCd(false);
+        ShouldIsCast(false);
     }
 
     [Test(Description = "執行技能")]
@@ -77,7 +77,7 @@ public class SkillTests : DDDUnitTestFixture
     {
         BindSkill(0 , cd);
         UseSkill();
-        Assert.AreEqual(expectedIsCd , skill.IsCd , "isCd is not equal");
+        ShouldIsCd(expectedIsCd);
     }
 
     [Test(Description = "CD中使用技能不會有效果")]
@@ -110,7 +110,7 @@ public class SkillTests : DDDUnitTestFixture
         ShouldCast(2);
     }
 
-    [Test]
+    [Test(Description = "Tick後離開詠唱")]
     [TestCase(4 , Description = "超過詠唱時間")]
     [TestCase(3 , Description = "剛好詠唱時間")]
     public void ExitCast_When_Tick_Skill(int time)
@@ -120,6 +120,16 @@ public class SkillTests : DDDUnitTestFixture
         Tick(time);
         ShouldExecute();
         ShouldIsCast(false);
+    }
+
+    [Test(Description = "Tick後離開CD")]
+    [TestCase(4 , Description = "超過CD時間")]
+    [TestCase(3 , Description = "剛好CD時間")]
+    public void ExitCD_When_Tick_Skill(int time)
+    {
+        Given_IsCd_Skill(3);
+        Tick(time);
+        ShouldIsCd(false);
     }
 
 #endregion
@@ -158,6 +168,7 @@ public class SkillTests : DDDUnitTestFixture
         BindSkill(cast);
         UseSkill();
     }
+
 
     private void Execute()
     {
@@ -202,6 +213,11 @@ public class SkillTests : DDDUnitTestFixture
     private void ShouldIsCast(bool expectedValue)
     {
         Assert.AreEqual(expectedValue , skill.IsCast , "IsCast is not equal");
+    }
+
+    private void ShouldIsCd(bool expectedIsCd)
+    {
+        Assert.AreEqual(expectedIsCd , skill.IsCd , "isCd is not equal");
     }
 
     private void Tick(int time)

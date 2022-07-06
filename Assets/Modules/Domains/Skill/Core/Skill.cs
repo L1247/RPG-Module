@@ -91,6 +91,9 @@ namespace rStar.Modules.Skill.Core
             if (IsCast)
                 if (Cast <= 0)
                     ExitCast();
+            if (IsCd)
+                if (Cd <= 0)
+                    ExitCd();
         }
 
         public void UseSkill()
@@ -122,6 +125,11 @@ namespace rStar.Modules.Skill.Core
         {
             IsCast = false;
             Execute();
+        }
+
+        private void ExitCd()
+        {
+            IsCd = false;
         }
 
     #endregion

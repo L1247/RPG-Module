@@ -6,9 +6,9 @@ using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace rStar.Modules.Skill.Example2
 {
-    public class SkillExampleInstaller : MonoInstaller
+    public class SkillExample2Installer : MonoInstaller
     {
     #region Public Methods
 
@@ -16,9 +16,6 @@ namespace rStar.Modules.Skill.Example1
         {
             DDDInstaller.Install(Container);
             SkillInstaller.Install(Container);
-            Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
-            Container.BindInterfacesTo<SkillExamplePresenter>().AsSingle();
-            Container.UnbindInterfacesTo<SkillTicker>();
         }
 
     #endregion

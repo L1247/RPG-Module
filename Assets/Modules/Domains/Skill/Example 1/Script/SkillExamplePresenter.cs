@@ -1,5 +1,6 @@
 #region
 
+using System.Collections.Generic;
 using rStar.Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
 using TMPro;
@@ -14,12 +15,14 @@ namespace rStar.Modules.Skill.Example1
     #region Private Variables
 
         [Inject]
-        private SkillExampleReference reference;
+        private SkillExample1Reference reference;
 
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private Core.Skill skill1;
+        private readonly List<Core.Skill> skills = new List<Core.Skill>();
+        private readonly List<TMP_Text>   infos  = new List<TMP_Text>();
+        private readonly int              time   = 1;
 
     #endregion
 
@@ -27,10 +30,15 @@ namespace rStar.Modules.Skill.Example1
 
         public void Initialize()
         {
-            skill1 = skillSpawner.CreateSkill("OwnerId" , 2 , 5);
-            reference.useSkill1.BindClick(UseSkill);
+            skills.Add(skillSpawner.CreateSkill("OwnerId" , 2 , 5));
+            skills.Add(skillSpawner.CreateSkill("OwnerId" , 0 , 1));
+            infos.Add(reference.skillInfo1);
+            infos.Add(reference.skillInfo2);
+            reference.useSkill1.BindClick(() => UseSkill(0));
+            reference.useSkill2.BindClick(() => UseSkill(1));
             reference.tickAllSkill.BindClick(TickAllSkill);
-            UpdateInfo(skill1 , reference.skillInfo1);
+            UpdateInfo(0);
+            UpdateInfo(1);
         }
 
     #endregion
@@ -39,21 +47,27 @@ namespace rStar.Modules.Skill.Example1
 
         private void TickAllSkill()
         {
-            skill1.Tick(1);
-            UpdateInfo(skill1 , reference.skillInfo1);
+            for (var index = 0 ; index < skills.Count ; index++)
+            {
+                var skill = skills[index];
+                skill.Tick(time);
+                UpdateInfo(index);
+            }
         }
 
-        private void UpdateInfo(Core.Skill skill , TMP_Text skillInfo)
+        private void UpdateInfo(int index)
         {
+            var skill = skills[index];
             var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
                        $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
+            var skillInfo = infos[index];
             skillInfo.text = info;
         }
 
-        private void UseSkill()
+        private void UseSkill(int index)
         {
-            skill1.UseSkill();
-            UpdateInfo(skill1 , reference.skillInfo1);
+            skills[index].UseSkill();
+            UpdateInfo(index);
         }
 
     #endregion

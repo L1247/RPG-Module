@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace rStar.Modules.Skill.Example1
 {
-    public class SkillExampleReference : MonoBehaviour
+    public class SkillExample1Reference : MonoBehaviour
     {
     #region Public Variables
 

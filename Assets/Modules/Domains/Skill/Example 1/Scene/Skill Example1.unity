@@ -229,8 +229,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62305118}
-  - component: {fileID: 62305117}
   - component: {fileID: 62305116}
+  - component: {fileID: 62305119}
   m_Layer: 0
   m_Name: SkillExampleReference
   m_TagString: Untagged
@@ -251,28 +251,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 62305117}
+  - {fileID: 62305119}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
   _bindType: 0
---- !u!114 &62305117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62305115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc56cb6c64814d8187249c3738432dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tickAllSkill: {fileID: 1654994380}
-  useSkill1: {fileID: 1452732557}
-  skillInfo1: {fileID: 183376276}
-  useSkill2: {fileID: 1855964267}
-  skillInfo2: {fileID: 239056610}
 --- !u!4 &62305118
 Transform:
   m_ObjectHideFlags: 0
@@ -288,6 +271,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62305119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62305115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc56cb6c64814d8187249c3738432dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickAllSkill: {fileID: 1654994380}
+  useSkill1: {fileID: 1452732557}
+  useSkill2: {fileID: 1855964267}
+  skillInfo1: {fileID: 183376276}
+  skillInfo2: {fileID: 239056610}
 --- !u!1 &81660202
 GameObject:
   m_ObjectHideFlags: 0

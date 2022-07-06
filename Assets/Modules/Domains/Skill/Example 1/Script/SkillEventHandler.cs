@@ -24,7 +24,7 @@ namespace rStar.Modules.Skill.Example1
 
         private void OnExecuted(Executed executed)
         {
-            Debug.Log($"OnExecuted: {executed.OwnerId}");
+            Debug.Log($"{executed.OwnerId} executed");
         }
 
     #endregion

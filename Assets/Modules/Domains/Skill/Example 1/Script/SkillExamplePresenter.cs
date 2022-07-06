@@ -30,8 +30,8 @@ namespace rStar.Modules.Skill.Example1
 
         public void Initialize()
         {
-            skills.Add(skillSpawner.CreateSkill("OwnerId" , 2 , 5));
-            skills.Add(skillSpawner.CreateSkill("OwnerId" , 0 , 1));
+            skills.Add(skillSpawner.CreateSkill("Skill1" , 2 , 5));
+            skills.Add(skillSpawner.CreateSkill("Skill2" , 0 , 1));
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
             reference.useSkill1.BindClick(() => UseSkill(0));

@@ -112,6 +112,19 @@ public class SkillTests : DDDUnitTestFixture
         Assert.AreEqual(2 , skill.Cast , "cast is not equal");
     }
 
+    [Test]
+    [TestCase(4 , Description = "超過詠唱時間")]
+    [TestCase(3 , Description = "剛好詠唱時間")]
+    public void ExitCast(int time)
+    {
+        BindSkill(3 , 3);
+        CacheExecuted();
+        UseSkill();
+        Tick(time);
+        ShouldExecute();
+        Assert.AreEqual(false , skill.IsCast , "IsCast is not equal");
+    }
+
 #endregion
 
 #region Private Methods

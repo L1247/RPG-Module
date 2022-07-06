@@ -88,6 +88,12 @@ namespace rStar.Modules.Skill.Core
         {
             Cd   -= time;
             Cast -= time;
+            if (IsCast)
+                if (Cast <= 0)
+                {
+                    IsCast = false;
+                    Execute();
+                }
         }
 
         public void UseSkill()

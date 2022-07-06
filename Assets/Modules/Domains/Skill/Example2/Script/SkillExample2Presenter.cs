@@ -77,7 +77,8 @@ namespace rStar.Modules.Skill.Example2
         {
             var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
                        $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
-            reference.info.text = info;
+            reference.coolDownImage.fillAmount = skill.Cd / skill.DefaultCd;
+            reference.info.text                = info;
         }
 
         private void UseSkill()

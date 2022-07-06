@@ -12,8 +12,7 @@ namespace rStar.Modules.Skill.Example2
     {
     #region Public Variables
 
-        public Animator enemyAnimator;
-
+        public Animator   enemyAnimator;
         public Button     execute;
         public Button     tick;
         public Button     use;

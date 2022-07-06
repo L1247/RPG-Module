@@ -2,11 +2,11 @@
   "name": "com.rstar.rpg.modules",
   "displayName": "RPG Modules",
   "description": "相依 rStarUtility的 RPG Module , 可用於開發RPG為基底的遊戲",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "unity": "2021.3",
   "unityRelease": "1f1",
   "dependencies": {
-    "com.rstar.rstarutility": "1.0.1"
+    "com.rstar.rstarutility": "1.0.3"
   },
   "author": {
     "name": "rStar",

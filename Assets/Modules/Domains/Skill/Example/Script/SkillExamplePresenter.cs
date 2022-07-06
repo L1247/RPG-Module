@@ -44,7 +44,8 @@ namespace rStar.Modules.Skill.Example
 
         private void UpdateInfo()
         {
-            var info = $"IsCast:{skill.IsCast}\n" + $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
+            var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
+                       $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
             reference.skillInfo.text = info;
         }
 

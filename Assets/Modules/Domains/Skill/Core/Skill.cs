@@ -90,10 +90,7 @@ namespace rStar.Modules.Skill.Core
             Cast -= time;
             if (IsCast)
                 if (Cast <= 0)
-                {
-                    IsCast = false;
-                    Execute();
-                }
+                    ExitCast();
         }
 
         public void UseSkill()
@@ -119,6 +116,12 @@ namespace rStar.Modules.Skill.Core
         {
             IsCd = true;
             Cd   = DefaultCd;
+        }
+
+        private void ExitCast()
+        {
+            IsCast = false;
+            Execute();
         }
 
     #endregion

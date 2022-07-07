@@ -23,6 +23,7 @@ namespace rStar.Modules.Skill.Example1
         private readonly List<Core.Skill> skills = new List<Core.Skill>();
         private readonly List<TMP_Text>   infos  = new List<TMP_Text>();
         private readonly int              time   = 1;
+        private readonly string           dataId = "dataId";
 
     #endregion
 
@@ -30,8 +31,8 @@ namespace rStar.Modules.Skill.Example1
 
         public void Initialize()
         {
-            skills.Add(skillSpawner.CreateSkill("Skill1" , 2 , 5));
-            skills.Add(skillSpawner.CreateSkill("Skill2" , 0 , 1));
+            skills.Add(skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5));
+            skills.Add(skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1));
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
             reference.useSkill1.BindClick(() => UseSkill(0));

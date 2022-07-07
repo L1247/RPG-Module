@@ -22,8 +22,9 @@ namespace rStar.Modules.Skill.Core
 
         public float Cd { get; private set; }
 
-        public float DefaultCast { get; private set; }
-        public float DefaultCd   { get; private set; }
+        public float  DefaultCast { get; private set; }
+        public float  DefaultCd   { get; private set; }
+        public string DataId      { get; private set; }
 
         public string OwnerId { get; private set; }
 
@@ -60,12 +61,13 @@ namespace rStar.Modules.Skill.Core
             return id;
         }
 
-        public void Init(string ownerId , float cast , float cd)
+        public void Init(string ownerId , string dataId , float cast , float cd)
         {
             id          = Guid.NewGuid().ToString();
             DefaultCd   = cd;
             DefaultCast = cast;
             OwnerId     = ownerId;
+            DataId      = dataId;
             Cd          = 0;
             Cast        = DefaultCast;
             IsCd        = false;

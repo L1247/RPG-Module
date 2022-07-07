@@ -23,6 +23,7 @@ namespace rStar.Modules.Skill.Example2
 
         private readonly int      time = 1;
         private          Animator animator;
+        private readonly string   dataId = "dataId";
 
     #endregion
 
@@ -31,7 +32,7 @@ namespace rStar.Modules.Skill.Example2
         public void Initialize()
         {
             animator = reference.enemyAnimator;
-            skill    = skillSpawner.CreateSkill("Skill" , 2 , 4);
+            skill    = skillSpawner.CreateSkill("Skill" , dataId , 2 , 4);
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);

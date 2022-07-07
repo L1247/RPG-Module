@@ -17,10 +17,10 @@ namespace rStar.Modules.Skill.Core
 
     #region Public Methods
 
-        public Skill CreateSkill(string ownerId , float cast , float cd)
+        public Skill CreateSkill(string ownerId , string dataId , float cast , float cd)
         {
             var skill = factory.Create();
-            skill.Init(ownerId , cast , cd);
+            skill.Init(ownerId , dataId , cast , cd);
             return skill;
         }
 

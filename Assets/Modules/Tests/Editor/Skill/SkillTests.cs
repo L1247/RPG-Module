@@ -17,6 +17,7 @@ public class SkillTests : DDDUnitTestFixture
     private Executed    executed;
     private CastEntered castEntered;
     private string      id;
+    private string      dataId;
 
 #endregion
 
@@ -30,6 +31,7 @@ public class SkillTests : DDDUnitTestFixture
         skill       = null;
         executed    = null;
         castEntered = null;
+        dataId      = null;
     }
 
 #endregion
@@ -44,6 +46,7 @@ public class SkillTests : DDDUnitTestFixture
         BindSkill(cast , cd);
         Assert.NotNull(skill.GetId() , "skill's is null");
         Assert.AreEqual(ownerId , skill.OwnerId ,     "OwnerId is not equal");
+        Assert.AreEqual(dataId ,  skill.DataId ,      "dataId is not equal");
         Assert.AreEqual(cast ,    skill.DefaultCast , "DefaultCast is not equal");
         Assert.AreEqual(cd ,      skill.DefaultCd ,   "DefaultCd is not equal");
         ShouldCd(0);
@@ -142,7 +145,8 @@ public class SkillTests : DDDUnitTestFixture
         Container.Bind<Skill>().AsSingle();
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();
-        skill.Init(ownerId , cast , cd);
+        dataId  = NewGuid();
+        skill.Init(ownerId , dataId , cast , cd);
         id = skill.GetId();
     }
 

@@ -41,6 +41,13 @@
       },
       "hash": "653c4879f18f0a30471f0dae36e584f8754dfee0"
     },
+    "com.smkplus.custom-toolbar": {
+      "version": "https://github.com/smkplus/CustomToolbar.git#master",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5408dc65a416c6bb897372f0456f1cf43efb0f98"
+    },
     "com.svermeulen.extenject": {
       "version": "9.2.0-stcf3",
       "depth": 1,

@@ -76,6 +76,7 @@ namespace rStar.Modules.Skill.Core
 
         public void OnDespawned()
         {
+            Dispose();
             pool = null;
             skillRegistry.RemoveSkill(this);
         }

@@ -212,6 +212,7 @@ public class SkillTests : DDDUnitTestFixture
         Assert.NotNull(executed);
         Assert.AreEqual(ownerId , executed.OwnerId , "OwnerId is not equal");
         Assert.AreEqual(id ,      executed.ID ,      "id is not equal");
+        Assert.AreEqual(dataId ,  executed.DataId ,  "DataId is not equal");
     }
 
     private void ShouldIsCast(bool expectedValue)

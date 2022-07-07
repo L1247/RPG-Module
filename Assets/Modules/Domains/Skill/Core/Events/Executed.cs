@@ -10,6 +10,8 @@ namespace rStar.Modules.Skill.Core.Event
     {
     #region Public Variables
 
+        public string DataId { get; }
+
         public string ID      { get; }
         public string OwnerId { get; }
 
@@ -17,10 +19,11 @@ namespace rStar.Modules.Skill.Core.Event
 
     #region Constructor
 
-        public Executed(string id , string ownerId)
+        public Executed(string id , string ownerId , string dataId)
         {
             ID      = id;
             OwnerId = ownerId;
+            DataId  = dataId;
         }
 
     #endregion

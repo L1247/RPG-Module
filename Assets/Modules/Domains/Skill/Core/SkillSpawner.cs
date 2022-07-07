@@ -1,5 +1,6 @@
 #region
 
+using rStarUtility.Util;
 using Zenject;
 
 #endregion
@@ -19,6 +20,10 @@ namespace rStar.Modules.Skill.Core
 
         public Skill CreateSkill(string ownerId , string dataId , float cast , float cd)
         {
+            Contract.RequireString(ownerId , $"ownerId:{ownerId}");
+            Contract.RequireString(dataId ,  $"dataId:{dataId}");
+            Contract.Require(cast >= 0 , "cast need greater than or equal zero");
+            Contract.Require(cd >= 0 ,   "cast need greater than or equal zero");
             var skill = factory.Create();
             skill.Init(ownerId , dataId , cast , cd);
             return skill;

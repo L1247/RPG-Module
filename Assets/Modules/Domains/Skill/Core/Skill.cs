@@ -53,7 +53,7 @@ namespace rStar.Modules.Skill.Core
 
         public void Execute()
         {
-            domainEventBus.Post(new Executed(GetId() , OwnerId));
+            domainEventBus.Post(new Executed(GetId() , OwnerId , DataId));
         }
 
         public string GetId()

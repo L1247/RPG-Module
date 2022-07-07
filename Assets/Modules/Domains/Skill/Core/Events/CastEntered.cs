@@ -10,15 +10,17 @@ namespace rStar.Modules.Skill.Core.Event
     {
     #region Public Variables
 
-        public string ID { get; }
+        public string ID      { get; }
+        public string OwnerId { get; }
 
     #endregion
 
     #region Constructor
 
-        public CastEntered(string id)
+        public CastEntered(string id , string ownerId)
         {
-            ID = id;
+            ID      = id;
+            OwnerId = ownerId;
         }
 
     #endregion

@@ -203,7 +203,8 @@ public class SkillTests : DDDUnitTestFixture
     private void ShouldEnterCast()
     {
         Assert.NotNull(castEntered , "castEntered is null");
-        Assert.AreEqual(id , castEntered.ID , "id is not equal");
+        Assert.AreEqual(id ,      castEntered.ID ,      "id is not equal");
+        Assert.AreEqual(ownerId , castEntered.OwnerId , "OwnerId is not equal");
         ShouldIsCast(true);
     }
 

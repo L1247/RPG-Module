@@ -114,7 +114,7 @@ namespace rStar.Modules.Skill.Core
         {
             Cast   = DefaultCast;
             IsCast = true;
-            domainEventBus.Post(new CastEntered(GetId()));
+            domainEventBus.Post(new CastEntered(GetId() , OwnerId));
         }
 
         private void EnterCd()

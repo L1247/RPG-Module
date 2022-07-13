@@ -32,7 +32,7 @@ public class StatModifyAmountUseCaseTests : DDDUnitTestFixture
         var stat   = Substitute.For<IStat>();
         var amount = 10;
 
-        Scenario("Modify stat amount with valid stat id")
+        Scenario("Modify stat amount with valid stat Id")
             .Given("give a Stat in repository , and input for usecase" , () =>
             {
                 repository.FindById(statId).Returns(stat);
@@ -47,7 +47,7 @@ public class StatModifyAmountUseCaseTests : DDDUnitTestFixture
             })
             .And("the result is success" , () =>
             {
-                Assert.AreEqual(statId ,           output.GetId() ,       "id is not equal");
+                Assert.AreEqual(statId ,           output.GetId() ,       "Id is not equal");
                 Assert.AreEqual(ExitCode.SUCCESS , output.GetExitCode() , "ExitCode is not equal");
             });
     }
@@ -65,7 +65,7 @@ public class StatModifyAmountUseCaseTests : DDDUnitTestFixture
         var statId = NewGuid();
         var amount = 10;
 
-        Scenario("Modify stat amount with valid stat id")
+        Scenario("Modify stat amount with valid stat Id")
             .Given("give a Stat in repository , and input for usecase" , () =>
             {
                 repository.FindById(statId).ReturnsNull();
@@ -78,7 +78,7 @@ public class StatModifyAmountUseCaseTests : DDDUnitTestFixture
                  () => domainEventBus.DidNotReceiveWithAnyArgs().PostAll(null))
             .And("the result is success" , () =>
             {
-                Assert.AreEqual(statId ,           output.GetId() ,       "id is not equal");
+                Assert.AreEqual(statId ,           output.GetId() ,       "Id is not equal");
                 Assert.AreEqual(ExitCode.FAILURE , output.GetExitCode() , "ExitCode is not equal");
             });
     }

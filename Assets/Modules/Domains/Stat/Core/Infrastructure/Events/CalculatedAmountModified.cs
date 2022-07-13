@@ -10,19 +10,22 @@ namespace rStar.Modules.Stat.Infrastructure.Events
     {
     #region Public Variables
 
-        public readonly string id;
+        public int    CalculatedAmount { get; }
+        public string DataId           { get; }
 
-        public readonly string ownerId;
-        public          int    CalculatedAmount { get; }
+        public string Id { get; }
+
+        public string OwnerId { get; }
 
     #endregion
 
     #region Constructor
 
-        public CalculatedAmountModified(string id , string ownerId , int calculatedAmount)
+        public CalculatedAmountModified(string id , string dataId , string ownerId , int calculatedAmount)
         {
-            this.id          = id;
-            this.ownerId     = ownerId;
+            Id               = id;
+            OwnerId          = ownerId;
+            DataId           = dataId;
             CalculatedAmount = calculatedAmount;
         }
 

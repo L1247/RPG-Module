@@ -28,7 +28,7 @@ namespace rStar.Modules.Stat.UseCase
         public override void Execute(RemoveModifierInput input , CqrsCommandPresenter output)
         {
             var id = input.id;
-            Contract.RequireString(id , "id");
+            Contract.RequireString(id , "Id");
             var statReadModel = repository.FindById(id);
             if (statReadModel != null)
             {
@@ -56,7 +56,7 @@ namespace rStar.Modules.Stat.UseCase
         public List<string> modifierIds;
 
         /// <summary>
-        ///     stat's id
+        ///     stat's Id
         /// </summary>
         public string id;
 

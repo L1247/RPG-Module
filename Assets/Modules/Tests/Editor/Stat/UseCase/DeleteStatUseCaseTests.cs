@@ -30,8 +30,8 @@ public class DeleteStatUseCaseTests : DDDUnitTestFixture
         stat.GetId().Returns(statId);
         repository.Save(stat);
 
-        Scenario("Modify stat amount with valid stat id")
-            .Given("give input's stat id" , () => { input.id = statId; })
+        Scenario("Modify stat amount with valid stat Id")
+            .Given("give input's stat Id" , () => { input.id = statId; })
             .When("call usecase" , () => { deleteStatUseCase.Execute(input , output); })
             .Then("repository deleteById will be call" , () =>
             {
@@ -40,7 +40,7 @@ public class DeleteStatUseCaseTests : DDDUnitTestFixture
             })
             .And("the result is success" , () =>
             {
-                Assert.AreEqual(statId ,           output.GetId() ,       "id is not equal");
+                Assert.AreEqual(statId ,           output.GetId() ,       "Id is not equal");
                 Assert.AreEqual(ExitCode.SUCCESS , output.GetExitCode() , "ExitCode is not equal");
             });
     }

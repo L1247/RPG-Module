@@ -40,7 +40,7 @@ public class StatRepositoryTests : DDDUnitTestFixture
         var                  statRepository = new StatRepository();
         var                  ownerId        = NewGuid();
         List<IStatReadModel> foundStats     = null;
-        Scenario("Find Stats that have same ownerId")
+        Scenario("Find Stats that have same OwnerId")
             .Given("give stats into repository" , () =>
             {
                 var stat1 = Substitute.For<IStat>();

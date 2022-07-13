@@ -32,7 +32,7 @@ public class AddModifierUseCaseTests : DDDUnitTestFixture
         var modifierTypes = new List<ModifierType>();
         var amounts       = new List<int>();
 
-        Scenario("Add modifiers to stat with valid stat id")
+        Scenario("Add modifiers to stat with valid stat Id")
             .Given("give a Stat in repository , and input for usecase" , () =>
             {
                 repository.FindById(statId).Returns(stat);
@@ -50,7 +50,7 @@ public class AddModifierUseCaseTests : DDDUnitTestFixture
                   })
             .And("the result is success" , () =>
             {
-                Assert.AreEqual(statId ,           output.GetId() ,       "id is not equal");
+                Assert.AreEqual(statId ,           output.GetId() ,       "Id is not equal");
                 Assert.AreEqual(ExitCode.SUCCESS , output.GetExitCode() , "ExitCode is not equal");
             });
     }

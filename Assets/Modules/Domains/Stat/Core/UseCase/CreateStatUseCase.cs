@@ -27,7 +27,7 @@ namespace rStar.Modules.Stat.UseCase
             var id = GUID.NewGUID();
 
             var ownerId = input.ownerId;
-            Contract.RequireString(ownerId , "ownerId");
+            Contract.RequireString(ownerId , "OwnerId");
             var statDataId = input.statDataId;
             Contract.RequireString(statDataId , "statDataId");
             var amount = input.amount;

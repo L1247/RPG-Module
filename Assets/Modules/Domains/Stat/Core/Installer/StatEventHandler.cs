@@ -16,7 +16,7 @@ namespace rStar.Modules.Stat.Installer
         {
             Register<StatCreated>(created => WhenStatCreated(created.id , created.dataId , created.ownerId));
             Register<BaseAmountModified>(modified => WhenBaseAmountModified(modified.Id , modified.OwnerId , modified.DataId));
-            Register<CalculatedAmountModified>(modified => WhenCalculatedAmountModified(modified.id , modified.ownerId));
+            Register<CalculatedAmountModified>(modified => WhenCalculatedAmountModified(modified.Id , modified.OwnerId));
             Register<ModifierAdded>(added => WhenModifierAdded(added.statId , added.modifierId));
             Register<ModifierRemoved>(removed => WhenModifierRemoved(removed.statId , removed.modifierId));
         }

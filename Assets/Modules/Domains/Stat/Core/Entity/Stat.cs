@@ -51,8 +51,8 @@ namespace rStar.Modules.Stat.Entity
             Contract.Require(0 != wantToAddCount ,                   "modifierId's count is zero");
             Contract.Require(0 != modifierTypes.Count ,              "modifierType's count is zero");
             Contract.Require(0 != amounts.Count ,                    "amount's count is zero");
-            Contract.Require(wantToAddCount == modifierTypes.Count , "id with type count is not equal.");
-            Contract.Require(wantToAddCount == amounts.Count ,       "id with amount count is not equal.");
+            Contract.Require(wantToAddCount == modifierTypes.Count , "Id with type count is not equal.");
+            Contract.Require(wantToAddCount == amounts.Count ,       "Id with amount count is not equal.");
 
             var modifiersCount = Modifiers.Count;
             for (var i = 0 ; i < wantToAddCount ; i++)
@@ -152,7 +152,7 @@ namespace rStar.Modules.Stat.Entity
         private void SetCalculatedAmount(int amount)
         {
             CalculatedAmount = amount;
-            AddDomainEvent(new CalculatedAmountModified(GetId() , OwnerId , CalculatedAmount));
+            AddDomainEvent(new CalculatedAmountModified(GetId() , DataId , OwnerId , CalculatedAmount));
         }
 
     #endregion

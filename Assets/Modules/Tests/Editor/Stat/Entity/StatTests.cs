@@ -33,7 +33,7 @@ public class StatTests : DDDUnitTestFixture
             .When("Create Stat" , () => { stat = new Stat(id , ownerId , dataId , amount); })
             .Then("stat will have statCreated event" , () =>
             {
-                Assert.AreEqual(id ,      stat.GetId() ,          "id is not equal");
+                Assert.AreEqual(id ,      stat.GetId() ,          "Id is not equal");
                 Assert.AreEqual(ownerId , stat.OwnerId ,          "OwnerId is not equal");
                 Assert.AreEqual(dataId ,  stat.DataId ,           "DataId is not equal");
                 Assert.AreEqual(amount ,  stat.BaseAmount ,       "baseAmount is not equal");
@@ -41,9 +41,9 @@ public class StatTests : DDDUnitTestFixture
 
                 var statCreated = stat.FindDomainEvent<StatCreated>();
                 Assert.NotNull(statCreated , "statCreated is null");
-                Assert.AreEqual(id ,      statCreated.id ,        "id is not equal");
+                Assert.AreEqual(id ,      statCreated.id ,        "Id is not equal");
                 Assert.AreEqual(dataId ,  statCreated.dataId ,    "dataId is not equal");
-                Assert.AreEqual(ownerId , statCreated.ownerId ,   "ownerId is not equal");
+                Assert.AreEqual(ownerId , statCreated.ownerId ,   "OwnerId is not equal");
                 Assert.AreEqual(amount ,  stat.CalculatedAmount , "CalculatedAmount is not equal");
                 Assert.AreEqual(amount ,  stat.BaseAmount ,       "BaseAmount is not equal");
             });
@@ -63,8 +63,8 @@ public class StatTests : DDDUnitTestFixture
                 Assert.AreEqual(1 , stat.FindDomainEvents<BaseAmountModified>().Count() , "event count is not equal");
                 var amountModified = stat.FindDomainEvent<BaseAmountModified>();
                 Assert.NotNull(amountModified , "amountModified is null");
-                Assert.AreEqual(id ,      amountModified.Id ,      "id is not equal");
-                Assert.AreEqual(ownerId , amountModified.OwnerId , "ownerId is not equal");
+                Assert.AreEqual(id ,      amountModified.Id ,      "Id is not equal");
+                Assert.AreEqual(ownerId , amountModified.OwnerId , "OwnerId is not equal");
                 Assert.AreEqual(dataId ,  amountModified.DataId ,  "message is not equal");
             });
     }
@@ -85,8 +85,8 @@ public class StatTests : DDDUnitTestFixture
             {
                 var amountModified = stat.FindDomainEvent<BaseAmountModified>();
                 Assert.NotNull(amountModified , "amountModified is null");
-                Assert.AreEqual(id ,      amountModified.Id ,      "id is not equal");
-                Assert.AreEqual(ownerId , amountModified.OwnerId , "ownerId is not equal");
+                Assert.AreEqual(id ,      amountModified.Id ,      "Id is not equal");
+                Assert.AreEqual(ownerId , amountModified.OwnerId , "OwnerId is not equal");
                 var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
                 Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
             });
@@ -238,8 +238,8 @@ public class StatTests : DDDUnitTestFixture
             {
                 var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
                 Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
-                Assert.AreEqual(id ,      calculatedAmountModified.id ,      "id is not equal");
-                Assert.AreEqual(ownerId , calculatedAmountModified.ownerId , "ownerId is not equal");
+                Assert.AreEqual(id ,      calculatedAmountModified.Id ,      "Id is not equal");
+                Assert.AreEqual(ownerId , calculatedAmountModified.OwnerId , "OwnerId is not equal");
                 var modifierRemoved = stat.FindDomainEvents<ModifierRemoved>();
                 Assert.AreEqual(2 , modifierRemoved.Count() , "event count is not equal");
             });
@@ -272,8 +272,8 @@ public class StatTests : DDDUnitTestFixture
             {
                 var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
                 Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
-                Assert.AreEqual(id ,      calculatedAmountModified.id ,      "id is not equal");
-                Assert.AreEqual(ownerId , calculatedAmountModified.ownerId , "ownerId is not equal");
+                Assert.AreEqual(id ,      calculatedAmountModified.Id ,      "Id is not equal");
+                Assert.AreEqual(ownerId , calculatedAmountModified.OwnerId , "OwnerId is not equal");
             });
     }
 
@@ -298,8 +298,8 @@ public class StatTests : DDDUnitTestFixture
     {
         var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
         Assert.NotNull(calculatedAmountModified , "calculatedAmountModified is null");
-        Assert.AreEqual(id ,      calculatedAmountModified.id ,      "id is not equal");
-        Assert.AreEqual(ownerId , calculatedAmountModified.ownerId , "ownerId is not equal");
+        Assert.AreEqual(id ,      calculatedAmountModified.Id ,      "Id is not equal");
+        Assert.AreEqual(ownerId , calculatedAmountModified.OwnerId , "OwnerId is not equal");
         var modifierAdded = stat.FindDomainEvents<ModifierAdded>();
         Assert.AreEqual(expectedModifierCount , modifierAdded.Count() , "event count is not equal");
     }

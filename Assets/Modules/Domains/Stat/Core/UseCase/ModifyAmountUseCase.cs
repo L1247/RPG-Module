@@ -27,7 +27,7 @@ namespace rStar.Modules.Stat.UseCase
         public override void Execute(ModifyAmountInput input , CqrsCommandPresenter output)
         {
             var id = input.id;
-            Contract.RequireString(id , "id");
+            Contract.RequireString(id , "Id");
             var statReadModel = repository.FindById(id);
 
             if (statReadModel != null)

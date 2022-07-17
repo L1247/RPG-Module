@@ -106,7 +106,7 @@ namespace rStar.Modules.Stat.Entity
         {
             var modifier = new Modifier(modifierId , modifierType , amount);
             Modifiers.Add(modifier);
-            AddDomainEvent(new ModifierAdded(GetId() , modifierId));
+            AddDomainEvent(new ModifierAdded(GetId() , modifierId , DataId));
         }
 
         private void Calculate()
@@ -146,7 +146,7 @@ namespace rStar.Modules.Stat.Entity
         {
             var modifier      = GetModifier(modifierId);
             var removeSucceed = Modifiers.Remove(modifier);
-            if (removeSucceed) AddDomainEvent(new ModifierRemoved(GetId() , modifierId));
+            if (removeSucceed) AddDomainEvent(new ModifierRemoved(GetId() , modifierId , DataId));
         }
 
         private void SetCalculatedAmount(int amount)

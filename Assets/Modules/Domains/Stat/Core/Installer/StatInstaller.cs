@@ -23,7 +23,6 @@ namespace rStar.Modules.Stat.Installer
             Container.Bind<RemoveModifiersUseCase>().AsSingle();
             Container.Bind<DeleteStatUseCase>().AsSingle();
 
-            Container.Bind<StatEventHandler>().AsSingle().NonLazy();
             Container.Bind<IStatController>().To<StatController>().AsSingle();
             Container.Bind<IStatRepository>().To<StatRepository>().AsSingle();
         }

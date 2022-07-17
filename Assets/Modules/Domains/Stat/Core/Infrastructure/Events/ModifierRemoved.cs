@@ -10,17 +10,19 @@ namespace rStar.Modules.Stat.Infrastructure.Events
     {
     #region Public Variables
 
-        public readonly string modifierId;
-        public readonly string statId;
+        public string DataId     { get; }
+        public string ModifierId { get; }
+        public string StatId     { get; }
 
     #endregion
 
     #region Constructor
 
-        public ModifierRemoved(string statId , string modifierId)
+        public ModifierRemoved(string statId , string modifierId , string dataId)
         {
-            this.statId     = statId;
-            this.modifierId = modifierId;
+            StatId     = statId;
+            ModifierId = modifierId;
+            DataId     = dataId;
         }
 
     #endregion

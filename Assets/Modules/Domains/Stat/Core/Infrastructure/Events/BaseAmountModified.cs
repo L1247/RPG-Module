@@ -14,6 +14,9 @@ namespace rStar.Modules.Stat.Infrastructure.Events
 
         public string DataId { get; }
 
+        /// <summary>
+        ///     stat's id
+        /// </summary>
         public string Id { get; }
 
         public string OwnerId { get; }

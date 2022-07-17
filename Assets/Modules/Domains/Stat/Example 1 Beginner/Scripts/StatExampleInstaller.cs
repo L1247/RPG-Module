@@ -1,7 +1,6 @@
 #region
 
 using rStar.Modules.Stat.Installer;
-using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using Zenject;
 
@@ -15,12 +14,11 @@ namespace rStar.Modules.Stat.Example.Scripts
 
         public override void InstallBindings()
         {
-            var hasBindingDomainEventBus = Container.HasBinding<IDomainEventBus>();
-            if (hasBindingDomainEventBus == false) DDDInstaller.Install(Container);
+            DDDInstaller.Install(Container);
             Container.BindInterfacesAndSelfTo<StatSampleFlow>().AsSingle();
             Container.BindInterfacesAndSelfTo<StatExamplePresenter>().AsSingle();
             StatInstaller.Install(Container);
-            Container.Rebind<StatEventHandler>().To<StatEventHandlerExample>().AsSingle().NonLazy();
+            Container.Bind<StatEventHandlerExample>().AsSingle().NonLazy();
         }
 
     #endregion

@@ -37,12 +37,12 @@ namespace rStar.Modules.Stat.Example.Scripts
             statReference.removeModifierButton.BindClick(() => statSampleFlow.RemoveModifier());
         }
 
-        public void UpdateStatView(string statId)
+        public void UpdateStatView(string statId , int amount)
         {
-            var stat = statController.GetStat(statId);
-
-            if (statId.Equals(cachedStatId1)) statReference.statAmountTextActor1.text = $"Current BaseAmount: {stat.BaseAmount}";
-            if (statId.Equals(cachedStatId2)) statReference.statAmountTextActor2.text = $"Current BaseAmount: {stat.BaseAmount}";
+            TMP_Text statReferenceStatAmount                          = null;
+            if (statId.Equals(cachedStatId1)) statReferenceStatAmount = statReference.statAmountTextActor1;
+            if (statId.Equals(cachedStatId2)) statReferenceStatAmount = statReference.statAmountTextActor2;
+            statReferenceStatAmount.text = $"Current BaseAmount: {amount}";
         }
 
         public void UpdateStatView(string statId , string ownerId)

@@ -8,16 +8,14 @@ namespace rStar.Modules.Stat.Infrastructure
     {
     #region Public Methods
 
-        bool AddAmount(string   statId ,  int          amount);
-        void AddModifier(string statId ,  ModifierType modifierType , int amount);
-        void CreateStat(string  actorId , string       dataId ,       int amount);
-        void DeleteStat(string  ownerId);
-
-        IModifier      GetModifier(string statId , string modifierId);
-        IStatReadModel GetStat(string     statId);
-        IStatReadModel GetStat(string     ownerId , string dataId);
-
-        void RemoveModifier(string statId , string modifierId);
+        bool           AddAmount(string      statId ,  int          amount);
+        void           AddModifier(string    statId ,  ModifierType modifierType , int amount);
+        void           CreateStat(string     ownerId , string       dataId ,       int amount);
+        void           DeleteStat(string     ownerId);
+        IModifier      GetModifier(string    statId , string modifierId);
+        IStatReadModel GetStat(string        statId);
+        IStatReadModel GetStat(string        ownerId , string dataId);
+        void           RemoveModifier(string statId ,  string modifierId);
 
         /// <summary>
         ///     set stat base amount

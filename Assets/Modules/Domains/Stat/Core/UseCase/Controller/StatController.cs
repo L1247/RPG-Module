@@ -76,17 +76,17 @@ namespace rStar.Modules.Stat.Core.UseCase.Controller
             addModifiersUseCase.Execute(addModifiersInput , addModifierOutput);
         }
 
-        public void CreateStat(string actorId , string dataId , int amount)
+        public void CreateStat(string ownerId , string dataId , int amount)
         {
             createStatInput.statDataId = dataId;
             createStatInput.amount     = amount;
-            createStatInput.ownerId    = actorId;
+            createStatInput.ownerId    = ownerId;
             createStatUseCase.Execute(createStatInput , createStatOutput);
         }
 
         public void DeleteStat(string ownerId)
         {
-            var statReadModels = (IEnumerable<IStatReadModel>)repository.FindStatsByOwnerId(ownerId);
+            var statReadModels = repository.FindStatsByOwnerId(ownerId);
             foreach (var stat in statReadModels)
             {
                 deleteStatInput.id = stat.GetId();

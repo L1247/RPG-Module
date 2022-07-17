@@ -9,7 +9,7 @@ using rStarUtility.DDD.Implement.Abstract;
 
 namespace rStar.Modules.Stat.UseCase.Repository
 {
-    public class StatRepository : AbstractRepository<IStatReadModel> , IStatRepository
+    public class StatRepository : GenericRepository<IStatReadModel> , IStatRepository
     {
     #region Public Methods
 
@@ -22,12 +22,12 @@ namespace rStar.Modules.Stat.UseCase.Repository
 
         public IStatReadModel FindStat(string ownerId , string dataId)
         {
-            return GetAll().Find(stat => stat.OwnerId.Equals(ownerId) && stat.DataId.Equals(dataId));
+            return GetAll().FirstOrDefault(stat => stat.OwnerId.Equals(ownerId) && stat.DataId.Equals(dataId));
         }
 
-        public List<IStatReadModel> FindStatsByOwnerId(string ownerId)
+        public IEnumerable<IStatReadModel> FindStatsByOwnerId(string ownerId)
         {
-            return GetAll().FindAll(stat => stat.OwnerId.Equals(ownerId)).ToList();
+            return GetAll().Where(stat => stat.OwnerId.Equals(ownerId));
         }
 
     #endregion

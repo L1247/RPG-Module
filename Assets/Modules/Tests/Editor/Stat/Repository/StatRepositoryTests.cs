@@ -1,6 +1,7 @@
 #region
 
 using System.Collections.Generic;
+using System.Linq;
 using NSubstitute;
 using NUnit.Framework;
 using rStar.Modules.Stat.Entity;
@@ -47,7 +48,7 @@ public class StatRepositoryTests : DDDUnitTestFixture
                 mockStat.GetId().Returns(statId);
                 mockStat.OwnerId.Returns(ownerId);
                 mockStat.DataId.Returns(dataId);
-                statRepository.Save(mockStat);
+                statRepository.Save(statId , mockStat);
             })
             .When("Call FindStat_Return_Null" , () => { foundStat = statRepository.FindStat(ownerId , dataId); })
             .Then("stat should exist and equal." , () =>
@@ -78,13 +79,13 @@ public class StatRepositoryTests : DDDUnitTestFixture
                 var stat1 = Substitute.For<IStat>();
                 stat1.GetId().Returns(NewGuid());
                 stat1.OwnerId.Returns(ownerId);
-                statRepository.Save(stat1);
+                statRepository.Save(stat1.GetId() , stat1);
                 var stat2 = Substitute.For<IStat>();
                 stat2.GetId().Returns(NewGuid());
                 stat2.OwnerId.Returns(ownerId);
-                statRepository.Save(stat2);
+                statRepository.Save(stat2.GetId() , stat2);
             })
-            .When("Call FindStatsByOwnerId" , () => { foundStats = statRepository.FindStatsByOwnerId(ownerId); })
+            .When("Call FindStatsByOwnerId" , () => { foundStats = statRepository.FindStatsByOwnerId(ownerId).ToList(); })
             .Then("stats exist" , () =>
             {
                 Assert.NotNull(foundStats , "foundStat is null");
@@ -107,7 +108,7 @@ public class StatRepositoryTests : DDDUnitTestFixture
                 var stat = Substitute.For<IStat>();
                 stat.GetId().Returns(statId);
                 stat.Modifiers.Returns(modifiers);
-                statRepository.Save(stat);
+                statRepository.Save(statId , stat);
             })
             .When("Call FindModifier" , () => { foundModifier = statRepository.FindModifer(statId , modifierId); })
             .Then("modifer exist" , () => { Assert.NotNull(foundModifier , "foundModifer is null"); });

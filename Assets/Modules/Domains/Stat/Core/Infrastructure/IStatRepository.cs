@@ -20,7 +20,7 @@ namespace rStar.Modules.Stat.Infrastructure
 
         IStatReadModel FindStat(string ownerId , string dataId);
 
-        public List<IStatReadModel> FindStatsByOwnerId(string ownerId);
+        public IEnumerable<IStatReadModel> FindStatsByOwnerId(string ownerId);
 
     #endregion
     }

@@ -34,7 +34,7 @@ namespace rStar.Modules.Stat.UseCase
             Contract.Require(amount >= 0 , "amount must greater than or equal 0.");
 
             var stat = new Entity.Stat(id , ownerId , statDataId , amount);
-            repository.Save(stat);
+            repository.Save(id , stat);
 
             domainEventBus.PostAll(stat);
 

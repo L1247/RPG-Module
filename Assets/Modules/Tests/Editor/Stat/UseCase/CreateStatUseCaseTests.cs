@@ -1,10 +1,11 @@
 #region
 
+using System.Linq;
 using NSubstitute;
 using NUnit.Framework;
-using rStar.Modules.Stat.Entity;
 using rStar.Modules.Stat.Infrastructure;
 using rStar.Modules.Stat.UseCase;
+using rStar.Modules.Stat.UseCase.Repository;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;
@@ -18,21 +19,18 @@ public class CreateStatUseCaseTests : DDDUnitTestFixture
     [Test]
     public void Should_Succeed_When_Create_Stat()
     {
-        BindFromSubstitute<IStatRepository>();
+        Container.Bind<IStatRepository>().To<StatRepository>().AsSingle();
         BindAsSingle<CreateStatUseCase>();
         var createStatUseCase = Resolve<CreateStatUseCase>();
         var repository        = Resolve<IStatRepository>();
+        var input             = new CreateStatInput();
+        var output            = CqrsCommandPresenter.NewInstance();
 
-        Stat stat = null;
-        repository.Save(Arg.Do<Stat>(s => stat = s));
-
-        var input  = new CreateStatInput();
-        var output = CqrsCommandPresenter.NewInstance();
-
-        string statId     = null;
-        var    amount     = 100;
-        var    statDataId = NewGuid();
-        var    ownerId    = NewGuid();
+        IStatReadModel stat       = null;
+        string         statId     = null;
+        var            amount     = 100;
+        var            statDataId = NewGuid();
+        var            ownerId    = NewGuid();
         Scenario("Create a stat with valid Stat Id")
             .Given("give a Stat data Id" , () =>
             {
@@ -43,7 +41,8 @@ public class CreateStatUseCaseTests : DDDUnitTestFixture
             .When("create a Stat" , () => { createStatUseCase.Execute(input , output); })
             .Then("the repository should save Stat , and Id equals" , () =>
             {
-                repository.ReceivedWithAnyArgs(1).Save(null);
+                Assert.AreEqual(1 , repository.Count , "repository's count is not equal");
+                stat = repository.GetAll().ToList()[0];
                 Assert.NotNull(stat ,         "stat is null");
                 Assert.NotNull(stat.GetId() , "Id is null");
                 Assert.NotNull(stat.OwnerId , "stat's OwnerId is null");

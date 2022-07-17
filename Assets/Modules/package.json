@@ -6,7 +6,7 @@
   "unity": "2021.3",
   "unityRelease": "1f1",
   "dependencies": {
-    "com.rstar.rstarutility": "1.0.3"
+    "com.rstar.rstarutility": "1.0.4"
   },
   "author": {
     "name": "rStar",

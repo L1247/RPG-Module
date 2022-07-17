@@ -28,7 +28,7 @@ public class DeleteStatUseCaseTests : DDDUnitTestFixture
         var statId            = NewGuid();
         var stat              = Substitute.For<IStat>();
         stat.GetId().Returns(statId);
-        repository.Save(stat);
+        repository.Save(statId , stat);
 
         Scenario("Modify stat amount with valid stat Id")
             .Given("give input's stat Id" , () => { input.id = statId; })

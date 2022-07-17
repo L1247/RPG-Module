@@ -9,5 +9,8 @@ https://github.com/L1247/RPG-Module.git?path=Assets/Modules
 ### Dependence
 rStarUtility : https://github.com/L1247/rStarUtility
 
-### 導入後
+### After import
 ![](https://github.com/L1247/RPG-Module/blob/main/ScreenShots/Stat.png?raw=true)
+
+### Issue Fix
+If update version fail , remove and reimport RPGModule from the PackageManager by git url.

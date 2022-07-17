@@ -12,34 +12,66 @@ using rStarUtility.DDD.DDDTestFrameWork;
 
 public class StatRepositoryTests : DDDUnitTestFixture
 {
+#region Private Variables
+
+    private StatRepository statRepository;
+    private string         ownerId;
+    private string         dataId;
+    private string         statId;
+
+#endregion
+
+#region Setup/Teardown Methods
+
+    [SetUp]
+    public void SetUp()
+    {
+        statRepository = new StatRepository();
+        ownerId        = NewGuid();
+        dataId         = NewGuid();
+        statId         = NewGuid();
+    }
+
+#endregion
+
 #region Test Methods
 
     [Test]
-    public void FindStat_With_OwnerId_DataId()
+    public void FindStat()
     {
-        var            statRepository = new StatRepository();
-        var            ownerId        = NewGuid();
-        var            dataId         = NewGuid();
-        IStatReadModel foundStat      = null;
+        IStatReadModel foundStat = null;
+        var            mockStat  = Substitute.For<IStat>();
         Scenario("Find a Stat")
             .Given("give stat into repository" , () =>
             {
-                var stat = Substitute.For<IStat>();
-                stat.GetId().Returns(NewGuid());
-                stat.OwnerId.Returns(ownerId);
-                stat.DataId.Returns(dataId);
-                statRepository.Save(stat);
+                mockStat.GetId().Returns(statId);
+                mockStat.OwnerId.Returns(ownerId);
+                mockStat.DataId.Returns(dataId);
+                statRepository.Save(mockStat);
             })
-            .When("Call FindStat" , () => { foundStat = statRepository.FindStat(ownerId , dataId); })
-            .Then("stat exist" , () => { Assert.NotNull(foundStat , "foundStat is null"); });
+            .When("Call FindStat_Return_Null" , () => { foundStat = statRepository.FindStat(ownerId , dataId); })
+            .Then("stat should exist and equal." , () =>
+            {
+                Assert.NotNull(foundStat , "foundStat is null");
+                Assert.AreEqual(true ,      statRepository.ContainsId(statId) , "ContainsId is not equal");
+                Assert.AreEqual(foundStat , mockStat ,                          "stat is not equal");
+            });
     }
+
+    [Test]
+    public void FindStat_Return_Null()
+    {
+        IStatReadModel foundStat = null;
+        Scenario("Find a Stat")
+            .When("Call FindStat_Return_Null" , () => { foundStat = statRepository.FindStat(ownerId , dataId); })
+            .Then("stat should exist and equal." , () => { Assert.IsNull(foundStat , "foundStat is null"); });
+    }
+
 
     [Test]
     public void FindStatsByOwnerId()
     {
-        var                  statRepository = new StatRepository();
-        var                  ownerId        = NewGuid();
-        List<IStatReadModel> foundStats     = null;
+        List<IStatReadModel> foundStats = null;
         Scenario("Find Stats that have same OwnerId")
             .Given("give stats into repository" , () =>
             {
@@ -63,10 +95,8 @@ public class StatRepositoryTests : DDDUnitTestFixture
     [Test]
     public void FindModifier()
     {
-        var       statRepository = new StatRepository();
-        var       statId         = NewGuid();
-        var       modifierId     = NewGuid();
-        IModifier foundModifier  = null;
+        var       modifierId    = NewGuid();
+        IModifier foundModifier = null;
         Scenario("Find the Modifer")
             .Given("give stat with modifier into repository" , () =>
             {

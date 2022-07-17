@@ -14,10 +14,7 @@ namespace rStar.Modules.Stat.Example.Scripts
     #region Private Variables
 
         [Inject]
-        private StatExamplePresenter statExamplePresenter;
-
-        [Inject]
-        private StatSampleFlow statSampleFlow;
+        private StatExamplePresenter presenter;
 
     #endregion
 
@@ -25,34 +22,18 @@ namespace rStar.Modules.Stat.Example.Scripts
 
         protected StatEventHandlerExample(IDomainEventBus domainEventBus) : base(domainEventBus)
         {
-            Register<BaseAmountModified>(e => WhenBaseAmountModified(e.Id , e.BaseAmount));
-            Register<CalculatedAmountModified>(e => WhenCalculatedAmountModified(e.Id , e.OwnerId));
-            Register<ModifierAdded>(e => WhenModifierAdded(e.statId , e.modifierId));
-            Register<StatCreated>(e => WhenStatCreated(e.id , e.dataId , e.ownerId));
+            Register<BaseAmountModified>(e => WhenStatEvent(e.Id ,       e.OwnerId));
+            Register<CalculatedAmountModified>(e => WhenStatEvent(e.Id , e.OwnerId));
+            Register<StatCreated>(e => WhenStatEvent(e.id ,              e.ownerId));
         }
 
     #endregion
 
     #region Private Methods
 
-        private void WhenBaseAmountModified(string statId , int baseAmount)
+        private void WhenStatEvent(string statId , string ownerId)
         {
-            statExamplePresenter.UpdateStatView(statId , baseAmount);
-        }
-
-        private void WhenCalculatedAmountModified(string statId , string ownerId)
-        {
-            statSampleFlow.UpdateStatView(statId , ownerId);
-        }
-
-        private void WhenModifierAdded(string statId , string modifierId)
-        {
-            statSampleFlow.UpdateModifier(statId , modifierId);
-        }
-
-        private void WhenStatCreated(string statId , string statDataId , string ownerId)
-        {
-            statSampleFlow.UpdateStatView(statId , ownerId);
+            presenter.UpdateStatView(statId , ownerId);
         }
 
     #endregion

@@ -15,7 +15,7 @@ namespace rStar.Modules.Stat.Example.Scripts
         public override void InstallBindings()
         {
             DDDInstaller.Install(Container);
-            Container.BindInterfacesAndSelfTo<StatSampleFlow>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StatSampleMain>().AsSingle();
             Container.BindInterfacesAndSelfTo<StatExamplePresenter>().AsSingle();
             StatInstaller.Install(Container);
             Container.Bind<StatEventHandlerExample>().AsSingle().NonLazy();

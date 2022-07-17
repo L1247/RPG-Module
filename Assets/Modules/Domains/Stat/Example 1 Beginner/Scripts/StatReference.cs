@@ -12,13 +12,10 @@ namespace rStar.Modules.Stat.Example.Scripts
     {
     #region Public Variables
 
-        public Button addModifierButton;
-        public Button removeModifierButton;
-
+        public Button   addModifierButton;
+        public Button   removeModifierButton;
         public Button   statModifyAmountButtonActor1;
-        public Button   statModifyAmountButtonActor2;
         public TMP_Text statAmountTextActor1;
-        public TMP_Text statAmountTextActor2;
 
     #endregion
     }

@@ -2,7 +2,6 @@
 
 using rStar.Modules.Stat.Infrastructure;
 using rStarUtility.Util.Extensions;
-using TMPro;
 using Zenject;
 
 #endregion
@@ -17,13 +16,10 @@ namespace rStar.Modules.Stat.Example.Scripts
         private StatReference statReference;
 
         [Inject]
-        private IStatController statController;
-
-        private string cachedStatId1;
-        private string cachedStatId2;
+        private IStatController controller;
 
         [Inject]
-        private StatSampleFlow statSampleFlow;
+        private StatSampleMain main;
 
     #endregion
 
@@ -31,36 +27,19 @@ namespace rStar.Modules.Stat.Example.Scripts
 
         public void Initialize()
         {
-            statReference.statModifyAmountButtonActor1.BindClick(() => statController.AddAmount(cachedStatId1 , 5));
-            statReference.statModifyAmountButtonActor2.BindClick(() => statController.AddAmount(cachedStatId2 , 1));
-            statReference.addModifierButton.BindClick(() => statSampleFlow.AddModifier());
-            statReference.removeModifierButton.BindClick(() => statSampleFlow.RemoveModifier());
-        }
-
-        public void UpdateStatView(string statId , int amount)
-        {
-            TMP_Text statReferenceStatAmount                          = null;
-            if (statId.Equals(cachedStatId1)) statReferenceStatAmount = statReference.statAmountTextActor1;
-            if (statId.Equals(cachedStatId2)) statReferenceStatAmount = statReference.statAmountTextActor2;
-            statReferenceStatAmount.text = $"Current BaseAmount: {amount}";
+            statReference.statModifyAmountButtonActor1.BindClick(() => main.AddAmount());
+            statReference.addModifierButton.BindClick(() => main.AddModifier());
+            statReference.removeModifierButton.BindClick(() => main.RemoveModifier());
         }
 
         public void UpdateStatView(string statId , string ownerId)
         {
-            TMP_Text textComponent = null;
-            if (ownerId.Equals("actor1"))
-            {
-                textComponent = statReference.statAmountTextActor1;
-                cachedStatId1 = statId;
-            }
-            else if (ownerId.Equals("actor2"))
-            {
-                textComponent = statReference.statAmountTextActor2;
-                cachedStatId2 = statId;
-            }
-
-            var stat = statController.GetStat(statId);
-            textComponent.text = $"{ownerId} , {stat.DataId} , {statId} {stat.CalculatedAmount}";
+            var textComponent = statReference.statAmountTextActor1;
+            var stat          = controller.GetStat(statId);
+            textComponent.text = $"{ownerId}'s {stat.DataId}\n" +
+                                 $"Modifier's Count: {stat.Modifiers.Count}\n" +
+                                 $"BaseAmount is {stat.BaseAmount}\n" +
+                                 $"CalculatedAmount is {stat.CalculatedAmount}.";
         }
 
     #endregion

@@ -21,12 +21,12 @@
     {
       "displayName": "Stat Example",
       "description": "Example for Stat",
-      "path": "Domains/Stat/Samples~"
+      "path": "Domains/Stat/Samples~/"
     },
     {
       "displayName": "Skill Example",
       "description": "Example for Skill",
-      "path": "Domains/Skill/Samples~"
+      "path": "Domains/Skill/Samples~/"
     }
   ]
 }

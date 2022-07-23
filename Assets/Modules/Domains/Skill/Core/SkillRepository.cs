@@ -7,7 +7,7 @@ using rStarUtility.DDD.Implement.Abstract;
 
 namespace Modules.Skill.Core
 {
-    public class SkillManager : GenericRepository<ISkill>
+    public class SkillRepository : GenericRepository<ISkill>
     {
     #region Public Methods
 

@@ -28,7 +28,7 @@ namespace Modules.Skill.Example1
         private readonly string         dataId = "dataId";
 
         [Inject]
-        private SkillManager skillManager;
+        private SkillRepository skillRepository;
 
         [Inject]
         private ISkillController skillController;
@@ -41,7 +41,7 @@ namespace Modules.Skill.Example1
         {
             skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5);
             skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1);
-            skills = skillManager.GetAll().ToList();
+            skills = skillRepository.GetAll().ToList();
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
             reference.useSkill1.BindClick(() => UseSkill(0));

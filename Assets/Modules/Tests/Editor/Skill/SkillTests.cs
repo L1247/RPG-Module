@@ -141,7 +141,7 @@ public class SkillTests : DDDUnitTestFixture
 
     private void BindSkill(int cast = 0 , int cd = 0)
     {
-        Container.Bind<SkillManager>().AsSingle();
+        Container.Bind<SkillRepository>().AsSingle();
         Container.Bind<Skill>().AsSingle();
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();

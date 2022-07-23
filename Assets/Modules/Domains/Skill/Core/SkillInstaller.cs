@@ -13,7 +13,7 @@ namespace Modules.Skill.Core
 
         public override void InstallBindings()
         {
-            Container.Bind<SkillManager>().AsSingle();
+            Container.Bind<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
             Container.BindInterfacesTo<SkillTicker>().AsSingle();

@@ -12,7 +12,7 @@ namespace Modules.Skill.Core
     #region Private Variables
 
         [Inject]
-        private SkillManager skillManager;
+        private SkillRepository skillRepository;
 
     #endregion
 
@@ -40,7 +40,7 @@ namespace Modules.Skill.Core
 
         private Skill GetSkill(string id)
         {
-            var skill  = skillManager.FindById(id);
+            var skill  = skillRepository.FindById(id);
             var skill1 = (Skill)skill;
             return skill1;
         }

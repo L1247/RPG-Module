@@ -12,7 +12,7 @@ namespace Modules.Skill.Core
     #region Private Variables
 
         [Inject]
-        private SkillManager manager;
+        private SkillRepository repository;
 
     #endregion
 
@@ -21,7 +21,7 @@ namespace Modules.Skill.Core
         public void Tick()
         {
             var deltaTime = Time.deltaTime;
-            foreach (var skill in manager.GetAll()) ((Skill)skill).Tick(deltaTime);
+            foreach (var skill in repository.GetAll()) ((Skill)skill).Tick(deltaTime);
         }
 
     #endregion

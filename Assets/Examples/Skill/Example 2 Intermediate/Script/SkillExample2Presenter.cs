@@ -28,7 +28,7 @@ namespace Modules.Skill.Example2
         private readonly string   dataId = "dataId";
 
         [Inject]
-        private SkillManager skillManager;
+        private SkillRepository skillRepository;
 
         [Inject]
         private ISkillController skillController;
@@ -44,7 +44,7 @@ namespace Modules.Skill.Example2
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
-            skill = skillManager.GetAll().ToList()[0];
+            skill = skillRepository.GetAll().ToList()[0];
             UpdateInfo();
         }
 

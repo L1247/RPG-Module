@@ -63,7 +63,6 @@ namespace rStar.Modules.Skill.Core
 
         public void Init(string ownerId , string dataId , float cast , float cd)
         {
-            id          = Guid.NewGuid().ToString();
             DefaultCd   = cd;
             DefaultCast = cast;
             OwnerId     = ownerId;
@@ -84,6 +83,7 @@ namespace rStar.Modules.Skill.Core
         public void OnSpawned(IMemoryPool pool)
         {
             this.pool = pool;
+            id        = Guid.NewGuid().ToString();
             skillRegistry.Save(GetId() , this);
         }
 

@@ -19,9 +19,6 @@ namespace Modules.Skill.Example.Beginner1
         [Inject]
         private SkillExampleReference reference;
 
-        [Inject]
-        private SkillSpawner skillSpawner;
-
         private          List<ISkillReadModel> skills = new List<ISkillReadModel>();
         private readonly List<TMP_Text>        infos  = new List<TMP_Text>();
         private readonly int                   time   = 1;
@@ -31,7 +28,7 @@ namespace Modules.Skill.Example.Beginner1
         private SkillRepository skillRepository;
 
         [Inject]
-        private ISkillController skillController;
+        private ISkillController controller;
 
     #endregion
 
@@ -39,8 +36,8 @@ namespace Modules.Skill.Example.Beginner1
 
         public void Initialize()
         {
-            skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5);
-            skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1);
+            controller.CreateSkill("Skill1" , dataId , 2 , 5);
+            controller.CreateSkill("Skill2" , dataId , 0 , 1);
             skills = skillRepository.GetAll().ToList();
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
@@ -60,7 +57,7 @@ namespace Modules.Skill.Example.Beginner1
             for (var index = 0 ; index < skills.Count ; index++)
             {
                 var skill = skills[index];
-                skillController.TickSkill(skill.GetId() , time);
+                controller.TickSkill(skill.GetId() , time);
                 UpdateInfo(index);
             }
         }
@@ -77,7 +74,7 @@ namespace Modules.Skill.Example.Beginner1
         private void UseSkill(int index)
         {
             var id = skills[index].GetId();
-            skillController.UseSkill(id);
+            controller.UseSkill(id);
             UpdateInfo(index);
         }
 

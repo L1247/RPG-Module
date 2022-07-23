@@ -15,7 +15,6 @@ namespace Modules.Skill.Core
         {
             Container.Bind<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
-            Container.Bind<SkillSpawner>().AsSingle();
             Container.BindInterfacesTo<SkillTicker>().AsSingle();
 
             Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();

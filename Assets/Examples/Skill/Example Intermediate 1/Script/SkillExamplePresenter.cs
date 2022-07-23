@@ -15,9 +15,6 @@ namespace Modules.Skill.Example.Intermediate1
     {
     #region Private Variables
 
-        [Inject]
-        private SkillSpawner skillSpawner;
-
         private ISkillReadModel skillReadModel;
 
         [Inject]
@@ -31,7 +28,7 @@ namespace Modules.Skill.Example.Intermediate1
         private SkillRepository skillRepository;
 
         [Inject]
-        private ISkillController skillController;
+        private ISkillController controller;
 
         private string skillId;
 
@@ -42,7 +39,7 @@ namespace Modules.Skill.Example.Intermediate1
         public void Initialize()
         {
             animator = reference.enemyAnimator;
-            skillSpawner.CreateSkill("Skill" , dataId , 2 , 4);
+            controller.CreateSkill("Skill" , dataId , 2 , 4);
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
@@ -76,13 +73,13 @@ namespace Modules.Skill.Example.Intermediate1
 
         private void Execute()
         {
-            skillController.ExecuteSkill(skillId);
+            controller.ExecuteSkill(skillId);
             UpdateInfo();
         }
 
         private void Tick()
         {
-            skillController.TickSkill(skillId , time);
+            controller.TickSkill(skillId , time);
             UpdateInfo();
         }
 
@@ -97,7 +94,7 @@ namespace Modules.Skill.Example.Intermediate1
 
         private void UseSkill()
         {
-            skillController.UseSkill(skillId);
+            controller.UseSkill(skillId);
             UpdateInfo();
         }
 

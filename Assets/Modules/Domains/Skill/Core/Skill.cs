@@ -34,7 +34,7 @@ namespace Modules.Skill.Core
         private IMemoryPool pool;
 
         [Inject]
-        private SkillRegistry skillRegistry;
+        private SkillManager skillManager;
 
         [Inject]
         private IDomainEventBus domainEventBus;
@@ -85,13 +85,13 @@ namespace Modules.Skill.Core
         {
             Dispose();
             pool = null;
-            skillRegistry.DeleteById(GetId());
+            skillManager.DeleteById(GetId());
         }
 
         public void OnSpawned(IMemoryPool pool)
         {
             this.pool = pool;
-            skillRegistry.Save(GetId() , this);
+            skillManager.Save(GetId() , this);
         }
 
         public void Tick(float time)

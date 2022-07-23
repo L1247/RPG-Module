@@ -1,12 +1,12 @@
 #region
 
-using rStar.Modules.Stat.Infrastructure;
+using Modules.Stat.Infrastructure;
 using rStarUtility.Util.Extensions;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Stat.Example.Scripts
+namespace Modules.Stat.Example.Scripts
 {
     public class StatExamplePresenter : IInitializable
     {

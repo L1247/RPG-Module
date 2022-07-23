@@ -1,14 +1,14 @@
 #region
 
 using System;
-using rStar.Modules.Skill.Core.Event;
+using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Model;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Core
+namespace Modules.Skill.Core
 {
     public class Skill : IPoolable<IMemoryPool> , IDisposable , IEntity<string>
     {
@@ -41,6 +41,15 @@ namespace rStar.Modules.Skill.Core
         private IDomainEventBus domainEventBus;
 
         private string id;
+
+    #endregion
+
+    #region Constructor
+
+        public Skill()
+        {
+            id = Guid.NewGuid().ToString();
+        }
 
     #endregion
 
@@ -83,7 +92,6 @@ namespace rStar.Modules.Skill.Core
         public void OnSpawned(IMemoryPool pool)
         {
             this.pool = pool;
-            id        = Guid.NewGuid().ToString();
             skillRegistry.Save(GetId() , this);
         }
 

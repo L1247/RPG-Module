@@ -5,7 +5,7 @@ using rStarUtility.DDD.Model;
 
 #endregion
 
-namespace rStar.Modules.Stat.Infrastructure
+namespace Modules.Stat.Infrastructure
 {
     public interface IStatReadModel : IAggregateRoot
     {

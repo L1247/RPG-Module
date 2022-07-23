@@ -5,7 +5,7 @@ using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Core
+namespace Modules.Skill.Core
 {
     public class SkillSpawner
     {

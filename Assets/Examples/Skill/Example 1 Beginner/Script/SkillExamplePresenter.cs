@@ -1,14 +1,14 @@
 #region
 
 using System.Collections.Generic;
-using rStar.Modules.Skill.Core;
+using Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace Modules.Skill.Example1
 {
     public class SkillExamplePresenter : IInitializable
     {

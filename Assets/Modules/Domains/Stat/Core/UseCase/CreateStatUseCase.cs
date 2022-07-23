@@ -1,6 +1,6 @@
 #region
 
-using rStar.Modules.Stat.Infrastructure;
+using Modules.Stat.Infrastructure;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
@@ -10,7 +10,7 @@ using rStarUtility.Util;
 
 #endregion
 
-namespace rStar.Modules.Stat.UseCase
+namespace Modules.Stat.UseCase
 {
     public class CreateStatUseCase : UseCase<CreateStatInput , CqrsCommandPresenter , IStatRepository>
     {

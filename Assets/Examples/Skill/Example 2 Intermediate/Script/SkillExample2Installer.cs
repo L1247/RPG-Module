@@ -1,12 +1,12 @@
 #region
 
-using rStar.Modules.Skill.Core;
+using Modules.Skill.Core;
 using rStarUtility.DDD.Implement.Core;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example2
+namespace Modules.Skill.Example2
 {
     public class SkillExample2Installer : MonoInstaller
     {

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace rStar.Modules.Stat.Example.Scripts
+namespace Modules.Stat.Example.Scripts
 {
     public class StatReference : MonoBehaviour
     {

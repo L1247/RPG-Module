@@ -1,9 +1,9 @@
 #region
 
+using Modules.Skill.Core;
+using Modules.Skill.Infrastructure.Events;
 using NSubstitute;
 using NUnit.Framework;
-using rStar.Modules.Skill.Core;
-using rStar.Modules.Skill.Core.Event;
 using rStarUtility.DDD.DDDTestFrameWork;
 
 #endregion

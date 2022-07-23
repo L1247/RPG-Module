@@ -1,6 +1,6 @@
 #region
 
-using rStar.Modules.Skill.Core.Event;
+using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using UnityEngine;
@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example2
+namespace Modules.Skill.Example2
 {
     public class SkillEventHandler : DomainEventHandler
     {

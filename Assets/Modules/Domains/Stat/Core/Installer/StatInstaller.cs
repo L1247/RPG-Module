@@ -1,14 +1,14 @@
 #region
 
-using rStar.Modules.Stat.Core.UseCase.Controller;
-using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase;
-using rStar.Modules.Stat.UseCase.Repository;
+using Modules.Stat.Core.UseCase.Controller;
+using Modules.Stat.Infrastructure;
+using Modules.Stat.UseCase;
+using Modules.Stat.UseCase.Repository;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Stat.Installer
+namespace Modules.Stat.Installer
 {
     public class StatInstaller : Installer<StatInstaller>
     {

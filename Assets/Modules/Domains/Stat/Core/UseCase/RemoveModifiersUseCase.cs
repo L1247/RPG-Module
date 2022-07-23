@@ -1,8 +1,8 @@
 #region
 
 using System.Collections.Generic;
-using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase.Extensions;
+using Modules.Stat.Infrastructure;
+using Modules.Stat.UseCase.Extensions;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using rStarUtility.DDD.Implement.CQRS;
@@ -12,7 +12,7 @@ using rStarUtility.Util;
 
 #endregion
 
-namespace rStar.Modules.Stat.UseCase
+namespace Modules.Stat.UseCase
 {
     public class RemoveModifiersUseCase : UseCase<RemoveModifierInput , CqrsCommandPresenter , IStatRepository>
     {

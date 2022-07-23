@@ -4,7 +4,7 @@ using rStarUtility.DDD.Implement.Abstract;
 
 #endregion
 
-namespace rStar.Modules.Skill.Core
+namespace Modules.Skill.Core
 {
     public class SkillRegistry : GenericRepository<Skill> { }
 }

@@ -2,11 +2,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using Modules.Stat.Entity;
+using Modules.Stat.Infrastructure;
+using Modules.Stat.UseCase.Repository;
 using NSubstitute;
 using NUnit.Framework;
-using rStar.Modules.Stat.Entity;
-using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase.Repository;
 using rStarUtility.DDD.DDDTestFrameWork;
 
 #endregion

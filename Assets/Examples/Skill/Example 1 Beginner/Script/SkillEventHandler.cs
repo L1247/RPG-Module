@@ -1,13 +1,13 @@
 #region
 
-using rStar.Modules.Skill.Core.Event;
+using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using UnityEngine;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace Modules.Skill.Example1
 {
     public class SkillEventHandler : DomainEventHandler
     {

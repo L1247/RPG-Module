@@ -1,11 +1,11 @@
 #region
 
+using Modules.Stat.Entity;
+using Modules.Stat.Infrastructure;
+using Modules.Stat.UseCase;
+using Modules.Stat.UseCase.Repository;
 using NSubstitute;
 using NUnit.Framework;
-using rStar.Modules.Stat.Entity;
-using rStar.Modules.Stat.Infrastructure;
-using rStar.Modules.Stat.UseCase;
-using rStar.Modules.Stat.UseCase.Repository;
 using rStarUtility.DDD.DDDTestFrameWork;
 using rStarUtility.DDD.Implement.CQRS;
 using rStarUtility.DDD.Usecase.CQRS;

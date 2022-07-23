@@ -9,9 +9,9 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example2
+namespace Modules.Skill.Example.Intermediate1
 {
-    public class SkillExample2Presenter : IInitializable
+    public class SkillExamplePresenter : IInitializable
     {
     #region Private Variables
 
@@ -21,7 +21,7 @@ namespace Modules.Skill.Example2
         private ISkill skill;
 
         [Inject]
-        private SkillExample2Reference reference;
+        private SkillExampleReference reference;
 
         private readonly int      time = 1;
         private          Animator animator;

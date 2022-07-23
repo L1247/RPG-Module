@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace Modules.Skill.Example2
+namespace Modules.Skill.Example.Intermediate1
 {
-    public class SkillExample2Reference : MonoBehaviour
+    public class SkillExampleReference : MonoBehaviour
     {
     #region Public Variables
 

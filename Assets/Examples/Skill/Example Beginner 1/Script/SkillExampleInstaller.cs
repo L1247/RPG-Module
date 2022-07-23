@@ -6,9 +6,9 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example1
+namespace Modules.Skill.Example.Beginner1
 {
-    public class SkillExample1Installer : MonoInstaller
+    public class SkillExampleInstaller : MonoInstaller
     {
     #region Public Methods
 

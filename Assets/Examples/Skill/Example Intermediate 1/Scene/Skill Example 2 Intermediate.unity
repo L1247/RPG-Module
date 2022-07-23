@@ -1645,7 +1645,7 @@ GameObject:
   - component: {fileID: 2076167411}
   - component: {fileID: 2076167410}
   m_Layer: 0
-  m_Name: SkillExample2Reference
+  m_Name: SkillExampleReference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1685,10 +1685,10 @@ MonoBehaviour:
   execute: {fileID: 88009600}
   tick: {fileID: 1713926019}
   use: {fileID: 905959576}
+  coolDownImage: {fileID: 1863084262}
   projectilePrefab: {fileID: 7437803347043181443, guid: 25ded2985595e9347902b8888eeccfea, type: 3}
   info: {fileID: 1739153717}
   shootPoint: {fileID: 1736001684}
-  coolDownImage: {fileID: 1863084262}
 --- !u!4 &2076167412
 Transform:
   m_ObjectHideFlags: 0

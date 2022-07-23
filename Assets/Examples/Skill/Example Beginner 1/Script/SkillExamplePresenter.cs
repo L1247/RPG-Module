@@ -10,14 +10,14 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example1
+namespace Modules.Skill.Example.Beginner1
 {
     public class SkillExamplePresenter : IInitializable
     {
     #region Private Variables
 
         [Inject]
-        private SkillExample1Reference reference;
+        private SkillExampleReference reference;
 
         [Inject]
         private SkillSpawner skillSpawner;

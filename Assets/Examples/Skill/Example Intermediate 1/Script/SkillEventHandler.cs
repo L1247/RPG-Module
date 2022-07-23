@@ -4,17 +4,26 @@ using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
 using rStarUtility.DDD.Implement.Core;
 using UnityEngine;
+using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example1
+namespace Modules.Skill.Example.Intermediate1
 {
     public class SkillEventHandler : DomainEventHandler
     {
+    #region Private Variables
+
+        [Inject]
+        private SkillExamplePresenter presenter;
+
+    #endregion
+
     #region Constructor
 
         public SkillEventHandler(IDomainEventBus domainEventBus) : base(domainEventBus)
         {
+            Register<CastEntered>(OnCastEntered);
             Register<Executed>(OnExecuted);
         }
 
@@ -22,9 +31,17 @@ namespace Modules.Skill.Example1
 
     #region Private Methods
 
+        private void OnCastEntered(CastEntered entered)
+        {
+            Debug.Log($"OnCastEntered: {entered.ID}");
+            presenter.PlayCastEnter();
+        }
+
         private void OnExecuted(Executed executed)
         {
-            Debug.Log($"{executed.OwnerId} executed");
+            Debug.Log($"OnExecuted : {executed.ID}");
+            presenter.PlayAfterCast();
+            presenter.SpawnProjectile();
         }
 
     #endregion

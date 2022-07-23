@@ -6,9 +6,9 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example2
+namespace Modules.Skill.Example.Intermediate1
 {
-    public class SkillExample2Installer : MonoInstaller
+    public class SkillExampleInstaller : MonoInstaller
     {
     #region Public Methods
 
@@ -17,7 +17,7 @@ namespace Modules.Skill.Example2
             DDDInstaller.Install(Container);
             SkillInstaller.Install(Container);
             Container.UnbindInterfacesTo<SkillTicker>();
-            Container.BindInterfacesAndSelfTo<SkillExample2Presenter>().AsSingle();
+            Container.BindInterfacesAndSelfTo<SkillExamplePresenter>().AsSingle();
             Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
         }
 

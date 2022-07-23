@@ -1,23 +1,17 @@
-#region
-
-using rStarUtility.DDD.Model;
-
-#endregion
-
 namespace Modules.Skill.Core
 {
-    public interface ISkill : IEntity<string>
+    public interface ISkill : ISkillReadModel
     {
-    #region Public Variables
+    #region Public Methods
 
-        bool   IsCast      { get; }
-        bool   IsCd        { get; }
-        float  Cast        { get; }
-        float  Cd          { get; }
-        float  DefaultCast { get; }
-        float  DefaultCd   { get; }
-        string DataId      { get; }
-        string OwnerId     { get; }
+        void EnterCast();
+        void EnterCd();
+        void Execute();
+        void ExitCast();
+        void ExitCd();
+        void Init(string ownerId , string dataId , float cast , float cd);
+        void Tick(float  time);
+        void UseSkill();
 
     #endregion
     }

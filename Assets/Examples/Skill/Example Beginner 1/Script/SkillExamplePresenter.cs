@@ -22,10 +22,10 @@ namespace Modules.Skill.Example.Beginner1
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private          List<ISkill>   skills = new List<ISkill>();
-        private readonly List<TMP_Text> infos  = new List<TMP_Text>();
-        private readonly int            time   = 1;
-        private readonly string         dataId = "dataId";
+        private          List<ISkillReadModel> skills = new List<ISkillReadModel>();
+        private readonly List<TMP_Text>        infos  = new List<TMP_Text>();
+        private readonly int                   time   = 1;
+        private readonly string                dataId = "dataId";
 
         [Inject]
         private SkillRepository skillRepository;

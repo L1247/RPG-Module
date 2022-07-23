@@ -6,7 +6,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Stat.Example.Scripts
+namespace Modules.Stat.Example.Beginner1
 {
     public class StatExampleInstaller : MonoInstaller
     {

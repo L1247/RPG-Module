@@ -7,11 +7,11 @@ using rStarUtility.DDD.Implement.Abstract;
 
 namespace Modules.Skill.Core
 {
-    public class SkillRepository : GenericRepository<ISkill>
+    public class SkillRepository : GenericRepository<ISkillReadModel>
     {
     #region Public Methods
 
-        public ISkill GetSkillByOwner(string ownerId)
+        public ISkillReadModel GetSkillByOwner(string ownerId)
         {
             return GetAll().FirstOrDefault(skill => skill.OwnerId.Equals(ownerId));
         }

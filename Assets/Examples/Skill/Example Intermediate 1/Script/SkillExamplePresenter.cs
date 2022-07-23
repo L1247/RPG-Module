@@ -18,7 +18,7 @@ namespace Modules.Skill.Example.Intermediate1
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private ISkill skill;
+        private ISkillReadModel skillReadModel;
 
         [Inject]
         private SkillExampleReference reference;
@@ -46,8 +46,8 @@ namespace Modules.Skill.Example.Intermediate1
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
-            skill   = skillRepository.GetAll().ToList()[0];
-            skillId = skill.GetId();
+            skillReadModel = skillRepository.GetAll().ToList()[0];
+            skillId        = skillReadModel.GetId();
             UpdateInfo();
         }
 
@@ -60,7 +60,7 @@ namespace Modules.Skill.Example.Intermediate1
         public void PlayCastEnter()
         {
             animator.speed = 0;
-            animator.Play("Enemy Attack 3" , 0 , skill.Cast);
+            animator.Play("Enemy Attack 3" , 0 , skillReadModel.Cast);
         }
 
         public void SpawnProjectile()
@@ -88,9 +88,10 @@ namespace Modules.Skill.Example.Intermediate1
 
         private void UpdateInfo()
         {
-            var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
-                       $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
-            reference.coolDownImage.fillAmount = skill.Cd / skill.DefaultCd;
+            var info = $"DefaultCast:{skillReadModel.DefaultCast}\n" + $"DefaultCD:{skillReadModel.DefaultCd}\n" +
+                       $"IsCast:{skillReadModel.IsCast}\n" +
+                       $"Cast:{skillReadModel.Cast}\n" + $"IsCd:{skillReadModel.IsCd}\n" + $"CD:{skillReadModel.Cd}";
+            reference.coolDownImage.fillAmount = skillReadModel.Cd / skillReadModel.DefaultCd;
             reference.info.text                = info;
         }
 

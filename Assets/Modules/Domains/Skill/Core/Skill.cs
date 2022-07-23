@@ -59,9 +59,33 @@ namespace Modules.Skill.Core
             pool.Despawn(this);
         }
 
+        public void EnterCast()
+        {
+            Cast   = DefaultCast;
+            IsCast = true;
+            domainEventBus.Post(new CastEntered(GetId() , OwnerId));
+        }
+
+        public void EnterCd()
+        {
+            IsCd = true;
+            Cd   = DefaultCd;
+        }
+
         public void Execute()
         {
             domainEventBus.Post(new Executed(GetId() , OwnerId , DataId));
+        }
+
+        public void ExitCast()
+        {
+            IsCast = false;
+            Execute();
+        }
+
+        public void ExitCd()
+        {
+            IsCd = false;
         }
 
         public string GetId()
@@ -112,34 +136,6 @@ namespace Modules.Skill.Core
             if (DefaultCast <= 0) Execute();
             else if (IsCast == false) EnterCast();
             if (DefaultCd > 0) EnterCd();
-        }
-
-    #endregion
-
-    #region Private Methods
-
-        private void EnterCast()
-        {
-            Cast   = DefaultCast;
-            IsCast = true;
-            domainEventBus.Post(new CastEntered(GetId() , OwnerId));
-        }
-
-        private void EnterCd()
-        {
-            IsCd = true;
-            Cd   = DefaultCd;
-        }
-
-        private void ExitCast()
-        {
-            IsCast = false;
-            Execute();
-        }
-
-        private void ExitCd()
-        {
-            IsCd = false;
         }
 
     #endregion

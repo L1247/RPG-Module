@@ -23,7 +23,7 @@ namespace Modules.Skill.Core
             GetSkill(id).Execute();
         }
 
-        public void TickSkill(string id , int time)
+        public void TickSkill(string id , float time)
         {
             GetSkill(id).Tick(time);
         }
@@ -38,11 +38,11 @@ namespace Modules.Skill.Core
 
     #region Private Methods
 
-        private Skill GetSkill(string id)
+        private ISkill GetSkill(string id)
         {
-            var skill  = skillRepository.FindById(id);
-            var skill1 = (Skill)skill;
-            return skill1;
+            var skillReadModel = skillRepository.FindById(id);
+            var skill          = skillReadModel.TransformToDomain();
+            return skill;
         }
 
     #endregion

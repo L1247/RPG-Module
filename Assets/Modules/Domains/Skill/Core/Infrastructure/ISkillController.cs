@@ -5,7 +5,7 @@ namespace Modules.Domains.Skill.Core.Infrastructure
     #region Public Methods
 
         void ExecuteSkill(string id);
-        void TickSkill(string    id , int time);
+        void TickSkill(string    id , float time);
         void UseSkill(string     id);
 
     #endregion

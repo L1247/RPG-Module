@@ -1,6 +1,6 @@
 #region
 
-using Modules.Domains.Skill.Core.Infrastructure;
+using Modules.Skill.Infrastructure;
 using Zenject;
 
 #endregion
@@ -13,9 +13,9 @@ namespace Modules.Skill.Core
 
         public override void InstallBindings()
         {
-            Container.Bind<SkillRepository>().AsSingle();
+            Container.Bind<ISkillRepository>().To<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
-            Container.BindInterfacesTo<SkillTicker>().AsSingle();
+            Container.Bind<ISkillTicker>().To<SkillTicker>().AsSingle();
 
             Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();
         }

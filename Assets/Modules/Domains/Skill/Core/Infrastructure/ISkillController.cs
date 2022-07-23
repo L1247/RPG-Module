@@ -1,4 +1,4 @@
-namespace Modules.Domains.Skill.Core.Infrastructure
+namespace Modules.Skill.Infrastructure
 {
     public interface ISkillController
     {

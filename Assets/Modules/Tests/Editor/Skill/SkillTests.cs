@@ -1,6 +1,7 @@
 #region
 
 using Modules.Skill.Core;
+using Modules.Skill.Infrastructure;
 using Modules.Skill.Infrastructure.Events;
 using NSubstitute;
 using NUnit.Framework;
@@ -141,7 +142,7 @@ public class SkillTests : DDDUnitTestFixture
 
     private void BindSkill(int cast = 0 , int cd = 0)
     {
-        Container.Bind<SkillRepository>().AsSingle();
+        BindFromSubstitute<ISkillRepository>();
         Container.Bind<Skill>().AsSingle();
         skill   = Container.Resolve<Skill>();
         ownerId = NewGuid();

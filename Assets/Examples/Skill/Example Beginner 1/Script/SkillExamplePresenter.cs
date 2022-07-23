@@ -2,8 +2,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Modules.Domains.Skill.Core.Infrastructure;
-using Modules.Skill.Core;
+using Modules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
@@ -25,7 +24,7 @@ namespace Modules.Skill.Example.Beginner1
         private readonly string                dataId = "dataId";
 
         [Inject]
-        private SkillRepository skillRepository;
+        private ISkillRepository skillRepository;
 
         [Inject]
         private ISkillController controller;

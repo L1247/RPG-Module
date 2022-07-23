@@ -1,6 +1,7 @@
 #region
 
 using Modules.Skill.Core;
+using Modules.Skill.Infrastructure;
 using rStarUtility.DDD.Implement.Core;
 using Zenject;
 
@@ -16,9 +17,9 @@ namespace Modules.Skill.Example.Intermediate1
         {
             DDDInstaller.Install(Container);
             SkillInstaller.Install(Container);
-            Container.UnbindInterfacesTo<SkillTicker>();
-            Container.BindInterfacesAndSelfTo<SkillExamplePresenter>().AsSingle();
+            Container.Unbind<ISkillTicker>();
             Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SkillExamplePresenter>().AsSingle();
         }
 
     #endregion

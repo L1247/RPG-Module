@@ -1,6 +1,6 @@
 #region
 
-using Modules.Domains.Skill.Core.Infrastructure;
+using Modules.Skill.Infrastructure;
 using rStarUtility.Util;
 using Zenject;
 
@@ -13,7 +13,7 @@ namespace Modules.Skill.Core
     #region Private Variables
 
         [Inject]
-        private SkillRepository skillRepository;
+        private ISkillRepository skillRepository;
 
         [Inject]
         private Skill.Factory factory;

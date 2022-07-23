@@ -4,7 +4,7 @@ using rStarUtility.DDD.Model;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace Modules.Skill.Infrastructure
 {
     public interface ISkillReadModel : IEntity<string>
     {

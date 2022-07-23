@@ -1,3 +1,9 @@
+#region
+
+using Modules.Skill.Infrastructure;
+
+#endregion
+
 namespace Modules.Skill.Core
 {
     public interface ISkill : ISkillReadModel

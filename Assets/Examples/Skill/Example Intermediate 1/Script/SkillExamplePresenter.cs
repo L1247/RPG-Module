@@ -1,8 +1,7 @@
 #region
 
 using System.Linq;
-using Modules.Domains.Skill.Core.Infrastructure;
-using Modules.Skill.Core;
+using Modules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using UnityEngine;
 using Zenject;
@@ -25,7 +24,7 @@ namespace Modules.Skill.Example.Intermediate1
         private readonly string   dataId = "dataId";
 
         [Inject]
-        private SkillRepository skillRepository;
+        private ISkillRepository skillRepository;
 
         [Inject]
         private ISkillController controller;

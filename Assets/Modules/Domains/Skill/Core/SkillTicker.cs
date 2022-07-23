@@ -1,6 +1,6 @@
 #region
 
-using Modules.Domains.Skill.Core.Infrastructure;
+using Modules.Skill.Infrastructure;
 using UnityEngine;
 using Zenject;
 
@@ -8,12 +8,12 @@ using Zenject;
 
 namespace Modules.Skill.Core
 {
-    public class SkillTicker : ITickable
+    public class SkillTicker : ITickable , ISkillTicker
     {
     #region Private Variables
 
         [Inject]
-        private SkillRepository repository;
+        private ISkillRepository repository;
 
         [Inject]
         private ISkillController skillController;

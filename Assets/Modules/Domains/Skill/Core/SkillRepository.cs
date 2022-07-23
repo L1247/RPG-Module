@@ -1,17 +1,18 @@
 #region
 
 using System.Linq;
+using Modules.Skill.Infrastructure;
 using rStarUtility.DDD.Implement.Abstract;
 
 #endregion
 
 namespace Modules.Skill.Core
 {
-    public class SkillRepository : GenericRepository<ISkillReadModel>
+    public class SkillRepository : GenericRepository<ISkillReadModel> , ISkillRepository
     {
     #region Public Methods
 
-        public ISkillReadModel GetSkillByOwner(string ownerId)
+        public ISkillReadModel FindSkillByOwner(string ownerId)
         {
             return GetAll().FirstOrDefault(skill => skill.OwnerId.Equals(ownerId));
         }

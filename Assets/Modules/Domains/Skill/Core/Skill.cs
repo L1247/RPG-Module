@@ -1,8 +1,10 @@
 #region
 
 using System;
+using Modules.Skill.Infrastructure;
 using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
+using UnityEngine;
 using Zenject;
 
 #endregion
@@ -34,7 +36,7 @@ namespace Modules.Skill.Core
         private IMemoryPool pool;
 
         [Inject]
-        private SkillRepository skillRepository;
+        private ISkillRepository skillRepository;
 
         [Inject]
         private IDomainEventBus domainEventBus;
@@ -120,6 +122,7 @@ namespace Modules.Skill.Core
 
         public void Tick(float time)
         {
+            Debug.Log($"tick : {time}");
             Cd   -= time;
             Cast -= time;
             if (IsCast)

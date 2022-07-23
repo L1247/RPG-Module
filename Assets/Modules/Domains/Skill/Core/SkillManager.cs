@@ -20,7 +20,7 @@ namespace rStar.Modules.Skill.Core
 
         public Skill GetSkillByOwner(string ownerId)
         {
-            return registry.Skills.FirstOrDefault(skill => skill.OwnerId.Equals(ownerId));
+            return registry.GetAll().FirstOrDefault(skill => skill.OwnerId.Equals(ownerId));
         }
 
     #endregion

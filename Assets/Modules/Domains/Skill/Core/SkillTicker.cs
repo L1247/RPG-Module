@@ -21,7 +21,7 @@ namespace rStar.Modules.Skill.Core
         public void Tick()
         {
             var deltaTime = Time.deltaTime;
-            foreach (var skill in registry.Skills) skill.Tick(deltaTime);
+            foreach (var skill in registry.GetAll()) skill.Tick(deltaTime);
         }
 
     #endregion

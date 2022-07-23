@@ -78,13 +78,13 @@ namespace rStar.Modules.Skill.Core
         {
             Dispose();
             pool = null;
-            skillRegistry.RemoveSkill(this);
+            skillRegistry.DeleteById(GetId());
         }
 
         public void OnSpawned(IMemoryPool pool)
         {
             this.pool = pool;
-            skillRegistry.AddSkill(this);
+            skillRegistry.Save(GetId() , this);
         }
 
         public void Tick(float time)

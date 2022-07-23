@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections.Generic;
 using Modules.Stat.Infrastructure;
 using Modules.Stat.UseCase;
@@ -84,32 +85,9 @@ namespace Modules.Stat.Core.UseCase.Controller
             createStatUseCase.Execute(createStatInput , createStatOutput);
         }
 
-        public void DeleteStat(string ownerId)
+        public void RemoveAllModifier(string statId)
         {
-            var statReadModels = repository.FindStatsByOwnerId(ownerId);
-            foreach (var stat in statReadModels)
-            {
-                deleteStatInput.id = stat.GetId();
-                deleteStatUseCase.Execute(deleteStatInput , deleteOutput);
-            }
-        }
-
-        public IModifier GetModifier(string statId , string modifierId)
-        {
-            var modifier = repository.FindModifer(statId , modifierId);
-            return modifier;
-        }
-
-        public IStatReadModel GetStat(string statId)
-        {
-            var statReadModel = repository.FindStat(statId);
-            return statReadModel;
-        }
-
-        public IStatReadModel GetStat(string ownerId , string dataId)
-        {
-            var statReadModel = repository.FindStat(ownerId , dataId);
-            return statReadModel;
+            throw new NotImplementedException();
         }
 
         public void RemoveModifier(string statId , string modifierId)
@@ -118,6 +96,7 @@ namespace Modules.Stat.Core.UseCase.Controller
             removeModifierInput.modifierIds = new List<string>() { modifierId };
             removeModifiersUseCase.Execute(removeModifierInput , removeModifierOutput);
         }
+
 
         public void SetAmount(string statId , int amount)
         {

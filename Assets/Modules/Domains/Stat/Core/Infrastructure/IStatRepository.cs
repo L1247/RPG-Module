@@ -11,6 +11,8 @@ namespace Modules.Stat.Infrastructure
     {
     #region Public Methods
 
+        void DeleteAllStat(string ownerId);
+
         IModifier FindModifer(string statId , string modifierId);
 
         public IStatReadModel FindStat(string statId)

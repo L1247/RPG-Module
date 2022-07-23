@@ -13,6 +13,15 @@ namespace Modules.Stat.UseCase.Repository
     {
     #region Public Methods
 
+        public void DeleteAllStat(string ownerId)
+        {
+            foreach (var statReadModel in FindStatsByOwnerId(ownerId))
+            {
+                var id = statReadModel.GetId();
+                DeleteById(id);
+            }
+        }
+
         public IModifier FindModifer(string statId , string modifierId)
         {
             var stat     = FindById(statId);

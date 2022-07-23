@@ -16,10 +16,10 @@ namespace Modules.Stat.Example.Beginner1
         private StatReference statReference;
 
         [Inject]
-        private IStatController controller;
+        private StatSampleMain main;
 
         [Inject]
-        private StatSampleMain main;
+        private IStatRepository statRepository;
 
     #endregion
 
@@ -35,7 +35,7 @@ namespace Modules.Stat.Example.Beginner1
         public void UpdateStatView(string statId , string ownerId)
         {
             var textComponent = statReference.statAmountTextActor1;
-            var stat          = controller.GetStat(statId);
+            var stat          = statRepository.FindStat(statId);
             textComponent.text = $"{ownerId}'s {stat.DataId}\n" +
                                  $"Modifier's Count: {stat.Modifiers.Count}\n" +
                                  $"BaseAmount is {stat.BaseAmount}\n" +

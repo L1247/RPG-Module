@@ -53,7 +53,6 @@ namespace Modules.Stat.Example.Beginner1
             if (isNoModifierOnStat) return;
             var modifier   = stat.Modifiers[modifiersCount - 1];
             var modifierId = modifier.GetId();
-
             statController.RemoveModifier(statId , modifierId);
         }
 

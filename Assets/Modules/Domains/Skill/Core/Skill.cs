@@ -3,14 +3,13 @@
 using System;
 using Modules.Skill.Infrastructure.Events;
 using rStarUtility.DDD.Event;
-using rStarUtility.DDD.Model;
 using Zenject;
 
 #endregion
 
 namespace Modules.Skill.Core
 {
-    public class Skill : IPoolable<IMemoryPool> , IDisposable , IEntity<string>
+    public class Skill : IPoolable<IMemoryPool> , IDisposable , ISkill
     {
     #region Public Variables
 

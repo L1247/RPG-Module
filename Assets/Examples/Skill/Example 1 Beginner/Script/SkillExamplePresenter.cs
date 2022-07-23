@@ -1,6 +1,8 @@
 #region
 
 using System.Collections.Generic;
+using System.Linq;
+using Modules.Domains.Skill.Core.Infrastructure;
 using Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
 using TMPro;
@@ -20,10 +22,16 @@ namespace Modules.Skill.Example1
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private readonly List<Core.Skill> skills = new List<Core.Skill>();
-        private readonly List<TMP_Text>   infos  = new List<TMP_Text>();
-        private readonly int              time   = 1;
-        private readonly string           dataId = "dataId";
+        private          List<ISkill>   skills = new List<ISkill>();
+        private readonly List<TMP_Text> infos  = new List<TMP_Text>();
+        private readonly int            time   = 1;
+        private readonly string         dataId = "dataId";
+
+        [Inject]
+        private SkillRegistry skillRegistry;
+
+        [Inject]
+        private ISkillController skillController;
 
     #endregion
 
@@ -31,8 +39,9 @@ namespace Modules.Skill.Example1
 
         public void Initialize()
         {
-            skills.Add(skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5));
-            skills.Add(skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1));
+            skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5);
+            skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1);
+            skills = skillRegistry.GetAll().ToList();
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
             reference.useSkill1.BindClick(() => UseSkill(0));
@@ -51,7 +60,7 @@ namespace Modules.Skill.Example1
             for (var index = 0 ; index < skills.Count ; index++)
             {
                 var skill = skills[index];
-                skill.Tick(time);
+                skillController.TickSkill(skill.GetId() , time);
                 UpdateInfo(index);
             }
         }
@@ -67,7 +76,8 @@ namespace Modules.Skill.Example1
 
         private void UseSkill(int index)
         {
-            skills[index].UseSkill();
+            var id = skills[index].GetId();
+            skillController.UseSkill(id);
             UpdateInfo(index);
         }
 

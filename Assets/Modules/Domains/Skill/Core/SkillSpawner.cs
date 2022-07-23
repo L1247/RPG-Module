@@ -18,7 +18,7 @@ namespace Modules.Skill.Core
 
     #region Public Methods
 
-        public Skill CreateSkill(string ownerId , string dataId , float cast , float cd)
+        public void CreateSkill(string ownerId , string dataId , float cast , float cd)
         {
             Contract.RequireString(ownerId , $"ownerId:{ownerId}");
             Contract.RequireString(dataId ,  $"dataId:{dataId}");
@@ -26,7 +26,6 @@ namespace Modules.Skill.Core
             Contract.Require(cd >= 0 ,   "cast need greater than or equal zero");
             var skill = factory.Create();
             skill.Init(ownerId , dataId , cast , cd);
-            return skill;
         }
 
     #endregion

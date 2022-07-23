@@ -1,5 +1,6 @@
 #region
 
+using Modules.Domains.Skill.Core.Infrastructure;
 using Zenject;
 
 #endregion
@@ -13,7 +14,7 @@ namespace Modules.Skill.Core
         public override void InstallBindings()
         {
             Container.Bind<SkillRegistry>().AsSingle();
-            Container.Bind<SkillManager>().AsSingle();
+            Container.Bind<ISkillController>().To<SkillController>().AsSingle();
             Container.Bind<SkillSpawner>().AsSingle();
             Container.BindInterfacesTo<SkillTicker>().AsSingle();
 

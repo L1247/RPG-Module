@@ -21,7 +21,7 @@ namespace Modules.Skill.Core
         public void Tick()
         {
             var deltaTime = Time.deltaTime;
-            foreach (var skill in registry.GetAll()) skill.Tick(deltaTime);
+            foreach (var skill in registry.GetAll()) ((Skill)skill).Tick(deltaTime);
         }
 
     #endregion

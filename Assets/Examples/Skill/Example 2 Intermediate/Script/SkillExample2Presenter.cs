@@ -1,5 +1,7 @@
 #region
 
+using System.Linq;
+using Modules.Domains.Skill.Core.Infrastructure;
 using Modules.Skill.Core;
 using rStarUtility.Util.Extensions;
 using UnityEngine;
@@ -16,7 +18,7 @@ namespace Modules.Skill.Example2
         [Inject]
         private SkillSpawner skillSpawner;
 
-        private Core.Skill skill;
+        private ISkill skill;
 
         [Inject]
         private SkillExample2Reference reference;
@@ -25,6 +27,12 @@ namespace Modules.Skill.Example2
         private          Animator animator;
         private readonly string   dataId = "dataId";
 
+        [Inject]
+        private SkillRegistry skillRegistry;
+
+        [Inject]
+        private ISkillController skillController;
+
     #endregion
 
     #region Public Methods
@@ -32,10 +40,11 @@ namespace Modules.Skill.Example2
         public void Initialize()
         {
             animator = reference.enemyAnimator;
-            skill    = skillSpawner.CreateSkill("Skill" , dataId , 2 , 4);
+            skillSpawner.CreateSkill("Skill" , dataId , 2 , 4);
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
+            skill = skillRegistry.GetAll().ToList()[0];
             UpdateInfo();
         }
 
@@ -64,13 +73,13 @@ namespace Modules.Skill.Example2
 
         private void Execute()
         {
-            skill.Execute();
+            skillController.ExecuteSkill(skill.GetId());
             UpdateInfo();
         }
 
         private void Tick()
         {
-            skill.Tick(time);
+            skillController.TickSkill(skill.GetId() , time);
             UpdateInfo();
         }
 
@@ -84,7 +93,7 @@ namespace Modules.Skill.Example2
 
         private void UseSkill()
         {
-            skill.UseSkill();
+            skillController.UseSkill(skill.GetId());
             UpdateInfo();
         }
 

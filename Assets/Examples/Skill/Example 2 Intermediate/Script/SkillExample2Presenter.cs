@@ -33,6 +33,8 @@ namespace Modules.Skill.Example2
         [Inject]
         private ISkillController skillController;
 
+        private string skillId;
+
     #endregion
 
     #region Public Methods
@@ -44,7 +46,8 @@ namespace Modules.Skill.Example2
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
-            skill = skillRepository.GetAll().ToList()[0];
+            skill   = skillRepository.GetAll().ToList()[0];
+            skillId = skill.GetId();
             UpdateInfo();
         }
 
@@ -73,13 +76,13 @@ namespace Modules.Skill.Example2
 
         private void Execute()
         {
-            skillController.ExecuteSkill(skill.GetId());
+            skillController.ExecuteSkill(skillId);
             UpdateInfo();
         }
 
         private void Tick()
         {
-            skillController.TickSkill(skill.GetId() , time);
+            skillController.TickSkill(skillId , time);
             UpdateInfo();
         }
 
@@ -93,7 +96,7 @@ namespace Modules.Skill.Example2
 
         private void UseSkill()
         {
-            skillController.UseSkill(skill.GetId());
+            skillController.UseSkill(skillId);
             UpdateInfo();
         }
 

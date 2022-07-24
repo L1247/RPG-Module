@@ -35,11 +35,16 @@ namespace Modules.Skill.Example.Intermediate2
 
     #region Public Methods
 
+        public void HideMask()
+        {
+            reference.coolDownImage.raycastTarget = false;
+        }
+
         public void Initialize()
         {
             animator = reference.enemyAnimator;
             reference.mainImage.BindPointerClick(_ => UseSkill());
-            reference.coolDownImage.raycastTarget = false;
+            HideMask();
             controller.CreateSkill("Skill" , dataId , 2 , 4);
             skillReadModel = skillRepository.GetAll().ToList()[0];
             skillId        = skillReadModel.GetId();

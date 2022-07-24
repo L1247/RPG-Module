@@ -25,6 +25,7 @@ namespace Modules.Skill.Example.Intermediate2
             Register<CastEntered>(OnCastEntered);
             Register<Executed>(OnExecuted);
             Register<CdEntered>(OnCdEntered);
+            Register<CdExit>(OnCdExit);
             Register<Ticked>(OnTicked);
         }
 
@@ -40,6 +41,11 @@ namespace Modules.Skill.Example.Intermediate2
         private void OnCdEntered(CdEntered obj)
         {
             presenter.ShowMask();
+        }
+
+        private void OnCdExit(CdExit obj)
+        {
+            presenter.HideMask();
         }
 
         private void OnExecuted(Executed executed)

@@ -17,6 +17,7 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
     private Skill       skill;
     private Executed    executed;
     private CastEntered castEntered;
+    private Ticked      ticked;
     private string      id;
     private string      dataId;
 
@@ -114,6 +115,16 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         ShouldCast(2);
     }
 
+    [Test(Description = "Tick技能")]
+    public void Tick_Skill()
+    {
+        domainEventBus.Post(Arg.Do<Ticked>(e => ticked = e));
+        BindSkill(3 , 3);
+        Tick(1);
+        Assert.AreEqual(id , ticked.Id , "id is not equal");
+    }
+
+
     [Test(Description = "Tick後離開詠唱")]
     [TestCase(4 , Description = "超過詠唱時間")]
     [TestCase(3 , Description = "剛好詠唱時間")]
@@ -148,18 +159,19 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         ownerId = NewGuid();
         dataId  = NewGuid();
         skill.Init(ownerId , dataId , cast , cd);
-        id = skill.GetId();
+        id          = skill.GetId();
+        ticked      = null;
+        castEntered = null;
+        executed    = null;
     }
 
     private void CacheCastEntered()
     {
-        castEntered = null;
         domainEventBus.Post(Arg.Do<CastEntered>(e => castEntered = e));
     }
 
     private void CacheExecuted()
     {
-        executed = null;
         domainEventBus.Post(Arg.Do<Executed>(e => executed = e));
     }
 

@@ -2,7 +2,6 @@
 
 using Modules.Skill.Infrastructure;
 using rStarUtility.Generic.Interfaces;
-using UnityEngine;
 using Zenject;
 
 #endregion
@@ -29,7 +28,6 @@ namespace Modules.Skill.Core
         public void Tick()
         {
             var deltaTime = timeSystem.GetDeltaTime();
-            Debug.Log($"{deltaTime}");
             foreach (var skill in repository.GetAll()) skillController.TickSkill(skill.GetId() , deltaTime);
         }
 

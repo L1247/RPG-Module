@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate2
+namespace Modules.Skill.Example.Intermediate1
 {
     public class SkillExamplePresenter : IInitializable
     {
@@ -38,9 +38,10 @@ namespace Modules.Skill.Example.Intermediate2
         public void Initialize()
         {
             animator = reference.enemyAnimator;
-            reference.mainImage.BindPointerClick(_ => UseSkill());
-            reference.coolDownImage.raycastTarget = false;
             controller.CreateSkill("Skill" , dataId , 2 , 4);
+            reference.use.BindClick(UseSkill);
+            reference.execute.BindClick(Execute);
+            reference.tick.BindClick(Tick);
             skillReadModel = skillRepository.GetAll().ToList()[0];
             skillId        = skillReadModel.GetId();
             UpdateInfo();
@@ -65,7 +66,23 @@ namespace Modules.Skill.Example.Intermediate2
             projectile.transform.position = shootPointPosition;
         }
 
-        public void UpdateInfo()
+    #endregion
+
+    #region Private Methods
+
+        private void Execute()
+        {
+            controller.ExecuteSkill(skillId);
+            UpdateInfo();
+        }
+
+        private void Tick()
+        {
+            controller.TickSkill(skillId , time);
+            UpdateInfo();
+        }
+
+        private void UpdateInfo()
         {
             var info = $"DefaultCast:{skillReadModel.DefaultCast}\n" + $"DefaultCD:{skillReadModel.DefaultCd}\n" +
                        $"IsCast:{skillReadModel.IsCast}\n" +
@@ -74,13 +91,10 @@ namespace Modules.Skill.Example.Intermediate2
             reference.info.text                = info;
         }
 
-    #endregion
-
-    #region Private Methods
-
         private void UseSkill()
         {
             controller.UseSkill(skillId);
+            UpdateInfo();
         }
 
     #endregion

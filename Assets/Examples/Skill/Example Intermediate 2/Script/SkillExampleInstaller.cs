@@ -6,7 +6,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate2
+namespace Modules.Skill.Example.Intermediate1
 {
     public class SkillExampleInstaller : MonoInstaller
     {
@@ -15,6 +15,7 @@ namespace Modules.Skill.Example.Intermediate2
         public override void InstallBindings()
         {
             EventBusInstaller.Install(Container);
+            Container.BindInstance(false).WhenInjectedInto<SkillInstaller>();
             SkillInstaller.Install(Container);
             Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<SkillExamplePresenter>().AsSingle();

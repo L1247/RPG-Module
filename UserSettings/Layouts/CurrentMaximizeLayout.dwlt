@@ -18,12 +18,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2544
+    width: 2153
     height: 931
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 1
-  controlID: -1
+  controlID: 31983
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,10 +44,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 538
+    x: 776
     y: 81
-    width: 748
-    height: 552
+    width: 377
+    height: 492
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -94,23 +94,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 748
-      height: 531
-    m_Scale: {x: 0.38958332, y: 0.38958332}
-    m_Translation: {x: 374, y: 265.5}
+      width: 377
+      height: 471
+    m_Scale: {x: 0.19635417, y: 0.19635417}
+    m_Translation: {x: 188.5, y: 235.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -960.00006
-      y: -681.4974
-      width: 1920.0001
-      height: 1362.9948
+      x: -960
+      y: -1199.3634
+      width: 1920
+      height: 2398.7268
     m_MinimalGUI: 1
-  m_defaultScale: 0.38958332
-  m_LastWindowPixelSize: {x: 748, y: 552}
+  m_defaultScale: 0.19635417
+  m_LastWindowPixelSize: {x: 377, y: 492}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -130,19 +130,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
-  - {fileID: 13}
-  - {fileID: 18}
-  - {fileID: 21}
+  - {fileID: 14}
+  - {fileID: 19}
+  - {fileID: 22}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2544
+    width: 2153
     height: 931
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: -1
+  controlID: 31984
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,17 +157,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 5}
-  - {fileID: 10}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
+    width: 825
     height: 931
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: -1
+  controlID: 31985
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,12 +187,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1280
-    height: 573
+    width: 825
+    height: 513
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: -1
+  controlID: 31986
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,10 +210,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 530
-    height: 573
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 446
+    height: 513
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -240,10 +240,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
+    x: 330
     y: 81
-    width: 529
-    height: 552
+    width: 445
+    height: 492
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -445,9 +445,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 750.4052, y: 718.33044, z: -0.8113606}
+    m_Target: {x: 922.8543, y: 393.7527, z: 3.3182855}
     speed: 2
-    m_Value: {x: 750.4052, y: 718.33044, z: -0.8113606}
+    m_Value: {x: 922.8543, y: 393.7527, z: 3.3182855}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -498,9 +498,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 154.55212
+    m_Target: 223.98827
     speed: 2
-    m_Value: 154.55212
+    m_Value: 223.98827
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -638,18 +638,47 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 530
+    x: 446
     y: 0
-    width: 750
-    height: 573
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 379
+    height: 513
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
+  - {fileID: 10}
   m_Selected: 0
-  m_LastSelected: 0
+  m_LastSelected: 1
 --- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 800, y: 250}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Package Manager
+    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 571
+    y: 81
+    width: 708
+    height: 492
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -665,18 +694,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 573
-    width: 1280
-    height: 358
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 11}
+    y: 513
+    width: 825
+    height: 418
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 11}
   - {fileID: 12}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &11
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -696,15 +725,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 654
-    width: 1279
-    height: 337
+    x: 330
+    y: 594
+    width: 824
+    height: 397
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &12
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -734,8 +763,8 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -79478
---- !u!114 &13
+  m_LastSelectedObjectID: 43528
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -748,19 +777,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 14}
-  - {fileID: 16}
+  - {fileID: 15}
+  - {fileID: 17}
   m_Position:
     serializedVersion: 2
-    x: 1280
+    x: 825
     y: 0
-    width: 473
+    width: 545
     height: 931
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 52133
---- !u!114 &14
+  controlID: 31885
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -777,16 +806,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 473
+    width: 545
     height: 420
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &15
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -806,9 +835,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1288
+    x: 1155
     y: 81
-    width: 471
+    width: 543
     height: 399
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -817,9 +846,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b6890000
-      m_LastClickedID: 0
-      m_ExpandedIDs: f8b6feff2ebbfeff16effeff72f7fefff229ffff263fffffd846ffffa054ffff7a56ffffbc57fffff276ffff9099ffffde99ffff149dffffae9effff3ea0ffffd0a1ffff60a3ffff00a6ffff88a7ffff36a8ffffc0a9ffff18acffffa0adffff26afffff7cb1ffff38b4ffffe0b5ffff6eb8ffff16baffff64bdffff0cbfffffcebfffff88c0ffff34c2ffff78c4ffff4ec5fffff4c5ffff9cc6ffff42c7ffff84c9fffff8caffff6accffffdecdffff50cffffff2cfffff50d3ffff92d5ffff00d7ffff3cd9ffffb0daffff12fbfffff24a0000244b0000444b0000506d0000926d0000aa800000b8800000fe800000448100005081000094810000ac810000788200008c8d00007c90000042ab0000
+      m_SelectedIDs: d2a90000
+      m_LastClickedID: 43474
+      m_ExpandedIDs: 6007ffff6207ffff5809ffff5a09ffffa610ffffa810ffff2411ffffcc13ffff7015ffff1c17ffffc018ffff641affff081cffff501fffffd021ffff8023ffff3826ffffe227ffff8429ffff5a2affff002cffff3a30ffff3431ffff0e33ffff8c33ffffd834ffff8443ffffba57ffff7c74ffffa87cffffb67effff6285ffff5a88ffff6e89ffff988fffff2493ffff7e97ffff6e98ffff269afffff89affff48a4ffff3ea5ffff1ca6ffffaea7ffffb0a8ffff0eadffff2aaefffff0b3ffff78b4fffffab4ffff32b6ffff6eb7ffff2ab9ffff42bfffff5ec1ffff64c2ffffa2d1ffff18d8ffff1ed9ffff28dcffff26ddffff70e4ffff18e6ffff38e8ffff46eaffff4af5ffff34fbffff42a60000d2a9000012aa0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -835,7 +864,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 14}
+        m_ClientGUIView: {fileID: 15}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -843,7 +872,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 8ba31d86f65c5a64b96c1582c5425ccd
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -860,16 +889,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 420
-    width: 473
+    width: 545
     height: 511
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -889,9 +918,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1288
+    x: 1155
     y: 501
-    width: 471
+    width: 543
     height: 490
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -908,24 +937,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
+    m_SearchArea: 2
     m_Folders:
-    - Assets/Modules/Domains/Skill/Example2/Scene
+    - Assets/Examples/Skill/Example Intermediate 1/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Modules/Domains/Skill/Example2/Scene
+  - Assets/Examples/Skill/Example Intermediate 1/Script
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\GitProject\SideProject\RPG Module
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2890000
-    m_LastClickedID: 35250
-    m_ExpandedIDs: 00000000d04b0000d24b0000d44b0000d64b0000d84b0000da4b0000dc4b0000de4b0000e04b0000e24b0000e44b0000e64b0000e84b0000ea4b0000ec4b0000ee4b0000f04b0000f44b0000f64b0000127f00005e870000ae890000
+    m_SelectedIDs: b44e0000
+    m_LastClickedID: 20148
+    m_ExpandedIDs: 0000000084120000684e00006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e0000864e0000884e00008a4e00008c4e0000904e0000924e0000944e0000964e0000a04e0000a64e0000aa4e0000ae4e0000365500003a5e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -941,7 +970,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 16}
+      m_ClientGUIView: {fileID: 17}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -953,7 +982,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d04b0000d24b0000d44b0000d64b0000d84b0000da4b0000dc4b0000de4b0000e04b0000e24b0000e44b0000e64b0000e84b0000ea4b0000ec4b0000ee4b0000f04b0000f44b0000f64b0000bc7b0000127f0000
+    m_ExpandedIDs: 0000000084120000684e00006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e0000864e0000884e00008a4e00008c4e0000904e0000924e0000944e0000964e0000a04e0000a64e0000aa4e0000ae4e0000365500003a5e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -978,9 +1007,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b6890000
-    m_LastClickedInstanceID: 35254
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: d2a90000
+    m_LastClickedInstanceID: 43474
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000444600004245000060530000d25000003251000030510000c8450000d64d0000644500002446000098470000c83e0000b23c0000964200002c5b0000703f00007a410000083d000000570000bc3e0000fa410000e23c0000de3c00000000000008980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -997,7 +1026,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 16}
+      m_ClientGUIView: {fileID: 17}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1008,8 +1037,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 205
---- !u!114 &18
+  m_DirectoriesAreaWidth: 244
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1024,59 +1053,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1753
+    x: 1370
     y: 0
-    width: 338
+    width: 358
     height: 931
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1808
-    y: 81
-    width: 389
-    height: 910
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: -451
-    m_ControlHash: 1412526313
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 19598
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1097,9 +1085,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1761
+    x: 1700
     y: 81
-    width: 336
+    width: 356
     height: 910
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1108,7 +1096,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: -307
+    m_CachedPref: 327
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -1119,32 +1107,6 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 2091
-    y: 0
-    width: 453
-    height: 931
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1164,24 +1126,1085 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2099
+    x: 1424
     y: 81
-    width: 452
+    width: 435
     height: 910
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
+  m_ObjectsLockedBeforeSerialization:
+  - {fileID: 5897886265953266890, guid: 629ebe07a89320249a72a637ab6b7977, type: 3}
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -307
+    m_ControlHash: 1412526313
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: 24128
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 1
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1728
+    y: 0
+    width: 425
+    height: 931
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 24}
+  m_Panes:
+  - {fileID: 23}
+  - {fileID: 24}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1861
+    y: 81
+    width: 385
+    height: 910
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization:
+  - {fileID: 5897886265953266890, guid: 75baeb8eea31b154f898ef31e6559b45, type: 3}
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
     m_CachedPref: -229
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 21426
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
-    m_IsLocked: 0
+    m_IsLocked: 1
   m_PreviewWindow: {fileID: 0}
+--- !u!114 &24
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2058
+    y: 81
+    width: 424
+    height: 910
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 32050
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 630
+    - 210
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 840
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 0}
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 24}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[RPG Module][suite]'
+      name: RPG Module
+      fullName: RPG Module
+      resultStatus: 1
+      duration: 0.5291413
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1018
+      uniqueId: '[RPGModule.Skill.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Skill.Tests.dll][suite]'
+      name: RPGModule.Skill.Tests.dll
+      fullName: C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Skill.Tests.dll
+      resultStatus: 1
+      duration: 0.4863651
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[RPG Module][suite]'
+    - id: 1002
+      uniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+      name: SkillTests
+      fullName: SkillTests
+      resultStatus: 1
+      duration: 0.3924123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1018
+      parentUniqueId: '[RPGModule.Skill.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Skill.Tests.dll][suite]'
+    - id: 1003
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.CreateSkill]
+      name: CreateSkill
+      fullName: SkillTests.CreateSkill
+      resultStatus: 1
+      duration: 0.2496342
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u5EFA\u7ACB\u6280\u80FD"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1009
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.DoNoting_When_UseSkill_With_CDIng]
+      name: DoNoting_When_UseSkill_With_CDIng
+      fullName: SkillTests.DoNoting_When_UseSkill_With_CDIng
+      resultStatus: 1
+      duration: 0.0050369
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "CD\u4E2D\u4F7F\u7528\u6280\u80FD\u4E0D\u6703\u6709\u6548\u679C"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1010
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCast_When_Use_Skill]
+      name: EnterCast_When_Use_Skill
+      fullName: SkillTests.EnterCast_When_Use_Skill
+      resultStatus: 1
+      duration: 0.0015009
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u4F7F\u7528\u6280\u80FD\uFF0C\u9032\u5165\u8A60\u5531"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1008
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill][suite]
+      name: EnterCD_When_Use_Skill
+      fullName: SkillTests.EnterCD_When_Use_Skill
+      resultStatus: 1
+      duration: 0.0085727
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u4F7F\u7528\u6280\u80FD\uFF0C\u9032\u5165CD"
+      isSuite: 1
+      categories: []
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1006
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/EnterCD_When_Use_Skill/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill(0,False)]
+      name: EnterCD_When_Use_Skill(0,False)
+      fullName: SkillTests.EnterCD_When_Use_Skill(0,False)
+      resultStatus: 1
+      duration: 0.0010661
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill][suite]
+    - id: 1007
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/EnterCD_When_Use_Skill/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill(2,True)]
+      name: EnterCD_When_Use_Skill(2,True)
+      fullName: SkillTests.EnterCD_When_Use_Skill(2,True)
+      resultStatus: 1
+      duration: 0.0006729
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill][suite]
+    - id: 1005
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.Execute_When_Use_Skill]
+      name: Execute_When_Use_Skill
+      fullName: SkillTests.Execute_When_Use_Skill
+      resultStatus: 1
+      duration: 0.0013608
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u4F7F\u7528\u6280\u80FD\u4E26\u57F7\u884C"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1004
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExecuteSkill]
+      name: ExecuteSkill
+      fullName: SkillTests.ExecuteSkill
+      resultStatus: 1
+      duration: 0.000861
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u57F7\u884C\u6280\u80FD"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1014
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill][suite]
+      name: ExitCast_When_Tick_Skill
+      fullName: SkillTests.ExitCast_When_Tick_Skill
+      resultStatus: 1
+      duration: 0.006453
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "Tick\u5F8C\u96E2\u958B\u8A60\u5531"
+      isSuite: 1
+      categories: []
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1012
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/ExitCast_When_Tick_Skill/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill(4)]
+      name: ExitCast_When_Tick_Skill(4)
+      fullName: SkillTests.ExitCast_When_Tick_Skill(4)
+      resultStatus: 1
+      duration: 0.0015715
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u8D85\u904E\u8A60\u5531\u6642\u9593"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill][suite]
+    - id: 1013
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/ExitCast_When_Tick_Skill/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill(3)]
+      name: ExitCast_When_Tick_Skill(3)
+      fullName: SkillTests.ExitCast_When_Tick_Skill(3)
+      resultStatus: 1
+      duration: 0.0008182
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u525B\u597D\u8A60\u5531\u6642\u9593"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1014
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill][suite]
+    - id: 1017
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill][suite]
+      name: ExitCD_When_Tick_Skill
+      fullName: SkillTests.ExitCD_When_Tick_Skill
+      resultStatus: 1
+      duration: 0.0056848
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "Tick\u5F8C\u96E2\u958BCD"
+      isSuite: 1
+      categories: []
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1015
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/ExitCD_When_Tick_Skill/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill(4)]
+      name: ExitCD_When_Tick_Skill(4)
+      fullName: SkillTests.ExitCD_When_Tick_Skill(4)
+      resultStatus: 1
+      duration: 0.0010752
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u8D85\u904ECD\u6642\u9593"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill][suite]
+    - id: 1016
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/ExitCD_When_Tick_Skill/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill(3)]
+      name: ExitCD_When_Tick_Skill(3)
+      fullName: SkillTests.ExitCD_When_Tick_Skill(3)
+      resultStatus: 1
+      duration: 0.0007293
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u525B\u597DCD\u6642\u9593"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill][suite]
+    - id: 1011
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.Reduce_CD_And_Cast_When_Tick_Skill]
+      name: Reduce_CD_And_Cast_When_Tick_Skill
+      fullName: SkillTests.Reduce_CD_And_Cast_When_Tick_Skill
+      resultStatus: 1
+      duration: 0.0011398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "Tick\u6703\u6E1B\u5C11\u6280\u80FD\u51B7\u537B\u8DDF\u8A60\u5531"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1002
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1011
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.Tick_Skill]
+      name: Tick_Skill
+      fullName: SkillTests.Tick_Skill
+      resultStatus: 1
+      duration: 0.0013011
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "Tick\u6280\u80FD"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1050
+      uniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+      name: RPGModule.Stat.Tests.dll
+      fullName: C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll
+      resultStatus: 1
+      duration: 0.1185447
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[RPG Module][suite]'
+    - id: 1036
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][AddAmountUseCaseTests][suite]
+      name: AddAmountUseCaseTests
+      fullName: AddAmountUseCaseTests
+      resultStatus: 1
+      duration: 0.0032737
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1038
+      uniqueId: RPGModule.Stat.Tests.dll/AddAmountUseCaseTests/[RPGModule.Stat.Tests][AddAmountUseCaseTests.Should_Fail_When_AddAmount]
+      name: Should_Fail_When_AddAmount
+      fullName: AddAmountUseCaseTests.Should_Fail_When_AddAmount
+      resultStatus: 1
+      duration: 0.001037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][AddAmountUseCaseTests][suite]
+    - id: 1037
+      uniqueId: RPGModule.Stat.Tests.dll/AddAmountUseCaseTests/[RPGModule.Stat.Tests][AddAmountUseCaseTests.Should_Succeed_When_AddAmount]
+      name: Should_Succeed_When_AddAmount
+      fullName: AddAmountUseCaseTests.Should_Succeed_When_AddAmount
+      resultStatus: 1
+      duration: 0.0011266
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][AddAmountUseCaseTests][suite]
+    - id: 1039
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][AddModifierUseCaseTests][suite]
+      name: AddModifierUseCaseTests
+      fullName: AddModifierUseCaseTests
+      resultStatus: 1
+      duration: 0.010575
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1040
+      uniqueId: RPGModule.Stat.Tests.dll/AddModifierUseCaseTests/[RPGModule.Stat.Tests][AddModifierUseCaseTests.Should_Succeed_When_AddModifiers]
+      name: Should_Succeed_When_AddModifiers
+      fullName: AddModifierUseCaseTests.Should_Succeed_When_AddModifiers
+      resultStatus: 1
+      duration: 0.0014236
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1039
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][AddModifierUseCaseTests][suite]
+    - id: 1041
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][CreateStatUseCaseTests][suite]
+      name: CreateStatUseCaseTests
+      fullName: CreateStatUseCaseTests
+      resultStatus: 1
+      duration: 0.0119413
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1042
+      uniqueId: RPGModule.Stat.Tests.dll/CreateStatUseCaseTests/[RPGModule.Stat.Tests][CreateStatUseCaseTests.Should_Succeed_When_Create_Stat]
+      name: Should_Succeed_When_Create_Stat
+      fullName: CreateStatUseCaseTests.Should_Succeed_When_Create_Stat
+      resultStatus: 1
+      duration: 0.0009332
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1041
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][CreateStatUseCaseTests][suite]
+    - id: 1043
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][DeleteStatUseCaseTests][suite]
+      name: DeleteStatUseCaseTests
+      fullName: DeleteStatUseCaseTests
+      resultStatus: 1
+      duration: 0.0116449
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1044
+      uniqueId: RPGModule.Stat.Tests.dll/DeleteStatUseCaseTests/[RPGModule.Stat.Tests][DeleteStatUseCaseTests.Should_Succeed_When_DeleteStatUseCaseTests]
+      name: Should_Succeed_When_DeleteStatUseCaseTests
+      fullName: DeleteStatUseCaseTests.Should_Succeed_When_DeleteStatUseCaseTests
+      resultStatus: 1
+      duration: 0.0010434
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][DeleteStatUseCaseTests][suite]
+    - id: 1045
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][RemoveModifiersUseCaseTests][suite]
+      name: RemoveModifiersUseCaseTests
+      fullName: RemoveModifiersUseCaseTests
+      resultStatus: 1
+      duration: 0.0107862
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1046
+      uniqueId: RPGModule.Stat.Tests.dll/RemoveModifiersUseCaseTests/[RPGModule.Stat.Tests][RemoveModifiersUseCaseTests.Should_Succeed_When_RemoveModifiers]
+      name: Should_Succeed_When_RemoveModifiers
+      fullName: RemoveModifiersUseCaseTests.Should_Succeed_When_RemoveModifiers
+      resultStatus: 1
+      duration: 0.0013512
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1045
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][RemoveModifiersUseCaseTests][suite]
+    - id: 1047
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatModifyAmountUseCaseTests][suite]
+      name: StatModifyAmountUseCaseTests
+      fullName: StatModifyAmountUseCaseTests
+      resultStatus: 1
+      duration: 0.0129981
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1049
+      uniqueId: RPGModule.Stat.Tests.dll/StatModifyAmountUseCaseTests/[RPGModule.Stat.Tests][StatModifyAmountUseCaseTests.Should_Fail_When_ModifyAmount]
+      name: Should_Fail_When_ModifyAmount
+      fullName: StatModifyAmountUseCaseTests.Should_Fail_When_ModifyAmount
+      resultStatus: 1
+      duration: 0.0012146
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1047
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatModifyAmountUseCaseTests][suite]
+    - id: 1048
+      uniqueId: RPGModule.Stat.Tests.dll/StatModifyAmountUseCaseTests/[RPGModule.Stat.Tests][StatModifyAmountUseCaseTests.Should_Succeed_When_ModifyAmount]
+      name: Should_Succeed_When_ModifyAmount
+      fullName: StatModifyAmountUseCaseTests.Should_Succeed_When_ModifyAmount
+      resultStatus: 1
+      duration: 0.001239
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1047
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatModifyAmountUseCaseTests][suite]
+    - id: 1032
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatRepositoryTests][suite]
+      name: StatRepositoryTests
+      fullName: StatRepositoryTests
+      resultStatus: 1
+      duration: 0.0159925
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1035
+      uniqueId: RPGModule.Stat.Tests.dll/StatRepositoryTests/[RPGModule.Stat.Tests][StatRepositoryTests.FindModifier]
+      name: FindModifier
+      fullName: StatRepositoryTests.FindModifier
+      resultStatus: 1
+      duration: 0.0015661
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1032
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatRepositoryTests][suite]
+    - id: 1033
+      uniqueId: RPGModule.Stat.Tests.dll/StatRepositoryTests/[RPGModule.Stat.Tests][StatRepositoryTests.FindStat]
+      name: FindStat
+      fullName: StatRepositoryTests.FindStat
+      resultStatus: 1
+      duration: 0.0009757
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1032
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatRepositoryTests][suite]
+    - id: 1034
+      uniqueId: RPGModule.Stat.Tests.dll/StatRepositoryTests/[RPGModule.Stat.Tests][StatRepositoryTests.FindStat_Return_Null]
+      name: FindStat_Return_Null
+      fullName: StatRepositoryTests.FindStat_Return_Null
+      resultStatus: 1
+      duration: 0.0004468
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1032
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatRepositoryTests][suite]
+    - id: 1034
+      uniqueId: RPGModule.Stat.Tests.dll/StatRepositoryTests/[RPGModule.Stat.Tests][StatRepositoryTests.FindStatsByOwnerId]
+      name: FindStatsByOwnerId
+      fullName: StatRepositoryTests.FindStatsByOwnerId
+      resultStatus: 1
+      duration: 0.0013333
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1032
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatRepositoryTests][suite]
+    - id: 1019
+      uniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+      name: StatTests
+      fullName: StatTests
+      resultStatus: 1
+      duration: 0.029742
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[RPGModule.Stat.Tests][C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll][suite]'
+    - id: 1021
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddAmount]
+      name: AddAmount
+      fullName: StatTests.AddAmount
+      resultStatus: 1
+      duration: 0.000581
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1026
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddModifiers_All_ModifierType]
+      name: AddModifiers_All_ModifierType
+      fullName: StatTests.AddModifiers_All_ModifierType
+      resultStatus: 1
+      duration: 0.0004873
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1027
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddModifiers_With_Flat]
+      name: AddModifiers_With_Flat
+      fullName: StatTests.AddModifiers_With_Flat
+      resultStatus: 1
+      duration: 0.0005393
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1031
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddModifiers_With_NegativeNumber]
+      name: AddModifiers_With_NegativeNumber
+      fullName: StatTests.AddModifiers_With_NegativeNumber
+      resultStatus: 1
+      duration: 0.0004538
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1028
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddModifiers_With_PercentAdd]
+      name: AddModifiers_With_PercentAdd
+      fullName: StatTests.AddModifiers_With_PercentAdd
+      resultStatus: 1
+      duration: 0.0004586
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1029
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.AddModifiers_With_PercentMulti]
+      name: AddModifiers_With_PercentMulti
+      fullName: StatTests.AddModifiers_With_PercentMulti
+      resultStatus: 1
+      duration: 0.0005765
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1020
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.CreateStat]
+      name: CreateStat
+      fullName: StatTests.CreateStat
+      resultStatus: 1
+      duration: 0.0005765
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1030
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.RemoveModifiers]
+      name: RemoveModifiers
+      fullName: StatTests.RemoveModifiers
+      resultStatus: 1
+      duration: 0.000495
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1025
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.SetAmount][suite]
+      name: SetAmount
+      fullName: StatTests.SetAmount
+      resultStatus: 1
+      duration: 0.0129438
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: RPGModule.Stat.Tests.dll/[RPGModule.Stat.Tests][StatTests][suite]
+    - id: 1022
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/SetAmount/[RPGModule.Stat.Tests][StatTests.SetAmount(5,5)]
+      name: SetAmount(5,5)
+      fullName: StatTests.SetAmount(5,5)
+      resultStatus: 1
+      duration: 0.0006437
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.SetAmount][suite]
+    - id: 1023
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/SetAmount/[RPGModule.Stat.Tests][StatTests.SetAmount(0,0)]
+      name: SetAmount(0,0)
+      fullName: StatTests.SetAmount(0,0)
+      resultStatus: 1
+      duration: 0.0005756
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.SetAmount][suite]
+    - id: 1024
+      uniqueId: RPGModule.Stat.Tests.dll/StatTests/SetAmount/[RPGModule.Stat.Tests][StatTests.SetAmount(-1,0)]
+      name: SetAmount(-1,0)
+      fullName: StatTests.SetAmount(-1,0)
+      resultStatus: 1
+      duration: 0.0004788
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.SetAmount][suite]
+    m_ResultText: "CreateSkill (0.250s)\n\u5EFA\u7ACB\u6280\u80FD"
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 21839067
+      m_LastClickedID: 1737524001
+      m_ExpandedIDs: 21f596eaa903d816c1a9301b8d1a447fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized

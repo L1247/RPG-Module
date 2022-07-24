@@ -43,6 +43,8 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
     [Test(Description = "建立技能")]
     public void CreateSkill()
     {
+        SkillCreated skillCreated = null;
+        domainEventBus.Post(Arg.Do<SkillCreated>(created => skillCreated = created));
         var cast = 2;
         var cd   = 3;
         BindSkill(cast , cd);
@@ -55,6 +57,8 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         ShouldCast(cast);
         ShouldIsCd(false);
         ShouldIsCast(false);
+        Assert.NotNull(skillCreated , "skillCreated is null");
+        Assert.AreEqual(skill.GetId() , skillCreated.Id , "Id is not equal");
     }
 
     [Test(Description = "執行技能")]

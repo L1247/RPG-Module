@@ -104,6 +104,7 @@ namespace Modules.Skill.Core
             Cast        = DefaultCast;
             IsCd        = false;
             IsCast      = false;
+            domainEventBus.Post(new SkillCreated(GetId()));
         }
 
         public void OnDespawned()

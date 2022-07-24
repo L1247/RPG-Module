@@ -123,7 +123,7 @@ namespace Modules.Skill.Core
         {
             Cd   -= time;
             Cast -= time;
-            domainEventBus.Post(new Ticked(GetId()));
+            domainEventBus.Post(new Ticked(GetId() , Cast , Cd));
             if (IsCast)
                 if (Cast <= 0)
                     ExitCast();

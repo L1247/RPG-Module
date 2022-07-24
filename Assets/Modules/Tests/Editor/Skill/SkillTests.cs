@@ -121,7 +121,9 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         domainEventBus.Post(Arg.Do<Ticked>(e => ticked = e));
         BindSkill(3 , 3);
         Tick(1);
-        Assert.AreEqual(id , ticked.Id , "id is not equal");
+        Assert.AreEqual(id , ticked.Id ,   "id is not equal");
+        Assert.AreEqual(2 ,  ticked.Cast , "Cast is not equal");
+        Assert.AreEqual(-1 , ticked.Cd ,   "cd is not equal");
     }
 
 

@@ -89,6 +89,17 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         ShouldIsCd(expectedIsCd);
     }
 
+    [Test(Description = "進入CD")]
+    public void EnterCD_SKill()
+    {
+        var cd = 5;
+        BindSkill(0 , cd);
+        skill.EnterCd();
+        ShouldCd(cd);
+        ShouldIsCd(true);
+    }
+
+
     [Test(Description = "CD中使用技能不會有效果")]
     public void DoNoting_When_UseSkill_With_CDIng()
     {

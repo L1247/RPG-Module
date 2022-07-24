@@ -71,6 +71,7 @@ namespace Modules.Skill.Core
         {
             IsCd = true;
             Cd   = DefaultCd;
+            domainEventBus.Post(new CdEntered(GetId()));
         }
 
         public void Execute()

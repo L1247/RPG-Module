@@ -92,11 +92,15 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
     [Test(Description = "進入CD")]
     public void EnterCD_SKill()
     {
+        CdEntered cdEntered = null;
+        domainEventBus.Post(Arg.Do<CdEntered>(entered => cdEntered = entered));
         var cd = 5;
         BindSkill(0 , cd);
         skill.EnterCd();
         ShouldCd(cd);
         ShouldIsCd(true);
+        Assert.NotNull(cdEntered , "cdEntered is null");
+        Assert.AreEqual(id , cdEntered.Id , "id is not equal");
     }
 
 

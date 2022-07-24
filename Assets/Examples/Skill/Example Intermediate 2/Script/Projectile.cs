@@ -4,7 +4,7 @@ using UnityEngine;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate1
+namespace Modules.Skill.Example.Intermediate2
 {
     public class Projectile : MonoBehaviour
     {

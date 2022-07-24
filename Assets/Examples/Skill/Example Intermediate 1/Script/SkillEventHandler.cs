@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate2
+namespace Modules.Skill.Example.Intermediate1
 {
     public class SkillEventHandler : DomainEventHandler
     {
@@ -25,7 +25,6 @@ namespace Modules.Skill.Example.Intermediate2
         {
             Register<CastEntered>(OnCastEntered);
             Register<Executed>(OnExecuted);
-            Register<Ticked>(OnTicked);
         }
 
     #endregion
@@ -43,11 +42,6 @@ namespace Modules.Skill.Example.Intermediate2
             Debug.Log($"OnExecuted : {executed.ID}");
             presenter.PlayAfterCast();
             presenter.SpawnProjectile();
-        }
-
-        private void OnTicked(Ticked ticked)
-        {
-            presenter.UpdateInfo();
         }
 
     #endregion

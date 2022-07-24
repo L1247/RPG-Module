@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate1
+namespace Modules.Skill.Example.Intermediate2
 {
     public class SkillExamplePresenter : IInitializable
     {
@@ -38,10 +38,9 @@ namespace Modules.Skill.Example.Intermediate1
         public void Initialize()
         {
             animator = reference.enemyAnimator;
+            reference.mainImage.BindPointerClick(_ => UseSkill());
+            reference.coolDownImage.raycastTarget = false;
             controller.CreateSkill("Skill" , dataId , 2 , 4);
-            reference.use.BindClick(UseSkill);
-            reference.execute.BindClick(Execute);
-            reference.tick.BindClick(Tick);
             skillReadModel = skillRepository.GetAll().ToList()[0];
             skillId        = skillReadModel.GetId();
             UpdateInfo();
@@ -59,6 +58,11 @@ namespace Modules.Skill.Example.Intermediate1
             animator.Play("Enemy Attack 3" , 0 , skillReadModel.Cast);
         }
 
+        public void ShowMask()
+        {
+            reference.coolDownImage.raycastTarget = true;
+        }
+
         public void SpawnProjectile()
         {
             var projectile         = Object.Instantiate(reference.projectilePrefab);
@@ -66,23 +70,7 @@ namespace Modules.Skill.Example.Intermediate1
             projectile.transform.position = shootPointPosition;
         }
 
-    #endregion
-
-    #region Private Methods
-
-        private void Execute()
-        {
-            controller.ExecuteSkill(skillId);
-            UpdateInfo();
-        }
-
-        private void Tick()
-        {
-            controller.TickSkill(skillId , time);
-            UpdateInfo();
-        }
-
-        private void UpdateInfo()
+        public void UpdateInfo()
         {
             var info = $"DefaultCast:{skillReadModel.DefaultCast}\n" + $"DefaultCD:{skillReadModel.DefaultCd}\n" +
                        $"IsCast:{skillReadModel.IsCast}\n" +
@@ -91,10 +79,13 @@ namespace Modules.Skill.Example.Intermediate1
             reference.info.text                = info;
         }
 
+    #endregion
+
+    #region Private Methods
+
         private void UseSkill()
         {
             controller.UseSkill(skillId);
-            UpdateInfo();
         }
 
     #endregion

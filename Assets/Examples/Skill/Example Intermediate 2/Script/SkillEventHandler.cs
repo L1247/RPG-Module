@@ -3,12 +3,11 @@
 using Modules.Skill.Infrastructure.Events;
 using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Generic.Interfaces;
-using UnityEngine;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate1
+namespace Modules.Skill.Example.Intermediate2
 {
     public class SkillEventHandler : DomainEventHandler
     {
@@ -25,6 +24,8 @@ namespace Modules.Skill.Example.Intermediate1
         {
             Register<CastEntered>(OnCastEntered);
             Register<Executed>(OnExecuted);
+            Register<CdEntered>(OnCdEntered);
+            Register<Ticked>(OnTicked);
         }
 
     #endregion
@@ -33,15 +34,23 @@ namespace Modules.Skill.Example.Intermediate1
 
         private void OnCastEntered(CastEntered entered)
         {
-            Debug.Log($"OnCastEntered: {entered.ID}");
             presenter.PlayCastEnter();
+        }
+
+        private void OnCdEntered(CdEntered obj)
+        {
+            presenter.ShowMask();
         }
 
         private void OnExecuted(Executed executed)
         {
-            Debug.Log($"OnExecuted : {executed.ID}");
             presenter.PlayAfterCast();
             presenter.SpawnProjectile();
+        }
+
+        private void OnTicked(Ticked ticked)
+        {
+            presenter.UpdateInfo();
         }
 
     #endregion

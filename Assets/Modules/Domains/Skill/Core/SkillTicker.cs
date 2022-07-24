@@ -1,6 +1,7 @@
 #region
 
 using Modules.Skill.Infrastructure;
+using rStarUtility.Generic.Interfaces;
 using UnityEngine;
 using Zenject;
 
@@ -18,13 +19,17 @@ namespace Modules.Skill.Core
         [Inject]
         private ISkillController skillController;
 
+        [Inject]
+        private ITimeSystem timeSystem;
+
     #endregion
 
     #region Public Methods
 
         public void Tick()
         {
-            var deltaTime = Time.deltaTime;
+            var deltaTime = timeSystem.GetDeltaTime();
+            Debug.Log($"{deltaTime}");
             foreach (var skill in repository.GetAll()) skillController.TickSkill(skill.GetId() , deltaTime);
         }
 

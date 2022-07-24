@@ -1,14 +1,14 @@
 {
   "dependencies": {
     "com.cysharp.messagepipe": {
-      "version": "1.7.2",
+      "version": "1.7.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
     "com.cysharp.messagepipe.zenject": {
-      "version": "1.7.2",
+      "version": "1.7.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -35,11 +35,11 @@
       "dependencies": {
         "com.svermeulen.extenject": "9.2.0-stcf3",
         "com.cysharp.unitask": "2.3.1",
-        "com.cysharp.messagepipe": "1.7.2",
-        "com.cysharp.messagepipe.zenject": "1.7.2",
+        "com.cysharp.messagepipe": "1.7.4",
+        "com.cysharp.messagepipe.zenject": "1.7.4",
         "com.neuecc.unirx": "7.1.0"
       },
-      "hash": "3523d92b9a7cf64c653b7f9635bac29383f86624"
+      "hash": "2d358f6af0c216f6ce9a1248889c3605a7d1457a"
     },
     "com.smkplus.custom-toolbar": {
       "version": "https://github.com/smkplus/CustomToolbar.git#master",

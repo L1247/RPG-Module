@@ -1,6 +1,7 @@
 #region
 
 using Modules.Skill.Infrastructure;
+using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion
@@ -9,14 +10,29 @@ namespace Modules.Skill.Core
 {
     public class SkillInstaller : Installer<SkillInstaller>
     {
+    #region Private Variables
+
+        private readonly bool useTicker;
+
+    #endregion
+
+    #region Constructor
+
+        public SkillInstaller(bool useTicker = true)
+        {
+            this.useTicker = useTicker;
+        }
+
+    #endregion
+
     #region Public Methods
 
         public override void InstallBindings()
         {
+            GenericInstaller.Install(Container);
             Container.Bind<ISkillRepository>().To<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
-            Container.Bind<ISkillTicker>().To<SkillTicker>().AsSingle();
-
+            if (useTicker) Container.BindInterfacesAndSelfTo<SkillTicker>().AsSingle();
             Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();
         }
 

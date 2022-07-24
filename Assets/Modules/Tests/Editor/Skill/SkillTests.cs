@@ -103,6 +103,18 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         Assert.AreEqual(id , cdEntered.Id , "id is not equal");
     }
 
+    [Test(Description = "離開CD")]
+    public void ExitCD_SKill()
+    {
+        CdExit cdExit = null;
+        domainEventBus.Post(Arg.Do<CdExit>(entered => cdExit = entered));
+        BindSkill(0 , 5);
+        skill.ExitCd();
+        ShouldIsCd(false);
+        Assert.NotNull(cdExit , "cdExit is null");
+        Assert.AreEqual(id , cdExit.Id , "id is not equal");
+    }
+
 
     [Test(Description = "CD中使用技能不會有效果")]
     public void DoNoting_When_UseSkill_With_CDIng()

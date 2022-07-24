@@ -88,6 +88,7 @@ namespace Modules.Skill.Core
         public void ExitCd()
         {
             IsCd = false;
+            domainEventBus.Post(new CdExit(GetId()));
         }
 
         public string GetId()

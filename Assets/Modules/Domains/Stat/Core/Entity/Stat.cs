@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Modules.Stat.Infrastructure;
 using Modules.Stat.Infrastructure.Events;
-using rStarUtility.DDD.Implement.Core;
+using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Util;
 
 #endregion

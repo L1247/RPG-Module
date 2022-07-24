@@ -1,6 +1,6 @@
 #region
 
-using rStarUtility.DDD.Model;
+using rStarUtility.Generic.Model;
 
 #endregion
 

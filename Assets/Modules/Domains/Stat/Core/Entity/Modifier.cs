@@ -1,7 +1,7 @@
 #region
 
 using Modules.Stat.Infrastructure;
-using rStarUtility.DDD.Implement.Core;
+using rStarUtility.Generic.Implement.Core;
 
 #endregion
 

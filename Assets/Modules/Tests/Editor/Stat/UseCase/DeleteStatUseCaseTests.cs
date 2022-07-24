@@ -6,13 +6,13 @@ using Modules.Stat.UseCase;
 using Modules.Stat.UseCase.Repository;
 using NSubstitute;
 using NUnit.Framework;
-using rStarUtility.DDD.DDDTestFrameWork;
-using rStarUtility.DDD.Implement.CQRS;
-using rStarUtility.DDD.Usecase.CQRS;
+using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.TestFrameWork;
+using rStarUtility.Generic.Usecase.CQRS;
 
 #endregion
 
-public class DeleteStatUseCaseTests : DDDUnitTestFixture
+public class DeleteStatUseCaseTests : DIUnitTestFixture_With_EventBus
 {
 #region Test Methods
 

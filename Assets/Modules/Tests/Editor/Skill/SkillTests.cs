@@ -5,11 +5,11 @@ using Modules.Skill.Infrastructure;
 using Modules.Skill.Infrastructure.Events;
 using NSubstitute;
 using NUnit.Framework;
-using rStarUtility.DDD.DDDTestFrameWork;
+using rStarUtility.Generic.TestFrameWork;
 
 #endregion
 
-public class SkillTests : DDDUnitTestFixture
+public class SkillTests : DIUnitTestFixture_With_EventBus
 {
 #region Private Variables
 

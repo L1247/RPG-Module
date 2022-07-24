@@ -1,6 +1,10 @@
 #region
 
-using rStarUtility.DDD.Implement.Core;
+#endregion
+
+#region
+
+using rStarUtility.Generic.Implement.Core;
 
 #endregion
 

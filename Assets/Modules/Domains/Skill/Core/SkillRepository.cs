@@ -2,7 +2,7 @@
 
 using System.Linq;
 using Modules.Skill.Infrastructure;
-using rStarUtility.DDD.Implement.Abstract;
+using rStarUtility.Generic.Implement.Abstract;
 
 #endregion
 

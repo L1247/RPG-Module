@@ -6,12 +6,12 @@ using Modules.Stat.Entity;
 using Modules.Stat.Infrastructure;
 using Modules.Stat.Infrastructure.Events;
 using NUnit.Framework;
-using rStarUtility.DDD.DDDTestFrameWork;
+using rStarUtility.Generic.TestFrameWork;
 
 #endregion
 
 [TestFixture]
-public class StatTests : DDDUnitTestFixture
+public class StatTests : DIUnitTestFixture_With_EventBus
 {
 #region Private Variables
 

@@ -1,7 +1,7 @@
 #region
 
 using Modules.Stat.Installer;
-using rStarUtility.DDD.Implement.Core;
+using rStarUtility.Generic.Implement.Core;
 using Zenject;
 
 #endregion
@@ -14,7 +14,7 @@ namespace Modules.Stat.Example.Beginner1
 
         public override void InstallBindings()
         {
-            DDDInstaller.Install(Container);
+            EventBusInstaller.Install(Container);
             Container.BindInterfacesAndSelfTo<StatSampleMain>().AsSingle();
             Container.BindInterfacesAndSelfTo<StatExamplePresenter>().AsSingle();
             StatInstaller.Install(Container);

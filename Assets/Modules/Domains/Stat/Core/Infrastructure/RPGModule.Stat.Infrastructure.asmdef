@@ -2,7 +2,7 @@
   "name": "RPGModule.Stat.Infrastructure",
   "rootNamespace": "",
   "references": [
-    "GUID:b18a16a3dcf3d01428b99057a0d9b91e"
+    "GUID:aa7bb26fb297ee944a4249ceb695c159"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

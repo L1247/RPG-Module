@@ -4,8 +4,8 @@ using System;
 using System.Collections.Generic;
 using Modules.Stat.Infrastructure;
 using Modules.Stat.UseCase;
-using rStarUtility.DDD.Implement.CQRS;
-using rStarUtility.DDD.Usecase.CQRS;
+using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.Usecase.CQRS;
 using rStarUtility.Util;
 using Zenject;
 

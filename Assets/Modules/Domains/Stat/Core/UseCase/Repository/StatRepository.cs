@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Modules.Stat.Infrastructure;
-using rStarUtility.DDD.Implement.Abstract;
+using rStarUtility.Generic.Implement.Abstract;
 
 #endregion
 

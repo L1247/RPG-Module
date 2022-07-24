@@ -1,8 +1,8 @@
 #region
 
 using Modules.Stat.Infrastructure.Events;
-using rStarUtility.DDD.Event;
-using rStarUtility.DDD.Implement.Core;
+using rStarUtility.Generic.Implement.Core;
+using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion

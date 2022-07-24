@@ -1,6 +1,10 @@
 #region
 
-using rStarUtility.DDD.Event.Usecase;
+#endregion
+
+#region
+
+using rStarUtility.Generic.Usecase;
 
 #endregion
 

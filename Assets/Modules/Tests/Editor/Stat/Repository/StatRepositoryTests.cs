@@ -7,11 +7,11 @@ using Modules.Stat.Infrastructure;
 using Modules.Stat.UseCase.Repository;
 using NSubstitute;
 using NUnit.Framework;
-using rStarUtility.DDD.DDDTestFrameWork;
+using rStarUtility.Generic.TestFrameWork;
 
 #endregion
 
-public class StatRepositoryTests : DDDUnitTestFixture
+public class StatRepositoryTests : DIUnitTestFixture_With_EventBus
 {
 #region Private Variables
 

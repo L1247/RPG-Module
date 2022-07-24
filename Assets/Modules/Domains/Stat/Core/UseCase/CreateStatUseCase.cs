@@ -1,11 +1,11 @@
 #region
 
 using Modules.Stat.Infrastructure;
-using rStarUtility.DDD.Event;
-using rStarUtility.DDD.Implement.Core;
-using rStarUtility.DDD.Implement.CQRS;
-using rStarUtility.DDD.Usecase;
-using rStarUtility.DDD.Usecase.CQRS;
+using rStarUtility.Generic.Implement.Core;
+using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.Interfaces;
+using rStarUtility.Generic.Usecase;
+using rStarUtility.Generic.Usecase.CQRS;
 using rStarUtility.Util;
 
 #endregion

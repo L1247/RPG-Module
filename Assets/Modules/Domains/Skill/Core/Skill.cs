@@ -3,7 +3,7 @@
 using System;
 using Modules.Skill.Infrastructure;
 using Modules.Skill.Infrastructure.Events;
-using rStarUtility.DDD.Event;
+using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion

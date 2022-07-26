@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate1
+namespace rStar.RPGModules.Skill.Example.Intermediate1
 {
     public class SkillExampleReference : MonoBehaviour
     {

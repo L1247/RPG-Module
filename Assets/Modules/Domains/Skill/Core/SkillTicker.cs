@@ -1,12 +1,12 @@
 #region
 
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace rStar.RPGModules.Skill.Core
 {
     public class SkillTicker : ITickable , ISkillTicker
     {

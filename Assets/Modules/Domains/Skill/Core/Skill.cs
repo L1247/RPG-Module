@@ -1,14 +1,14 @@
 #region
 
 using System;
-using Modules.Skill.Infrastructure;
-using Modules.Skill.Infrastructure.Events;
+using rStar.RPGModules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure.Events;
 using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace rStar.RPGModules.Skill.Core
 {
     public class Skill : IPoolable<IMemoryPool> , IDisposable , ISkill
     {

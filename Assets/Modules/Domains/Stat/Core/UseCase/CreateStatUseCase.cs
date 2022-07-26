@@ -1,6 +1,6 @@
 #region
 
-using Modules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.Infrastructure;
 using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Generic.Implement.CQRS;
 using rStarUtility.Generic.Interfaces;
@@ -10,7 +10,7 @@ using rStarUtility.Util;
 
 #endregion
 
-namespace Modules.Stat.UseCase
+namespace rStar.RPGModules.Stat.UseCase
 {
     public class CreateStatUseCase : UseCase<CreateStatInput , CqrsCommandPresenter , IStatRepository>
     {

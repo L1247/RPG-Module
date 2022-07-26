@@ -1,12 +1,12 @@
 #region
 
 using System;
-using Modules.Stat.Entity;
-using Modules.Stat.Infrastructure;
-using Modules.Stat.UseCase;
 using NSubstitute;
 using NSubstitute.ReturnsExtensions;
 using NUnit.Framework;
+using rStar.RPGModules.Stat.Entity;
+using rStar.RPGModules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.UseCase;
 using rStarUtility.Generic.Implement.CQRS;
 using rStarUtility.Generic.TestFrameWork;
 using rStarUtility.Generic.Usecase.CQRS;

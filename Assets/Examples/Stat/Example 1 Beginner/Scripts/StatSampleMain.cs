@@ -1,11 +1,11 @@
 #region
 
-using Modules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace Modules.Stat.Example.Beginner1
+namespace rStar.RPGModules.Stat.Example.Beginner1
 {
     public class StatSampleMain : IInitializable
     {

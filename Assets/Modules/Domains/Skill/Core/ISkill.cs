@@ -1,10 +1,10 @@
 #region
 
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace rStar.RPGModules.Skill.Core
 {
     public interface ISkill : ISkillReadModel
     {

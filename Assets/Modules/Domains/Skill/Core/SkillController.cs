@@ -1,12 +1,12 @@
 #region
 
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Util;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace rStar.RPGModules.Skill.Core
 {
     public class SkillController : ISkillController
     {

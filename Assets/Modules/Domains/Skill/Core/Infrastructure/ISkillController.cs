@@ -1,4 +1,4 @@
-namespace Modules.Skill.Infrastructure
+namespace rStar.RPGModules.Skill.Infrastructure
 {
     public interface ISkillController
     {

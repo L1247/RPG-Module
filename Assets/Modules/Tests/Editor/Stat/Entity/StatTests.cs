@@ -2,10 +2,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Modules.Stat.Entity;
-using Modules.Stat.Infrastructure;
-using Modules.Stat.Infrastructure.Events;
 using NUnit.Framework;
+using rStar.RPGModules.Stat.Entity;
+using rStar.RPGModules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.Infrastructure.Events;
 using rStarUtility.Generic.TestFrameWork;
 
 #endregion

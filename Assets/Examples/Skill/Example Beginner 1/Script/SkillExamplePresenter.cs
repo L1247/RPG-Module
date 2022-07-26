@@ -2,14 +2,14 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Beginner1
+namespace rStar.RPGModules.Skill.Example.Beginner1
 {
     public class SkillExamplePresenter : IInitializable
     {

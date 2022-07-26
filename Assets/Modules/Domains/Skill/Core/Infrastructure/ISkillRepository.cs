@@ -8,7 +8,7 @@ using rStarUtility.Generic.Usecase;
 
 #endregion
 
-namespace Modules.Skill.Infrastructure
+namespace rStar.RPGModules.Skill.Infrastructure
 {
     public interface ISkillRepository : IRepository<ISkillReadModel>
     {

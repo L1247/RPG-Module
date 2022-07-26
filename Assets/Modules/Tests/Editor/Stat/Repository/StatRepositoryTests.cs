@@ -2,11 +2,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using Modules.Stat.Entity;
-using Modules.Stat.Infrastructure;
-using Modules.Stat.UseCase.Repository;
 using NSubstitute;
 using NUnit.Framework;
+using rStar.RPGModules.Stat.Entity;
+using rStar.RPGModules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.UseCase.Repository;
 using rStarUtility.Generic.TestFrameWork;
 
 #endregion

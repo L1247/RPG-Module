@@ -2,8 +2,8 @@
 
 using System;
 using System.Collections.Generic;
-using Modules.Stat.Infrastructure;
-using Modules.Stat.UseCase;
+using rStar.RPGModules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.UseCase;
 using rStarUtility.Generic.Implement.CQRS;
 using rStarUtility.Generic.Usecase.CQRS;
 using rStarUtility.Util;
@@ -11,7 +11,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Stat.Core.UseCase.Controller
+namespace rStar.RPGModules.Stat.Core.UseCase.Controller
 {
     public class StatController : IStatController
     {

@@ -2,7 +2,7 @@
 
 #endregion
 
-namespace Modules.Stat.Infrastructure
+namespace rStar.RPGModules.Stat.Infrastructure
 {
     public interface IStatController
     {

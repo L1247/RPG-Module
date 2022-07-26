@@ -1,13 +1,13 @@
 #region
 
-using Modules.Stat.Infrastructure.Events;
+using rStar.RPGModules.Stat.Infrastructure.Events;
 using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion
 
-namespace Modules.Stat.Example.Beginner1
+namespace rStar.RPGModules.Stat.Example.Beginner1
 {
     public class StatEventHandlerExample : DomainEventHandler
     {

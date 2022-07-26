@@ -1,12 +1,12 @@
 #region
 
 using System.Linq;
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Generic.Implement.Abstract;
 
 #endregion
 
-namespace Modules.Skill.Core
+namespace rStar.RPGModules.Skill.Core
 {
     public class SkillRepository : GenericRepository<ISkillReadModel> , ISkillRepository
     {

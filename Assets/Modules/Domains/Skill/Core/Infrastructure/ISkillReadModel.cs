@@ -8,7 +8,7 @@ using rStarUtility.Generic.Model;
 
 #endregion
 
-namespace Modules.Skill.Infrastructure
+namespace rStar.RPGModules.Skill.Infrastructure
 {
     public interface ISkillReadModel : IEntity<string>
     {

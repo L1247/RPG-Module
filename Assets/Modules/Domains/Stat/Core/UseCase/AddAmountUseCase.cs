@@ -1,7 +1,7 @@
 #region
 
-using Modules.Stat.Infrastructure;
-using Modules.Stat.UseCase.Extensions;
+using rStar.RPGModules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.UseCase.Extensions;
 using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Generic.Implement.CQRS;
 using rStarUtility.Generic.Interfaces;
@@ -10,7 +10,7 @@ using rStarUtility.Generic.Usecase.CQRS;
 
 #endregion
 
-namespace Modules.Stat.UseCase
+namespace rStar.RPGModules.Stat.UseCase
 {
     public class AddAmountUseCase : UseCase<AddAmountInput , CqrsCommandPresenter , IStatRepository>
     {

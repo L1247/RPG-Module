@@ -4,7 +4,7 @@ using rStarUtility.Generic.Implement.Core;
 
 #endregion
 
-namespace Modules.Stat.Infrastructure.Events
+namespace rStar.RPGModules.Stat.Infrastructure.Events
 {
     public class StatCreated : DomainEvent
     {

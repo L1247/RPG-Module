@@ -8,7 +8,7 @@ using rStarUtility.Generic.Implement.Core;
 
 #endregion
 
-namespace Modules.Skill.Infrastructure.Events
+namespace rStar.RPGModules.Skill.Infrastructure.Events
 {
     public class CastEntered : DomainEvent
     {

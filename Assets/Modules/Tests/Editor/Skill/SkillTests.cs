@@ -1,10 +1,10 @@
 #region
 
-using Modules.Skill.Core;
-using Modules.Skill.Infrastructure;
-using Modules.Skill.Infrastructure.Events;
 using NSubstitute;
 using NUnit.Framework;
+using rStar.RPGModules.Skill.Core;
+using rStar.RPGModules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure.Events;
 using rStarUtility.Generic.TestFrameWork;
 
 #endregion

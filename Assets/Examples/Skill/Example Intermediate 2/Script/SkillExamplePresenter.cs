@@ -1,14 +1,14 @@
 #region
 
 using System.Linq;
-using Modules.Skill.Infrastructure;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using UnityEngine;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate2
+namespace rStar.RPGModules.Skill.Example.Intermediate2
 {
     public class SkillExamplePresenter : IInitializable
     {

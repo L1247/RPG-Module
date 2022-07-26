@@ -1,13 +1,13 @@
 #region
 
-using Modules.Skill.Infrastructure.Events;
+using rStar.RPGModules.Skill.Infrastructure.Events;
 using rStarUtility.Generic.Implement.Core;
 using rStarUtility.Generic.Interfaces;
 using Zenject;
 
 #endregion
 
-namespace Modules.Skill.Example.Intermediate2
+namespace rStar.RPGModules.Skill.Example.Intermediate2
 {
     public class SkillEventHandler : DomainEventHandler
     {

@@ -5,7 +5,7 @@ using rStarUtility.Generic.Usecase;
 
 #endregion
 
-namespace Modules.Stat.Infrastructure
+namespace rStar.RPGModules.Stat.Infrastructure
 {
     public interface IStatRepository : IRepository<IStatReadModel>
     {

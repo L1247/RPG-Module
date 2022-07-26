@@ -1,12 +1,13 @@
 #region
 
+using rStar.RPGModules.Skill.Core;
 using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion
 
-namespace rStar.RPGModules.Skill.Core
+namespace rStar.RPGModules.Skill.Installer
 {
     public class SkillInstaller : Installer<SkillInstaller>
     {
@@ -33,7 +34,7 @@ namespace rStar.RPGModules.Skill.Core
             Container.Bind<ISkillRepository>().To<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
             if (useTicker) Container.BindInterfacesAndSelfTo<SkillTicker>().AsSingle();
-            Container.BindFactory<Skill , Skill.Factory>().FromPoolableMemoryPool();
+            Container.BindFactory<Core.Skill , Core.Skill.Factory>().FromPoolableMemoryPool();
         }
 
     #endregion

@@ -1,6 +1,6 @@
 #region
 
-using rStar.RPGModules.Skill.Core;
+using rStar.RPGModules.Skill.Installer;
 using rStarUtility.Generic.Implement.Core;
 using Zenject;
 

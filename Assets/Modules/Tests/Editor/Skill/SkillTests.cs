@@ -58,7 +58,8 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         ShouldIsCd(false);
         ShouldIsCast(false);
         Assert.NotNull(skillCreated , "skillCreated is null");
-        Assert.AreEqual(skill.GetId() , skillCreated.Id , "Id is not equal");
+        Assert.AreEqual(skill.GetId() , skillCreated.Id ,     "Id is not equal");
+        Assert.AreEqual(dataId ,        skillCreated.DataId , "DataId is not equal");
     }
 
     [Test(Description = "執行技能")]

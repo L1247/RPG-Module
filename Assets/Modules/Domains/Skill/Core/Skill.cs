@@ -106,7 +106,7 @@ namespace rStar.RPGModules.Skill.Core
             Cast        = DefaultCast;
             IsCd        = false;
             IsCast      = false;
-            domainEventBus.Post(new SkillCreated(GetId()));
+            domainEventBus.Post(new SkillCreated(GetId() , DataId));
         }
 
         public void OnDespawned()

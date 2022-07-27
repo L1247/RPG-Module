@@ -10,15 +10,18 @@ namespace rStar.RPGModules.Skill.Infrastructure.Events
     {
     #region Public Variables
 
+        public string DataId { get; }
+
         public string Id { get; }
 
     #endregion
 
     #region Constructor
 
-        public SkillCreated(string id)
+        public SkillCreated(string id , string dataId)
         {
-            Id = id;
+            Id     = id;
+            DataId = dataId;
         }
 
     #endregion

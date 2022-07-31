@@ -18,12 +18,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2153
-    height: 931
+    width: 2544
+    height: 938
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 1
-  controlID: 31983
+  controlID: 59544
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,10 +44,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 776
+    x: 665
     y: 81
-    width: 377
-    height: 492
+    width: 468
+    height: 496
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -94,10 +94,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 377
-      height: 471
-    m_Scale: {x: 0.19635417, y: 0.19635417}
-    m_Translation: {x: 188.5, y: 235.5}
+      width: 468
+      height: 475
+    m_Scale: {x: 0.24375, y: 0.24375}
+    m_Translation: {x: 234, y: 237.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -105,12 +105,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -960
-      y: -1199.3634
+      y: -974.35895
       width: 1920
-      height: 2398.7268
+      height: 1948.7179
     m_MinimalGUI: 1
-  m_defaultScale: 0.19635417
-  m_LastWindowPixelSize: {x: 377, y: 492}
+  m_defaultScale: 0.24375
+  m_LastWindowPixelSize: {x: 468, y: 496}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -137,12 +137,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2153
-    height: 931
+    width: 2544
+    height: 938
   m_MinSize: {x: 500, y: 200}
   m_MaxSize: {x: 40480, y: 16192}
   vertical: 0
-  controlID: 31984
+  controlID: 59545
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,12 +162,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 825
-    height: 931
+    width: 1127
+    height: 938
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 31985
+  controlID: 59528
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,12 +187,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 825
-    height: 513
+    width: 1127
+    height: 517
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 31986
+  controlID: 59529
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,8 +210,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 446
-    height: 513
+    width: 657
+    height: 517
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 7}
@@ -240,10 +240,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 330
+    x: 8
     y: 81
-    width: 445
-    height: 492
+    width: 656
+    height: 496
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -436,7 +436,7 @@ MonoBehaviour:
       index: 10
       layout: 4
   m_WindowGUID: c7625a0cc3180334d95ee488239f1223
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -445,9 +445,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 922.8543, y: 393.7527, z: 3.3182855}
+    m_Target: {x: 1.5924199, y: 0.32990742, z: 0.000598571}
     speed: 2
-    m_Value: {x: 922.8543, y: 393.7527, z: 3.3182855}
+    m_Value: {x: 0.5916591, y: 1.5780885, z: 0.0012300014}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -498,9 +498,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 223.98827
+    m_Target: 1.441289
     speed: 2
-    m_Value: 223.98827
+    m_Value: 1.118034
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -547,8 +547,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 8
     y: 81
-    width: 690
-    height: 552
+    width: 373
+    height: 496
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -558,6 +558,7 @@ MonoBehaviour:
     - {fileID: -1644712454827102405, guid: b6552c3aebf2795439614ec6931df748, type: 2}
     - {fileID: -4563699080040028062, guid: 1a04e66e23439834a8372f45a9744e82, type: 2}
     - {fileID: -1644712454827102405, guid: 85ae59c7c3445144dbc564549bbc8347, type: 2}
+    - {fileID: -3065726549974645792, guid: e694ddcdd3c65324ebe7b850a68b791b, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.6219512
       e01: 0
@@ -607,10 +608,26 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 85ae59c7c3445144dbc564549bbc8347, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: e694ddcdd3c65324ebe7b850a68b791b, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1644712454827102405, guid: 85ae59c7c3445144dbc564549bbc8347, type: 2}
+  - m_Target: {fileID: -3065726549974645792, guid: e694ddcdd3c65324ebe7b850a68b791b, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -638,10 +655,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 446
+    x: 657
     y: 0
-    width: 379
-    height: 513
+    width: 470
+    height: 517
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -670,9 +687,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 571
+    x: 382
     y: 81
-    width: 708
+    width: 751
     height: 492
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -694,9 +711,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 513
-    width: 825
-    height: 418
+    y: 517
+    width: 1127
+    height: 421
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
@@ -725,10 +742,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 330
-    y: 594
-    width: 824
-    height: 397
+    x: 8
+    y: 598
+    width: 1126
+    height: 400
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -754,16 +771,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 8
-    y: 654
-    width: 1279
-    height: 337
+    y: 598
+    width: 1126
+    height: 400
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 43528
+  m_LastSelectedObjectID: -66558
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -781,14 +798,14 @@ MonoBehaviour:
   - {fileID: 17}
   m_Position:
     serializedVersion: 2
-    x: 825
+    x: 1127
     y: 0
-    width: 545
-    height: 931
+    width: 454
+    height: 938
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 31885
+  controlID: 59546
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -806,8 +823,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 545
-    height: 420
+    width: 454
+    height: 423
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -835,10 +852,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1155
+    x: 1135
     y: 81
-    width: 543
-    height: 399
+    width: 452
+    height: 402
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -846,9 +863,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d2a90000
-      m_LastClickedID: 43474
-      m_ExpandedIDs: 6007ffff6207ffff5809ffff5a09ffffa610ffffa810ffff2411ffffcc13ffff7015ffff1c17ffffc018ffff641affff081cffff501fffffd021ffff8023ffff3826ffffe227ffff8429ffff5a2affff002cffff3a30ffff3431ffff0e33ffff8c33ffffd834ffff8443ffffba57ffff7c74ffffa87cffffb67effff6285ffff5a88ffff6e89ffff988fffff2493ffff7e97ffff6e98ffff269afffff89affff48a4ffff3ea5ffff1ca6ffffaea7ffffb0a8ffff0eadffff2aaefffff0b3ffff78b4fffffab4ffff32b6ffff6eb7ffff2ab9ffff42bfffff5ec1ffff64c2ffffa2d1ffff18d8ffff1ed9ffff28dcffff26ddffff70e4ffff18e6ffff38e8ffff46eaffff4af5ffff34fbffff42a60000d2a9000012aa0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 664cffffc0cfffff5ed1ffff48daffff6edeffff9edfffff1ce2ffff1ee3ffff3ce4ffff50e5ffff90e6ffff34fbffffee630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -864,7 +881,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 15}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -888,9 +905,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 420
-    width: 545
-    height: 511
+    y: 423
+    width: 454
+    height: 515
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 18}
@@ -918,10 +935,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1155
-    y: 501
-    width: 543
-    height: 490
+    x: 1135
+    y: 504
+    width: 452
+    height: 494
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -937,24 +954,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 2
+    m_SearchArea: 1
     m_Folders:
-    - Assets/Examples/Skill/Example Intermediate 1/Script
+    - Assets/Examples/Combat/Example Beginner 1/Media/Prefab
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Examples/Skill/Example Intermediate 1/Script
+  - Assets/Examples/Combat/Example Beginner 1/Media/Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\GitProject\SideProject\RPG Module
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b44e0000
-    m_LastClickedID: 20148
-    m_ExpandedIDs: 0000000084120000684e00006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e0000864e0000884e00008a4e00008c4e0000904e0000924e0000944e0000964e0000a04e0000a64e0000aa4e0000ae4e0000365500003a5e0000
+    m_SelectedIDs: 96710000
+    m_LastClickedID: 29078
+    m_ExpandedIDs: 00000000aa1200006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e00008a4e00008c4e0000904e0000964e00009a4e00009c4e0000a24e0000a44e0000ac4e0000ba4e00006a5e00007662000080620000a66500007a66000018670000d869000092710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -982,7 +999,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000084120000684e00006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e0000864e0000884e00008a4e00008c4e0000904e0000924e0000944e0000964e0000a04e0000a64e0000aa4e0000ae4e0000365500003a5e0000
+    m_ExpandedIDs: 00000000aa1200006a4e00006c4e00006e4e0000704e0000724e0000744e0000764e0000784e00007a4e00007c4e00007e4e0000804e0000824e0000844e00008a4e00008c4e0000904e0000964e00009a4e00009c4e0000a24e0000a44e0000ac4e0000ba4e00006a5e00007662000080620000a66500007a66000018670000d8690000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1007,10 +1024,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d2a90000
-    m_LastClickedInstanceID: 43474
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000444600004245000060530000d25000003251000030510000c8450000d64d0000644500002446000098470000c83e0000b23c0000964200002c5b0000703f00007a410000083d000000570000bc3e0000fa410000e23c0000de3c00000000000008980000
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000444600004245000060530000d25000003251000030510000c8450000d64d0000644500002446000098470000c83e0000b23c0000964200002c5b0000703f00007a410000083d000000570000bc3e0000fa410000e23c0000de3c00000000000008980000e44c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1053,10 +1070,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1370
+    x: 1581
     y: 0
-    width: 358
-    height: 931
+    width: 461
+    height: 938
   m_MinSize: {x: 277, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
@@ -1085,10 +1102,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1700
+    x: 1589
     y: 81
-    width: 356
-    height: 910
+    width: 459
+    height: 917
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1096,7 +1113,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 327
+    m_CachedPref: -467
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -1141,7 +1158,7 @@ MonoBehaviour:
     m_CachedPref: -307
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 24128
+  m_LastInspectedObjectInstanceID: 19876
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1158,23 +1175,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1728
+    x: 2042
     y: 0
-    width: 425
-    height: 931
-  m_MinSize: {x: 101, y: 121}
+    width: 502
+    height: 938
+  m_MinSize: {x: 276, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
   - {fileID: 24}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1195,27 +1212,26 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1861
+    x: 2050
     y: 81
-    width: 385
-    height: 910
+    width: 501
+    height: 917
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_ObjectsLockedBeforeSerialization:
-  - {fileID: 5897886265953266890, guid: 75baeb8eea31b154f898ef31e6559b45, type: 3}
+  m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
     m_CachedPref: -229
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 21426
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
-    m_IsLocked: 1
+    m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &24
 MonoBehaviour:
@@ -1237,16 +1253,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2058
+    x: 2050
     y: 81
-    width: 424
+    width: 501
     height: 910
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 32050
+    ID: 211
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1313,7 +1329,7 @@ MonoBehaviour:
       name: RPG Module
       fullName: RPG Module
       resultStatus: 1
-      duration: 0.5291413
+      duration: 0.5445668
       messages: 
       output: 
       stacktrace: 
@@ -1329,7 +1345,7 @@ MonoBehaviour:
       name: RPGModule.Skill.Tests.dll
       fullName: C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Skill.Tests.dll
       resultStatus: 1
-      duration: 0.4863651
+      duration: 0.3039229
       messages: 
       output: 
       stacktrace: 
@@ -1345,7 +1361,7 @@ MonoBehaviour:
       name: SkillTests
       fullName: SkillTests
       resultStatus: 1
-      duration: 0.3924123
+      duration: 0.3022518
       messages: 
       output: 
       stacktrace: 
@@ -1361,7 +1377,7 @@ MonoBehaviour:
       name: CreateSkill
       fullName: SkillTests.CreateSkill
       resultStatus: 1
-      duration: 0.2496342
+      duration: 0.2387885
       messages: 
       output: 
       stacktrace: 
@@ -1378,7 +1394,7 @@ MonoBehaviour:
       name: DoNoting_When_UseSkill_With_CDIng
       fullName: SkillTests.DoNoting_When_UseSkill_With_CDIng
       resultStatus: 1
-      duration: 0.0050369
+      duration: 0.0030936
       messages: 
       output: 
       stacktrace: 
@@ -1395,7 +1411,7 @@ MonoBehaviour:
       name: EnterCast_When_Use_Skill
       fullName: SkillTests.EnterCast_When_Use_Skill
       resultStatus: 1
-      duration: 0.0015009
+      duration: 0.0013127
       messages: 
       output: 
       stacktrace: 
@@ -1408,11 +1424,28 @@ MonoBehaviour:
       parentId: 1002
       parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
     - id: 1008
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCD_SKill]
+      name: EnterCD_SKill
+      fullName: SkillTests.EnterCD_SKill
+      resultStatus: 1
+      duration: 0.0010783
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u9032\u5165CD"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
+    - id: 1008
       uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.EnterCD_When_Use_Skill][suite]
       name: EnterCD_When_Use_Skill
       fullName: SkillTests.EnterCD_When_Use_Skill
       resultStatus: 1
-      duration: 0.0085727
+      duration: 0.0117453
       messages: 
       output: 
       stacktrace: 
@@ -1428,7 +1461,7 @@ MonoBehaviour:
       name: EnterCD_When_Use_Skill(0,False)
       fullName: SkillTests.EnterCD_When_Use_Skill(0,False)
       resultStatus: 1
-      duration: 0.0010661
+      duration: 0.0010709
       messages: 
       output: 
       stacktrace: 
@@ -1445,7 +1478,7 @@ MonoBehaviour:
       name: EnterCD_When_Use_Skill(2,True)
       fullName: SkillTests.EnterCD_When_Use_Skill(2,True)
       resultStatus: 1
-      duration: 0.0006729
+      duration: 0.0006626
       messages: 
       output: 
       stacktrace: 
@@ -1462,7 +1495,7 @@ MonoBehaviour:
       name: Execute_When_Use_Skill
       fullName: SkillTests.Execute_When_Use_Skill
       resultStatus: 1
-      duration: 0.0013608
+      duration: 0.0011598
       messages: 
       output: 
       stacktrace: 
@@ -1479,7 +1512,7 @@ MonoBehaviour:
       name: ExecuteSkill
       fullName: SkillTests.ExecuteSkill
       resultStatus: 1
-      duration: 0.000861
+      duration: 0.000854
       messages: 
       output: 
       stacktrace: 
@@ -1496,7 +1529,7 @@ MonoBehaviour:
       name: ExitCast_When_Tick_Skill
       fullName: SkillTests.ExitCast_When_Tick_Skill
       resultStatus: 1
-      duration: 0.006453
+      duration: 0.0088162
       messages: 
       output: 
       stacktrace: 
@@ -1512,7 +1545,7 @@ MonoBehaviour:
       name: ExitCast_When_Tick_Skill(4)
       fullName: SkillTests.ExitCast_When_Tick_Skill(4)
       resultStatus: 1
-      duration: 0.0015715
+      duration: 0.0016803
       messages: 
       output: 
       stacktrace: 
@@ -1529,7 +1562,7 @@ MonoBehaviour:
       name: ExitCast_When_Tick_Skill(3)
       fullName: SkillTests.ExitCast_When_Tick_Skill(3)
       resultStatus: 1
-      duration: 0.0008182
+      duration: 0.0009148
       messages: 
       output: 
       stacktrace: 
@@ -1541,12 +1574,29 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1014
       parentUniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCast_When_Tick_Skill][suite]
+    - id: 1009
+      uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCD_SKill]
+      name: ExitCD_SKill
+      fullName: SkillTests.ExitCD_SKill
+      resultStatus: 1
+      duration: 0.0014123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: "\u96E2\u958BCD"
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: RPGModule.Skill.Tests.dll/[RPGModule.Skill.Tests][SkillTests][suite]
     - id: 1017
       uniqueId: RPGModule.Skill.Tests.dll/SkillTests/[RPGModule.Skill.Tests][SkillTests.ExitCD_When_Tick_Skill][suite]
       name: ExitCD_When_Tick_Skill
       fullName: SkillTests.ExitCD_When_Tick_Skill
       resultStatus: 1
-      duration: 0.0056848
+      duration: 0.0094154
       messages: 
       output: 
       stacktrace: 
@@ -1562,7 +1612,7 @@ MonoBehaviour:
       name: ExitCD_When_Tick_Skill(4)
       fullName: SkillTests.ExitCD_When_Tick_Skill(4)
       resultStatus: 1
-      duration: 0.0010752
+      duration: 0.0010505
       messages: 
       output: 
       stacktrace: 
@@ -1579,7 +1629,7 @@ MonoBehaviour:
       name: ExitCD_When_Tick_Skill(3)
       fullName: SkillTests.ExitCD_When_Tick_Skill(3)
       resultStatus: 1
-      duration: 0.0007293
+      duration: 0.0007834
       messages: 
       output: 
       stacktrace: 
@@ -1596,7 +1646,7 @@ MonoBehaviour:
       name: Reduce_CD_And_Cast_When_Tick_Skill
       fullName: SkillTests.Reduce_CD_And_Cast_When_Tick_Skill
       resultStatus: 1
-      duration: 0.0011398
+      duration: 0.0008376
       messages: 
       output: 
       stacktrace: 
@@ -1613,7 +1663,7 @@ MonoBehaviour:
       name: Tick_Skill
       fullName: SkillTests.Tick_Skill
       resultStatus: 1
-      duration: 0.0013011
+      duration: 0.0011792
       messages: 
       output: 
       stacktrace: 
@@ -1630,7 +1680,7 @@ MonoBehaviour:
       name: RPGModule.Stat.Tests.dll
       fullName: C:/GitProject/SideProject/RPG Module/Library/ScriptAssemblies/RPGModule.Stat.Tests.dll
       resultStatus: 1
-      duration: 0.1185447
+      duration: 0.1860096
       messages: 
       output: 
       stacktrace: 
@@ -1646,7 +1696,7 @@ MonoBehaviour:
       name: AddAmountUseCaseTests
       fullName: AddAmountUseCaseTests
       resultStatus: 1
-      duration: 0.0032737
+      duration: 0.0330936
       messages: 
       output: 
       stacktrace: 
@@ -1662,7 +1712,7 @@ MonoBehaviour:
       name: Should_Fail_When_AddAmount
       fullName: AddAmountUseCaseTests.Should_Fail_When_AddAmount
       resultStatus: 1
-      duration: 0.001037
+      duration: 0.0242352
       messages: 
       output: 
       stacktrace: 
@@ -1679,7 +1729,7 @@ MonoBehaviour:
       name: Should_Succeed_When_AddAmount
       fullName: AddAmountUseCaseTests.Should_Succeed_When_AddAmount
       resultStatus: 1
-      duration: 0.0011266
+      duration: 0.0072983
       messages: 
       output: 
       stacktrace: 
@@ -1696,7 +1746,7 @@ MonoBehaviour:
       name: AddModifierUseCaseTests
       fullName: AddModifierUseCaseTests
       resultStatus: 1
-      duration: 0.010575
+      duration: 0.0127929
       messages: 
       output: 
       stacktrace: 
@@ -1712,7 +1762,7 @@ MonoBehaviour:
       name: Should_Succeed_When_AddModifiers
       fullName: AddModifierUseCaseTests.Should_Succeed_When_AddModifiers
       resultStatus: 1
-      duration: 0.0014236
+      duration: 0.00342
       messages: 
       output: 
       stacktrace: 
@@ -1729,7 +1779,7 @@ MonoBehaviour:
       name: CreateStatUseCaseTests
       fullName: CreateStatUseCaseTests
       resultStatus: 1
-      duration: 0.0119413
+      duration: 0.016881
       messages: 
       output: 
       stacktrace: 
@@ -1745,7 +1795,7 @@ MonoBehaviour:
       name: Should_Succeed_When_Create_Stat
       fullName: CreateStatUseCaseTests.Should_Succeed_When_Create_Stat
       resultStatus: 1
-      duration: 0.0009332
+      duration: 0.0084624
       messages: 
       output: 
       stacktrace: 
@@ -1762,7 +1812,7 @@ MonoBehaviour:
       name: DeleteStatUseCaseTests
       fullName: DeleteStatUseCaseTests
       resultStatus: 1
-      duration: 0.0116449
+      duration: 0.0152649
       messages: 
       output: 
       stacktrace: 
@@ -1778,7 +1828,7 @@ MonoBehaviour:
       name: Should_Succeed_When_DeleteStatUseCaseTests
       fullName: DeleteStatUseCaseTests.Should_Succeed_When_DeleteStatUseCaseTests
       resultStatus: 1
-      duration: 0.0010434
+      duration: 0.0034585
       messages: 
       output: 
       stacktrace: 
@@ -1795,7 +1845,7 @@ MonoBehaviour:
       name: RemoveModifiersUseCaseTests
       fullName: RemoveModifiersUseCaseTests
       resultStatus: 1
-      duration: 0.0107862
+      duration: 0.0120944
       messages: 
       output: 
       stacktrace: 
@@ -1811,7 +1861,7 @@ MonoBehaviour:
       name: Should_Succeed_When_RemoveModifiers
       fullName: RemoveModifiersUseCaseTests.Should_Succeed_When_RemoveModifiers
       resultStatus: 1
-      duration: 0.0013512
+      duration: 0.0029558
       messages: 
       output: 
       stacktrace: 
@@ -1828,7 +1878,7 @@ MonoBehaviour:
       name: StatModifyAmountUseCaseTests
       fullName: StatModifyAmountUseCaseTests
       resultStatus: 1
-      duration: 0.0129981
+      duration: 0.0125453
       messages: 
       output: 
       stacktrace: 
@@ -1844,7 +1894,7 @@ MonoBehaviour:
       name: Should_Fail_When_ModifyAmount
       fullName: StatModifyAmountUseCaseTests.Should_Fail_When_ModifyAmount
       resultStatus: 1
-      duration: 0.0012146
+      duration: 0.0025068
       messages: 
       output: 
       stacktrace: 
@@ -1861,7 +1911,7 @@ MonoBehaviour:
       name: Should_Succeed_When_ModifyAmount
       fullName: StatModifyAmountUseCaseTests.Should_Succeed_When_ModifyAmount
       resultStatus: 1
-      duration: 0.001239
+      duration: 0.0020479
       messages: 
       output: 
       stacktrace: 
@@ -1878,7 +1928,7 @@ MonoBehaviour:
       name: StatRepositoryTests
       fullName: StatRepositoryTests
       resultStatus: 1
-      duration: 0.0159925
+      duration: 0.032714
       messages: 
       output: 
       stacktrace: 
@@ -1894,7 +1944,7 @@ MonoBehaviour:
       name: FindModifier
       fullName: StatRepositoryTests.FindModifier
       resultStatus: 1
-      duration: 0.0015661
+      duration: 0.0169952
       messages: 
       output: 
       stacktrace: 
@@ -1911,7 +1961,7 @@ MonoBehaviour:
       name: FindStat
       fullName: StatRepositoryTests.FindStat
       resultStatus: 1
-      duration: 0.0009757
+      duration: 0.002541
       messages: 
       output: 
       stacktrace: 
@@ -1928,7 +1978,7 @@ MonoBehaviour:
       name: FindStat_Return_Null
       fullName: StatRepositoryTests.FindStat_Return_Null
       resultStatus: 1
-      duration: 0.0004468
+      duration: 0.0008379
       messages: 
       output: 
       stacktrace: 
@@ -1945,7 +1995,7 @@ MonoBehaviour:
       name: FindStatsByOwnerId
       fullName: StatRepositoryTests.FindStatsByOwnerId
       resultStatus: 1
-      duration: 0.0013333
+      duration: 0.0026205
       messages: 
       output: 
       stacktrace: 
@@ -1962,7 +2012,7 @@ MonoBehaviour:
       name: StatTests
       fullName: StatTests
       resultStatus: 1
-      duration: 0.029742
+      duration: 0.0362362
       messages: 
       output: 
       stacktrace: 
@@ -1978,7 +2028,7 @@ MonoBehaviour:
       name: AddAmount
       fullName: StatTests.AddAmount
       resultStatus: 1
-      duration: 0.000581
+      duration: 0.0040766
       messages: 
       output: 
       stacktrace: 
@@ -1995,7 +2045,7 @@ MonoBehaviour:
       name: AddModifiers_All_ModifierType
       fullName: StatTests.AddModifiers_All_ModifierType
       resultStatus: 1
-      duration: 0.0004873
+      duration: 0.0036608
       messages: 
       output: 
       stacktrace: 
@@ -2012,7 +2062,7 @@ MonoBehaviour:
       name: AddModifiers_With_Flat
       fullName: StatTests.AddModifiers_With_Flat
       resultStatus: 1
-      duration: 0.0005393
+      duration: 0.0011552
       messages: 
       output: 
       stacktrace: 
@@ -2029,7 +2079,7 @@ MonoBehaviour:
       name: AddModifiers_With_NegativeNumber
       fullName: StatTests.AddModifiers_With_NegativeNumber
       resultStatus: 1
-      duration: 0.0004538
+      duration: 0.0010552
       messages: 
       output: 
       stacktrace: 
@@ -2046,7 +2096,7 @@ MonoBehaviour:
       name: AddModifiers_With_PercentAdd
       fullName: StatTests.AddModifiers_With_PercentAdd
       resultStatus: 1
-      duration: 0.0004586
+      duration: 0.001071
       messages: 
       output: 
       stacktrace: 
@@ -2063,7 +2113,7 @@ MonoBehaviour:
       name: AddModifiers_With_PercentMulti
       fullName: StatTests.AddModifiers_With_PercentMulti
       resultStatus: 1
-      duration: 0.0005765
+      duration: 0.0010598
       messages: 
       output: 
       stacktrace: 
@@ -2080,7 +2130,7 @@ MonoBehaviour:
       name: CreateStat
       fullName: StatTests.CreateStat
       resultStatus: 1
-      duration: 0.0005765
+      duration: 0.0011139
       messages: 
       output: 
       stacktrace: 
@@ -2097,7 +2147,7 @@ MonoBehaviour:
       name: RemoveModifiers
       fullName: StatTests.RemoveModifiers
       resultStatus: 1
-      duration: 0.000495
+      duration: 0.002331
       messages: 
       output: 
       stacktrace: 
@@ -2114,7 +2164,7 @@ MonoBehaviour:
       name: SetAmount
       fullName: StatTests.SetAmount
       resultStatus: 1
-      duration: 0.0129438
+      duration: 0.0103028
       messages: 
       output: 
       stacktrace: 
@@ -2130,7 +2180,7 @@ MonoBehaviour:
       name: SetAmount(5,5)
       fullName: StatTests.SetAmount(5,5)
       resultStatus: 1
-      duration: 0.0006437
+      duration: 0.0014108
       messages: 
       output: 
       stacktrace: 
@@ -2147,7 +2197,7 @@ MonoBehaviour:
       name: SetAmount(0,0)
       fullName: StatTests.SetAmount(0,0)
       resultStatus: 1
-      duration: 0.0005756
+      duration: 0.0005265
       messages: 
       output: 
       stacktrace: 
@@ -2164,7 +2214,7 @@ MonoBehaviour:
       name: SetAmount(-1,0)
       fullName: StatTests.SetAmount(-1,0)
       resultStatus: 1
-      duration: 0.0004788
+      duration: 0.0005964
       messages: 
       output: 
       stacktrace: 
@@ -2176,12 +2226,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1025
       parentUniqueId: RPGModule.Stat.Tests.dll/StatTests/[RPGModule.Stat.Tests][StatTests.SetAmount][suite]
-    m_ResultText: "CreateSkill (0.250s)\n\u5EFA\u7ACB\u6280\u80FD"
+    m_ResultText: "DoNoting_When_UseSkill_With_CDIng (0.003s)\nCD\u4E2D\u4F7F\u7528\u6280\u80FD\u4E0D\u6703\u6709\u6548\u679C"
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 21839067
-      m_LastClickedID: 1737524001
+      m_SelectedIDs: fd063b3d
+      m_LastClickedID: 1027278589
       m_ExpandedIDs: 21f596eaa903d816c1a9301b8d1a447fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0

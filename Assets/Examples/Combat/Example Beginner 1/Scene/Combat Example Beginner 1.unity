@@ -250,7 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 340af95eee2ab1d46a8ce661be514d93, type: 2}
   _monoInstallers:
   - {fileID: 203393890}
   _installerPrefabs: []
@@ -370,6 +371,7 @@ GameObject:
   - component: {fileID: 704654886}
   - component: {fileID: 704654885}
   - component: {fileID: 704654884}
+  - component: {fileID: 704654887}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -464,6 +466,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &704654887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704654883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 704654884}
+  _identifier: Player1
+  _useSceneContext: 0
+  _context: {fileID: 0}
+  _bindType: 0
 --- !u!1 &730356997
 GameObject:
   m_ObjectHideFlags: 0

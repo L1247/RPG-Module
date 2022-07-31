@@ -1,0 +1,23 @@
+{
+  "name": "RPGModule.Skill.Example.Intermediate.2",
+  "rootNamespace": "RPGModule.Skill.Example.Intermediate.2",
+  "references": [
+    "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+    "GUID:f22f718b9b174a74d89f976a69f9dd2a",
+    "GUID:6c7d9a66af01afe4783767909c903050",
+    "GUID:ace74969ab64aa74ba1296499c7747dc",
+    "GUID:f1b3f9df7defa8343bef5fde421cb1d7",
+    "GUID:6055be8ebefd69e48b49212b09b47b2f",
+    "GUID:629ebe07a89320249a72a637ab6b7977",
+    "GUID:b82558e3e7ad9204e82ab5399ca90325"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

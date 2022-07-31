@@ -6,18 +6,16 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example2
+namespace rStar.RPGModules.Skill.Example.Intermediate2
 {
-    public class SkillExample2Reference : MonoBehaviour
+    public class SkillExampleReference : MonoBehaviour
     {
     #region Public Variables
 
         public Animator   enemyAnimator;
-        public Button     execute;
-        public Button     tick;
-        public Button     use;
+        public GameObject projectilePrefab;
         public Image      coolDownImage;
-        public Projectile projectilePrefab;
+        public Image      mainImage;
         public TMP_Text   info;
         public Transform  shootPoint;
 

@@ -1,12 +1,12 @@
 #region
 
-using rStar.Modules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.Infrastructure;
 using rStarUtility.Util.Extensions;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Stat.Example.Scripts
+namespace rStar.RPGModules.Stat.Example.Beginner1
 {
     public class StatExamplePresenter : IInitializable
     {
@@ -16,10 +16,10 @@ namespace rStar.Modules.Stat.Example.Scripts
         private StatReference statReference;
 
         [Inject]
-        private IStatController controller;
+        private StatSampleMain main;
 
         [Inject]
-        private StatSampleMain main;
+        private IStatRepository statRepository;
 
     #endregion
 
@@ -35,7 +35,7 @@ namespace rStar.Modules.Stat.Example.Scripts
         public void UpdateStatView(string statId , string ownerId)
         {
             var textComponent = statReference.statAmountTextActor1;
-            var stat          = controller.GetStat(statId);
+            var stat          = statRepository.FindStat(statId);
             textComponent.text = $"{ownerId}'s {stat.DataId}\n" +
                                  $"Modifier's Count: {stat.Modifiers.Count}\n" +
                                  $"BaseAmount is {stat.BaseAmount}\n" +

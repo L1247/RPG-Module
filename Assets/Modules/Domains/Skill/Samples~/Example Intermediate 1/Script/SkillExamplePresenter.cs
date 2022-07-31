@@ -1,29 +1,35 @@
 #region
 
-using rStar.Modules.Skill.Core;
+using System.Linq;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using UnityEngine;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example2
+namespace rStar.RPGModules.Skill.Example.Intermediate1
 {
-    public class SkillExample2Presenter : IInitializable
+    public class SkillExamplePresenter : IInitializable
     {
     #region Private Variables
 
-        [Inject]
-        private SkillSpawner skillSpawner;
-
-        private Core.Skill skill;
+        private ISkillReadModel skillReadModel;
 
         [Inject]
-        private SkillExample2Reference reference;
+        private SkillExampleReference reference;
 
         private readonly int      time = 1;
         private          Animator animator;
         private readonly string   dataId = "dataId";
+
+        [Inject]
+        private ISkillRepository skillRepository;
+
+        [Inject]
+        private ISkillController controller;
+
+        private string skillId;
 
     #endregion
 
@@ -32,10 +38,12 @@ namespace rStar.Modules.Skill.Example2
         public void Initialize()
         {
             animator = reference.enemyAnimator;
-            skill    = skillSpawner.CreateSkill("Skill" , dataId , 2 , 4);
+            controller.CreateSkill("Skill" , dataId , 2 , 4);
             reference.use.BindClick(UseSkill);
             reference.execute.BindClick(Execute);
             reference.tick.BindClick(Tick);
+            skillReadModel = skillRepository.GetAll().ToList()[0];
+            skillId        = skillReadModel.GetId();
             UpdateInfo();
         }
 
@@ -48,7 +56,7 @@ namespace rStar.Modules.Skill.Example2
         public void PlayCastEnter()
         {
             animator.speed = 0;
-            animator.Play("Enemy Attack 3" , 0 , skill.Cast);
+            animator.Play("Enemy Attack 3" , 0 , skillReadModel.Cast);
         }
 
         public void SpawnProjectile()
@@ -64,27 +72,28 @@ namespace rStar.Modules.Skill.Example2
 
         private void Execute()
         {
-            skill.Execute();
+            controller.ExecuteSkill(skillId);
             UpdateInfo();
         }
 
         private void Tick()
         {
-            skill.Tick(time);
+            controller.TickSkill(skillId , time);
             UpdateInfo();
         }
 
         private void UpdateInfo()
         {
-            var info = $"DefaultCast:{skill.DefaultCast}\n" + $"DefaultCD:{skill.DefaultCd}\n" + $"IsCast:{skill.IsCast}\n" +
-                       $"Cast:{skill.Cast}\n" + $"IsCd:{skill.IsCd}\n" + $"CD:{skill.Cd}";
-            reference.coolDownImage.fillAmount = skill.Cd / skill.DefaultCd;
+            var info = $"DefaultCast:{skillReadModel.DefaultCast}\n" + $"DefaultCD:{skillReadModel.DefaultCd}\n" +
+                       $"IsCast:{skillReadModel.IsCast}\n" +
+                       $"Cast:{skillReadModel.Cast}\n" + $"IsCd:{skillReadModel.IsCd}\n" + $"CD:{skillReadModel.Cd}";
+            reference.coolDownImage.fillAmount = skillReadModel.Cd / skillReadModel.DefaultCd;
             reference.info.text                = info;
         }
 
         private void UseSkill()
         {
-            skill.UseSkill();
+            controller.UseSkill(skillId);
             UpdateInfo();
         }
 

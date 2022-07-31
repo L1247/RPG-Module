@@ -1,12 +1,12 @@
 #region
 
-using rStar.Modules.Stat.Installer;
-using rStarUtility.DDD.Implement.Core;
+using rStar.RPGModules.Stat.Installer;
+using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Stat.Example.Scripts
+namespace rStar.RPGModules.Stat.Example.Beginner1
 {
     public class StatExampleInstaller : MonoInstaller
     {
@@ -14,7 +14,7 @@ namespace rStar.Modules.Stat.Example.Scripts
 
         public override void InstallBindings()
         {
-            DDDInstaller.Install(Container);
+            EventBusInstaller.Install(Container);
             Container.BindInterfacesAndSelfTo<StatSampleMain>().AsSingle();
             Container.BindInterfacesAndSelfTo<StatExamplePresenter>().AsSingle();
             StatInstaller.Install(Container);

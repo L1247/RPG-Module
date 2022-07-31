@@ -1,24 +1,24 @@
 #region
 
-using rStar.Modules.Skill.Core;
-using rStarUtility.DDD.Implement.Core;
+using rStar.RPGModules.Skill.Installer;
+using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace rStar.RPGModules.Skill.Example.Beginner1
 {
-    public class SkillExample1Installer : MonoInstaller
+    public class SkillExampleInstaller : MonoInstaller
     {
     #region Public Methods
 
         public override void InstallBindings()
         {
-            DDDInstaller.Install(Container);
+            EventBusInstaller.Install(Container);
+            Container.BindInstance(false).WhenInjectedInto<SkillInstaller>();
             SkillInstaller.Install(Container);
             Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
             Container.BindInterfacesTo<SkillExamplePresenter>().AsSingle();
-            Container.UnbindInterfacesTo<SkillTicker>();
         }
 
     #endregion

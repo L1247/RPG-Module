@@ -1,29 +1,33 @@
 #region
 
 using System.Collections.Generic;
-using rStar.Modules.Skill.Core;
+using System.Linq;
+using rStar.RPGModules.Skill.Infrastructure;
 using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace rStar.RPGModules.Skill.Example.Beginner1
 {
     public class SkillExamplePresenter : IInitializable
     {
     #region Private Variables
 
         [Inject]
-        private SkillExample1Reference reference;
+        private SkillExampleReference reference;
+
+        private          List<ISkillReadModel> skills = new List<ISkillReadModel>();
+        private readonly List<TMP_Text>        infos  = new List<TMP_Text>();
+        private readonly int                   time   = 1;
+        private readonly string                dataId = "dataId";
 
         [Inject]
-        private SkillSpawner skillSpawner;
+        private ISkillRepository skillRepository;
 
-        private readonly List<Core.Skill> skills = new List<Core.Skill>();
-        private readonly List<TMP_Text>   infos  = new List<TMP_Text>();
-        private readonly int              time   = 1;
-        private readonly string           dataId = "dataId";
+        [Inject]
+        private ISkillController controller;
 
     #endregion
 
@@ -31,8 +35,9 @@ namespace rStar.Modules.Skill.Example1
 
         public void Initialize()
         {
-            skills.Add(skillSpawner.CreateSkill("Skill1" , dataId , 2 , 5));
-            skills.Add(skillSpawner.CreateSkill("Skill2" , dataId , 0 , 1));
+            controller.CreateSkill("Skill1" , dataId , 2 , 5);
+            controller.CreateSkill("Skill2" , dataId , 0 , 1);
+            skills = skillRepository.GetAll().ToList();
             infos.Add(reference.skillInfo1);
             infos.Add(reference.skillInfo2);
             reference.useSkill1.BindClick(() => UseSkill(0));
@@ -51,7 +56,7 @@ namespace rStar.Modules.Skill.Example1
             for (var index = 0 ; index < skills.Count ; index++)
             {
                 var skill = skills[index];
-                skill.Tick(time);
+                controller.TickSkill(skill.GetId() , time);
                 UpdateInfo(index);
             }
         }
@@ -67,7 +72,8 @@ namespace rStar.Modules.Skill.Example1
 
         private void UseSkill(int index)
         {
-            skills[index].UseSkill();
+            var id = skills[index].GetId();
+            controller.UseSkill(id);
             UpdateInfo(index);
         }
 

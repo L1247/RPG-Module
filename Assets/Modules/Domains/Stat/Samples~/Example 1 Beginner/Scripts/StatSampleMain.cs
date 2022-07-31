@@ -1,11 +1,11 @@
 #region
 
-using rStar.Modules.Stat.Infrastructure;
+using rStar.RPGModules.Stat.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Stat.Example.Scripts
+namespace rStar.RPGModules.Stat.Example.Beginner1
 {
     public class StatSampleMain : IInitializable
     {
@@ -53,7 +53,6 @@ namespace rStar.Modules.Stat.Example.Scripts
             if (isNoModifierOnStat) return;
             var modifier   = stat.Modifiers[modifiersCount - 1];
             var modifierId = modifier.GetId();
-
             statController.RemoveModifier(statId , modifierId);
         }
 

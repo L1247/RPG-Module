@@ -1,21 +1,19 @@
 #region
 
-using rStar.Modules.Skill.Core.Event;
-using rStarUtility.DDD.Event;
-using rStarUtility.DDD.Implement.Core;
-using UnityEngine;
+using rStar.RPGModules.Skill.Infrastructure.Events;
+using rStarUtility.Generic.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example2
+namespace rStar.RPGModules.Skill.Example.Intermediate2
 {
     public class SkillEventHandler : DomainEventHandler
     {
     #region Private Variables
 
         [Inject]
-        private SkillExample2Presenter presenter;
+        private SkillExamplePresenter presenter;
 
     #endregion
 
@@ -25,6 +23,9 @@ namespace rStar.Modules.Skill.Example2
         {
             Register<CastEntered>(OnCastEntered);
             Register<Executed>(OnExecuted);
+            Register<CdEntered>(OnCdEntered);
+            Register<CdExit>(OnCdExit);
+            Register<Ticked>(OnTicked);
         }
 
     #endregion
@@ -33,15 +34,28 @@ namespace rStar.Modules.Skill.Example2
 
         private void OnCastEntered(CastEntered entered)
         {
-            Debug.Log($"OnCastEntered: {entered.ID}");
             presenter.PlayCastEnter();
+        }
+
+        private void OnCdEntered(CdEntered obj)
+        {
+            presenter.ShowMask();
+        }
+
+        private void OnCdExit(CdExit obj)
+        {
+            presenter.HideMask();
         }
 
         private void OnExecuted(Executed executed)
         {
-            Debug.Log($"OnExecuted : {executed.ID}");
             presenter.PlayAfterCast();
             presenter.SpawnProjectile();
+        }
+
+        private void OnTicked(Ticked ticked)
+        {
+            presenter.UpdateInfo();
         }
 
     #endregion

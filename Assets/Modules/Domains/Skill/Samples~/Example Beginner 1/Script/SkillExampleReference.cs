@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace rStar.Modules.Skill.Example1
+namespace rStar.RPGModules.Skill.Example.Beginner1
 {
-    public class SkillExample1Reference : MonoBehaviour
+    public class SkillExampleReference : MonoBehaviour
     {
     #region Public Variables
 

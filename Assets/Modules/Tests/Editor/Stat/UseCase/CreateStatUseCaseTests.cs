@@ -6,9 +6,8 @@ using NUnit.Framework;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
 using rStar.RPGModules.Stat.UseCase.Repository;
-using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Generic.TestFrameWork;
-using rStarUtility.Generic.Usecase.CQRS;
 
 #endregion
 
@@ -24,7 +23,7 @@ public class CreateStatUseCaseTests : DIUnitTestFixture_With_EventBus
         var createStatUseCase = Resolve<CreateStatUseCase>();
         var repository        = Resolve<IStatRepository>();
         var input             = new CreateStatInput();
-        var output            = CqrsCommandPresenter.NewInstance();
+        var output            = new Result();
 
         IStatReadModel stat       = null;
         string         statId     = null;

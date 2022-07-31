@@ -1,7 +1,7 @@
 #region
 
 using rStar.RPGModules.Stat.Infrastructure;
-using rStarUtility.Generic.Implement.Core;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

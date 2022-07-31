@@ -2,7 +2,7 @@
   "name": "RPGModule.Stat.UseCase",
   "rootNamespace": "",
   "references": [
-    "GUID:aa7bb26fb297ee944a4249ceb695c159",
+    "GUID:ace74969ab64aa74ba1296499c7747dc",
     "GUID:f22f718b9b174a74d89f976a69f9dd2a",
     "GUID:d3fb8bff81294c54fbfaefec2ecd3d74",
     "GUID:79c30704f8922d24bb101cc1297f71c9"

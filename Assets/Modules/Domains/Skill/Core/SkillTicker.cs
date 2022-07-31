@@ -1,7 +1,7 @@
 #region
 
 using rStar.RPGModules.Skill.Infrastructure;
-using rStarUtility.Generic.Interfaces;
+using rStarUtility.Generic.Infrastructure;
 using Zenject;
 
 #endregion

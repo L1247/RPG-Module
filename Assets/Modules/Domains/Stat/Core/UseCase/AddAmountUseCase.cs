@@ -2,17 +2,13 @@
 
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase.Extensions;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Implement.CQRS;
-using rStarUtility.Generic.Interfaces;
-using rStarUtility.Generic.Usecase;
-using rStarUtility.Generic.Usecase.CQRS;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 
 namespace rStar.RPGModules.Stat.UseCase
 {
-    public class AddAmountUseCase : UseCase<AddAmountInput , CqrsCommandPresenter , IStatRepository>
+    public class AddAmountUseCase : UseCase<AddAmountInput , Result , IStatRepository>
     {
     #region Constructor
 
@@ -22,7 +18,7 @@ namespace rStar.RPGModules.Stat.UseCase
 
     #region Public Methods
 
-        public override void Execute(AddAmountInput input , CqrsCommandPresenter output)
+        public override void Execute(AddAmountInput input , Result output)
         {
             var statReadModel = repository.FindById(input.id);
             if (statReadModel != null)

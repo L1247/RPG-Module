@@ -1,10 +1,6 @@
 #region
 
-#endregion
-
-#region
-
-using rStarUtility.Generic.Usecase;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

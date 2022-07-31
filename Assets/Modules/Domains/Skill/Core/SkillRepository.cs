@@ -2,7 +2,7 @@
 
 using System.Linq;
 using rStar.RPGModules.Skill.Infrastructure;
-using rStarUtility.Generic.Implement.Abstract;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

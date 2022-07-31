@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using rStar.RPGModules.Stat.Infrastructure;
-using rStarUtility.Generic.Implement.Abstract;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

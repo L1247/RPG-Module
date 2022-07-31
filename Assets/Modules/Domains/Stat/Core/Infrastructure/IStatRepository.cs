@@ -1,7 +1,7 @@
 #region
 
 using System.Collections.Generic;
-using rStarUtility.Generic.Usecase;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

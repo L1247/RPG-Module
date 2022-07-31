@@ -4,8 +4,7 @@ using System;
 using System.Collections.Generic;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
-using rStarUtility.Generic.Implement.CQRS;
-using rStarUtility.Generic.Usecase.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 using Zenject;
 
@@ -23,14 +22,14 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
         [Inject]
         private CreateStatUseCase createStatUseCase;
 
-        private readonly CreateStatInput      createStatInput  = new CreateStatInput();
-        private readonly CqrsCommandPresenter createStatOutput = CqrsCommandPresenter.NewInstance();
+        private readonly CreateStatInput createStatInput  = new CreateStatInput();
+        private readonly Result          createStatOutput = new Result();
 
         [Inject]
         private ModifyAmountUseCase modifyAmountUseCase;
 
-        private readonly ModifyAmountInput    modifyAmountInput  = new ModifyAmountInput();
-        private readonly CqrsCommandPresenter modifyAmountOutput = CqrsCommandPresenter.NewInstance();
+        private readonly ModifyAmountInput modifyAmountInput  = new ModifyAmountInput();
+        private readonly Result            modifyAmountOutput = new Result();
 
         [Inject]
         private DeleteStatUseCase deleteStatUseCase;
@@ -38,10 +37,10 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
         [Inject]
         private AddAmountUseCase addAmountUseCase;
 
-        private readonly DeleteStatInput      deleteStatInput = new DeleteStatInput();
-        private readonly CqrsCommandPresenter deleteOutput    = CqrsCommandPresenter.NewInstance();
-        private readonly AddAmountInput       addAmountInput  = new AddAmountInput();
-        private readonly CqrsCommandPresenter addAmountOutput = CqrsCommandPresenter.NewInstance();
+        private readonly DeleteStatInput deleteStatInput = new DeleteStatInput();
+        private readonly Result          deleteOutput    = new Result();
+        private readonly AddAmountInput  addAmountInput  = new AddAmountInput();
+        private readonly Result          addAmountOutput = new Result();
 
         [Inject]
         private AddModifiersUseCase addModifiersUseCase;
@@ -49,12 +48,12 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
         [Inject]
         private RemoveModifiersUseCase removeModifiersUseCase;
 
-        private readonly AddModifiersInput    addModifiersInput = new AddModifiersInput();
-        private readonly CqrsCommandPresenter addModifierOutput = CqrsCommandPresenter.NewInstance();
+        private readonly AddModifiersInput addModifiersInput = new AddModifiersInput();
+        private readonly Result            addModifierOutput = new Result();
 
         private readonly RemoveModifierInput removeModifierInput = new RemoveModifierInput();
 
-        private readonly CqrsCommandPresenter removeModifierOutput = CqrsCommandPresenter.NewInstance();
+        private readonly Result removeModifierOutput = new Result();
 
     #endregion
 

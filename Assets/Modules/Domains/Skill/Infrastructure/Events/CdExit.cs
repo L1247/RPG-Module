@@ -1,12 +1,16 @@
 #region
 
-using rStarUtility.Generic.Implement.Core;
+#endregion
+
+#region
+
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 
 namespace rStar.RPGModules.Skill.Infrastructure.Events
 {
-    public class CdEntered : DomainEvent
+    public class CdExit : DomainEvent
     {
     #region Public Variables
 
@@ -16,7 +20,7 @@ namespace rStar.RPGModules.Skill.Infrastructure.Events
 
     #region Constructor
 
-        public CdEntered(string id)
+        public CdExit(string id)
         {
             Id = id;
         }

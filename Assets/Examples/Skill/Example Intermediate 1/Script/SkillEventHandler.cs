@@ -1,8 +1,7 @@
 #region
 
 using rStar.RPGModules.Skill.Infrastructure.Events;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Interfaces;
+using rStarUtility.Generic.Infrastructure;
 using UnityEngine;
 using Zenject;
 

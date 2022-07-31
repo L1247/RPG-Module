@@ -1,8 +1,7 @@
 #region
 
 using rStar.RPGModules.Stat.Infrastructure.Events;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Interfaces;
+using rStarUtility.Generic.Infrastructure;
 using Zenject;
 
 #endregion

@@ -39,7 +39,7 @@
         "com.cysharp.messagepipe.zenject": "1.7.4",
         "com.neuecc.unirx": "7.1.0"
       },
-      "hash": "0b07653ec10938e733a449f6b4ee6fea612375dd"
+      "hash": "67c3d5f563ef9667c223f758b86116fc4e7c62cb"
     },
     "com.smkplus.custom-toolbar": {
       "version": "https://github.com/smkplus/CustomToolbar.git#master",
@@ -78,7 +78,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.31",
+      "version": "1.1.33",
       "depth": 0,
       "source": "registry",
       "dependencies": {

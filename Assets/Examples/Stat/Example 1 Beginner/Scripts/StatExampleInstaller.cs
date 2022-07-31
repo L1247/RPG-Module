@@ -1,7 +1,7 @@
 #region
 
 using rStar.RPGModules.Stat.Installer;
-using rStarUtility.Generic.Implement.Core;
+using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion

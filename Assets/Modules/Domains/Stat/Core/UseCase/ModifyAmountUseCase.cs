@@ -2,18 +2,14 @@
 
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase.Extensions;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Implement.CQRS;
-using rStarUtility.Generic.Interfaces;
-using rStarUtility.Generic.Usecase;
-using rStarUtility.Generic.Usecase.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 
 #endregion
 
 namespace rStar.RPGModules.Stat.UseCase
 {
-    public class ModifyAmountUseCase : UseCase<ModifyAmountInput , CqrsCommandPresenter , IStatRepository>
+    public class ModifyAmountUseCase : UseCase<ModifyAmountInput , Result , IStatRepository>
     {
     #region Constructor
 
@@ -24,7 +20,7 @@ namespace rStar.RPGModules.Stat.UseCase
 
     #region Public Methods
 
-        public override void Execute(ModifyAmountInput input , CqrsCommandPresenter output)
+        public override void Execute(ModifyAmountInput input , Result output)
         {
             var id = input.id;
             Contract.RequireString(id , "Id");

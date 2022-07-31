@@ -7,9 +7,8 @@ using NUnit.Framework;
 using rStar.RPGModules.Stat.Entity;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
-using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Generic.TestFrameWork;
-using rStarUtility.Generic.Usecase.CQRS;
 
 #endregion
 
@@ -26,7 +25,7 @@ public class StatModifyAmountUseCaseTests : DIUnitTestFixture_With_EventBus
         var modifyStatAmountUseCase = Resolve<ModifyAmountUseCase>();
         var repository              = Resolve<IStatRepository>();
         var input                   = new ModifyAmountInput();
-        var output                  = new CqrsCommandPresenter();
+        var output                  = new Result();
 
         var statId = NewGuid();
         var stat   = Substitute.For<IStat>();
@@ -60,7 +59,7 @@ public class StatModifyAmountUseCaseTests : DIUnitTestFixture_With_EventBus
         var modifyStatAmountUseCase = Resolve<ModifyAmountUseCase>();
         var repository              = Resolve<IStatRepository>();
         var input                   = new ModifyAmountInput();
-        var output                  = new CqrsCommandPresenter();
+        var output                  = new Result();
 
         var statId = NewGuid();
         var amount = 10;

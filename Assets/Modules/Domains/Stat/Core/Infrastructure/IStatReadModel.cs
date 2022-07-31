@@ -1,7 +1,7 @@
 #region
 
 using System.Collections.Generic;
-using rStarUtility.Generic.Model;
+using rStarUtility.Generic.Infrastructure;
 
 #endregion
 

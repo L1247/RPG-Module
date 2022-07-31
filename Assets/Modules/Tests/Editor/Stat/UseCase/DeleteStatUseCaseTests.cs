@@ -6,9 +6,8 @@ using rStar.RPGModules.Stat.Entity;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
 using rStar.RPGModules.Stat.UseCase.Repository;
-using rStarUtility.Generic.Implement.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Generic.TestFrameWork;
-using rStarUtility.Generic.Usecase.CQRS;
 
 #endregion
 
@@ -24,7 +23,7 @@ public class DeleteStatUseCaseTests : DIUnitTestFixture_With_EventBus
         var deleteStatUseCase = Resolve<DeleteStatUseCase>();
         var repository        = Resolve<IStatRepository>();
         var input             = new DeleteStatInput();
-        var output            = new CqrsCommandPresenter();
+        var output            = new Result();
         var statId            = NewGuid();
         var stat              = Substitute.For<IStat>();
         stat.GetId().Returns(statId);

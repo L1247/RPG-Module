@@ -1,18 +1,14 @@
 #region
 
 using rStar.RPGModules.Stat.Infrastructure;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Implement.CQRS;
-using rStarUtility.Generic.Interfaces;
-using rStarUtility.Generic.Usecase;
-using rStarUtility.Generic.Usecase.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 
 #endregion
 
 namespace rStar.RPGModules.Stat.UseCase
 {
-    public class CreateStatUseCase : UseCase<CreateStatInput , CqrsCommandPresenter , IStatRepository>
+    public class CreateStatUseCase : UseCase<CreateStatInput , Result , IStatRepository>
     {
     #region Constructor
 
@@ -22,7 +18,7 @@ namespace rStar.RPGModules.Stat.UseCase
 
     #region Public Methods
 
-        public override void Execute(CreateStatInput input , CqrsCommandPresenter output)
+        public override void Execute(CreateStatInput input , Result output)
         {
             var id = GUID.NewGUID();
 

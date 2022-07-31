@@ -3,11 +3,7 @@
 using System.Collections.Generic;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase.Extensions;
-using rStarUtility.Generic.Implement.Core;
-using rStarUtility.Generic.Implement.CQRS;
-using rStarUtility.Generic.Interfaces;
-using rStarUtility.Generic.Usecase;
-using rStarUtility.Generic.Usecase.CQRS;
+using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 
 #endregion
@@ -17,7 +13,7 @@ namespace rStar.RPGModules.Stat.UseCase
     /// <summary>
     ///     節省計算，可一次傳新增多個Modifier
     /// </summary>
-    public class AddModifiersUseCase : UseCase<AddModifiersInput , CqrsCommandPresenter , IStatRepository>
+    public class AddModifiersUseCase : UseCase<AddModifiersInput , Result , IStatRepository>
     {
     #region Constructor
 
@@ -27,7 +23,7 @@ namespace rStar.RPGModules.Stat.UseCase
 
     #region Public Methods
 
-        public override void Execute(AddModifiersInput input , CqrsCommandPresenter output)
+        public override void Execute(AddModifiersInput input , Result output)
         {
             var id = input.id;
             Contract.RequireString(id , "Id");

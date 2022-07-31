@@ -19,14 +19,19 @@
   },
   "samples": [
     {
-      "displayName": "Stat Example",
+      "displayName": "Stat Examples",
       "description": "Example for Stat",
       "path": "Domains/Stat/Samples~/"
     },
     {
-      "displayName": "Skill Example",
+      "displayName": "Skill Examples",
       "description": "Example for Skill",
       "path": "Domains/Skill/Samples~/"
+    },
+    {
+      "displayName": "Combat Examples",
+      "description": "Example for Combat",
+      "path": "Domains/Combat/Samples~/"
     }
   ]
 }

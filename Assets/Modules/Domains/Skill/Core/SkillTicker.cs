@@ -19,7 +19,7 @@ namespace rStar.RPGModules.Skill.Core
         private ISkillController skillController;
 
         [Inject]
-        private ITimeSystem timeSystem;
+        private ITimeProvider timeProvider;
 
     #endregion
 
@@ -27,7 +27,7 @@ namespace rStar.RPGModules.Skill.Core
 
         public void Tick()
         {
-            var deltaTime = timeSystem.GetDeltaTime();
+            var deltaTime = timeProvider.GetDeltaTime();
             foreach (var skill in repository.GetAll()) skillController.TickSkill(skill.GetId() , deltaTime);
         }
 

@@ -1,23 +1,22 @@
 # RPG Module
 
-### ChangeLog
+## ChangeLog
 [CHANGELOG.md](https://github.com/L1247/RPG-Module/blob/main/Assets/Modules/CHANGELOG.md)
 
-### add package from git URL
+## add package from git URL
 ```
 https://github.com/L1247/RPG-Module.git?path=Assets/Modules
 ```
-### Dependence
+## Dependence
 [rStarUtility](https://github.com/L1247/rStarUtility)
 
-### After import
+## After import
 ![](https://github.com/L1247/RPG-Module/blob/main/ScreenShots/Stat.png?raw=true)
 
-### Issue Fix
+## Issue Fix
 If update version fail , remove and reimport RPGModule from the PackageManager by git url.
 
-
-### Progress:
+## Progress:
 
 * ✅ Stat
 * ✅ Skill

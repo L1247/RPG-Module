@@ -24,3 +24,4 @@ If update version fail , remove and reimport RPGModule from the PackageManager b
 * ✅ Skill
 * [ ] Combat
 * [ ] Item
+* [ ] Tag

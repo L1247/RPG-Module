@@ -1,5 +1,6 @@
 # RPG Module
 `RPGModule` is module that quick production for making RPG
+### 更多資訊 See [Wiki](https://github.com/L1247/RPG-Module/wiki)
 
 ## ChangeLog
 [CHANGELOG.md](https://github.com/L1247/RPG-Module/blob/main/Assets/Modules/CHANGELOG.md)

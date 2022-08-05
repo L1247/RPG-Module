@@ -39,7 +39,7 @@
         "com.cysharp.messagepipe.zenject": "1.7.4",
         "com.neuecc.unirx": "7.1.0"
       },
-      "hash": "bd456c2361684a5f60b0528f8f500e550c378620"
+      "hash": "2cc464739781918a4b37d5b3c4fb216d720ba930"
     },
     "com.smkplus.custom-toolbar": {
       "version": "https://github.com/smkplus/CustomToolbar.git#master",

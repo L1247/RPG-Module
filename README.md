@@ -1,4 +1,5 @@
 # RPG Module
+`RPGModule` is module that quick production for making RPG
 
 ## ChangeLog
 [CHANGELOG.md](https://github.com/L1247/RPG-Module/blob/main/Assets/Modules/CHANGELOG.md)

@@ -15,3 +15,11 @@ https://github.com/L1247/RPG-Module.git?path=Assets/Modules
 
 ### Issue Fix
 If update version fail , remove and reimport RPGModule from the PackageManager by git url.
+
+
+### Progress:
+
+* ✅ Stat
+* ✅ Skill
+* [ ] Combat
+* [ ] Item

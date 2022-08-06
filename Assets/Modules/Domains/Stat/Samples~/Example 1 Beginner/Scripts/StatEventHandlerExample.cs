@@ -23,7 +23,7 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
         {
             Register<BaseAmountModified>(e => WhenStatEvent(e.Id ,       e.OwnerId));
             Register<CalculatedAmountModified>(e => WhenStatEvent(e.Id , e.OwnerId));
-            Register<StatCreated>(e => WhenStatEvent(e.id ,              e.ownerId));
+            Register<StatCreated>(e => WhenStatEvent(e.Id ,              e.OwnerId));
         }
 
     #endregion

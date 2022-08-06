@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
 using rStarUtility.Generic.Infrastructure;
@@ -94,6 +95,22 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
             removeModifierInput.id          = statId;
             removeModifierInput.modifierIds = new List<string>() { modifierId };
             removeModifiersUseCase.Execute(removeModifierInput , removeModifierOutput);
+        }
+
+        public bool RemoveStat(string id)
+        {
+            deleteStatInput.id = id;
+            deleteStatUseCase.Execute(deleteStatInput , deleteOutput);
+            return deleteOutput.GetExitCode() == ExitCode.SUCCESS;
+        }
+
+        public bool RemoveStatsByOwner(string ownerId)
+        {
+            Contract.RequireString(ownerId , $"ownerId: {ownerId}");
+            var stats = repository.FindStatsByOwnerId(ownerId);
+            var count = stats.Count();
+            foreach (var stat in stats) RemoveStat(stat.GetId());
+            return count == 0;
         }
 
 

@@ -13,10 +13,10 @@ namespace rStar.RPGModules.Skill.Core
     #region Private Variables
 
         [Inject]
-        private ISkillRepository skillRepository;
+        private ISkillRepository repository;
 
         [Inject]
-        private Skill.Factory factory;
+        private Skill.Pool pool;
 
     #endregion
 
@@ -28,13 +28,22 @@ namespace rStar.RPGModules.Skill.Core
             Contract.RequireString(dataId ,  $"dataId:{dataId}");
             Contract.Require(cast >= 0 , "cast need greater than or equal zero");
             Contract.Require(cd >= 0 ,   "cast need greater than or equal zero");
-            var skill = factory.Create();
+            var skill = pool.Spawn().TransformToDomain();
             skill.Init(ownerId , dataId , cast , cd);
+            repository.Save(skill.GetId() , skill);
         }
 
         public void ExecuteSkill(string id)
         {
             GetSkill(id).Execute();
+        }
+
+        public void RemoveSkill(string id)
+        {
+            Contract.RequireString(id , $"id , {id}");
+            var skill = GetSkill(id) as Skill;
+            pool.Despawn(skill);
+            repository.DeleteById(id);
         }
 
         public void TickSkill(string id , float time)
@@ -44,8 +53,8 @@ namespace rStar.RPGModules.Skill.Core
 
         public void UseSkill(string id)
         {
-            var skill1 = GetSkill(id);
-            skill1.UseSkill();
+            var skill = GetSkill(id);
+            skill.UseSkill();
         }
 
     #endregion
@@ -54,7 +63,7 @@ namespace rStar.RPGModules.Skill.Core
 
         private ISkill GetSkill(string id)
         {
-            var skillReadModel = skillRepository.FindById(id);
+            var skillReadModel = repository.FindById(id);
             var skill          = skillReadModel.TransformToDomain();
             return skill;
         }

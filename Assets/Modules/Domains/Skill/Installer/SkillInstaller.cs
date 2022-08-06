@@ -34,7 +34,7 @@ namespace rStar.RPGModules.Skill.Installer
             Container.Bind<ISkillRepository>().To<SkillRepository>().AsSingle();
             Container.Bind<ISkillController>().To<SkillController>().AsSingle();
             if (useTicker) Container.BindInterfacesAndSelfTo<SkillTicker>().AsSingle();
-            Container.BindFactory<Core.Skill , Core.Skill.Factory>().FromPoolableMemoryPool();
+            Container.BindMemoryPool<Core.Skill , Core.Skill.Pool>().AsSingle();
         }
 
     #endregion

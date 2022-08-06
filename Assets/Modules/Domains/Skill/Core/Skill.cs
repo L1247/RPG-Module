@@ -147,7 +147,7 @@ namespace rStar.RPGModules.Skill.Core
 
     #region Nested Types
 
-        public class Factory : PlaceholderFactory<Skill> { }
+        public class Pool : MemoryPool<Skill> { }
 
     #endregion
     }

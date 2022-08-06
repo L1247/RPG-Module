@@ -35,9 +35,6 @@ namespace rStar.RPGModules.Skill.Core
         private IMemoryPool pool;
 
         [Inject]
-        private ISkillRepository skillRepository;
-
-        [Inject]
         private IDomainEventBus domainEventBus;
 
         private string id;
@@ -113,13 +110,11 @@ namespace rStar.RPGModules.Skill.Core
         {
             Dispose();
             pool = null;
-            skillRepository.DeleteById(GetId());
         }
 
         public void OnSpawned(IMemoryPool pool)
         {
             this.pool = pool;
-            skillRepository.Save(GetId() , this);
         }
 
         public void Tick(float time)
@@ -147,7 +142,7 @@ namespace rStar.RPGModules.Skill.Core
 
     #region Nested Types
 
-        public class Pool : MemoryPool<Skill> { }
+        public class Pool : MemoryPool<ISkillReadModel> { }
 
     #endregion
     }

@@ -41,7 +41,7 @@ namespace rStar.RPGModules.Skill.Core
         public void RemoveSkill(string id)
         {
             Contract.RequireString(id , $"id , {id}");
-            var skill = GetSkill(id) as Skill;
+            var skill = GetSkill(id);
             pool.Despawn(skill);
             repository.DeleteById(id);
         }

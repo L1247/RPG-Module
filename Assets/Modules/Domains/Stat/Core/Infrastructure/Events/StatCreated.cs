@@ -10,11 +10,12 @@ namespace rStar.RPGModules.Stat.Infrastructure.Events
     {
     #region Public Variables
 
-        public readonly string dataId;
-        public readonly string id;
+        public int BaseAmount { get; }
 
-        public readonly string ownerId;
-        public          int    BaseAmount { get; }
+        public string DataId { get; }
+        public string Id     { get; }
+
+        public string OwnerId { get; }
 
     #endregion
 
@@ -22,10 +23,10 @@ namespace rStar.RPGModules.Stat.Infrastructure.Events
 
         public StatCreated(string id , string dataId , string ownerId , int baseAmount)
         {
-            BaseAmount   = baseAmount;
-            this.id      = id;
-            this.dataId  = dataId;
-            this.ownerId = ownerId;
+            BaseAmount = baseAmount;
+            Id         = id;
+            DataId     = dataId;
+            OwnerId    = ownerId;
         }
 
     #endregion

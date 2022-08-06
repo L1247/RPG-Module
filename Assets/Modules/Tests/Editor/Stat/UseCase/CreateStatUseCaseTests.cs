@@ -47,7 +47,7 @@ public class CreateStatUseCaseTests : DIUnitTestFixture_With_EventBus
                 Assert.NotNull(stat.OwnerId , "stat's OwnerId is null");
 
                 Assert.AreEqual(ownerId ,    stat.OwnerId ,          "OwnerId is not equal");
-                Assert.AreEqual(statDataId , stat.DataId ,           "dataId is not equal");
+                Assert.AreEqual(statDataId , stat.DataId ,           "DataId is not equal");
                 Assert.AreEqual(amount ,     stat.BaseAmount ,       "stat's amount is not equal");
                 Assert.AreEqual(amount ,     stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
                 statId = stat.GetId();

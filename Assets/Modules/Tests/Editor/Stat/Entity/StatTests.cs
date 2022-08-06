@@ -41,9 +41,9 @@ public class StatTests : DIUnitTestFixture_With_EventBus
 
                 var statCreated = stat.FindDomainEvent<StatCreated>();
                 Assert.NotNull(statCreated , "statCreated is null");
-                Assert.AreEqual(id ,      statCreated.id ,        "Id is not equal");
-                Assert.AreEqual(dataId ,  statCreated.dataId ,    "dataId is not equal");
-                Assert.AreEqual(ownerId , statCreated.ownerId ,   "OwnerId is not equal");
+                Assert.AreEqual(id ,      statCreated.Id ,        "Id is not equal");
+                Assert.AreEqual(dataId ,  statCreated.DataId ,    "DataId is not equal");
+                Assert.AreEqual(ownerId , statCreated.OwnerId ,   "OwnerId is not equal");
                 Assert.AreEqual(amount ,  stat.CalculatedAmount , "CalculatedAmount is not equal");
                 Assert.AreEqual(amount ,  stat.BaseAmount ,       "BaseAmount is not equal");
             });

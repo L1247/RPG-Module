@@ -13,7 +13,7 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
     #region Private Variables
 
         [SerializeField]
-        private CombatConfig combatConfig;
+        private StatConfig statConfig;
 
     #endregion
 
@@ -21,7 +21,7 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
 
         public override void InstallBindings()
         {
-            Container.Bind<ICombatConfig>().FromInstance(combatConfig);
+            Container.Bind<IStatConfig>().FromInstance(statConfig);
         }
 
     #endregion

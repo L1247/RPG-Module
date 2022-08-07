@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e9673c34654fb79f1f584a3f6b64bb, type: 3}
   m_Name: CombatConfig
   m_EditorClassIdentifier: 
-  combatConfig:
+  statConfig:
     statAtkDataId: Atk
     statHealthDataId: Health

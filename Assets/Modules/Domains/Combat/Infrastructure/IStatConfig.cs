@@ -1,6 +1,6 @@
 namespace rStar.RPGModules.Combat.Infrastructure
 {
-    public interface ICombatConfig
+    public interface IStatConfig
     {
     #region Public Methods
 

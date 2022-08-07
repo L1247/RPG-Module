@@ -1,5 +1,6 @@
 #region
 
+using rStar.RPGModules.Combat.Infrastructure;
 using rStar.RPGModules.Skill.Infrastructure;
 using rStar.RPGModules.Stat.Infrastructure;
 using UnityEngine;
@@ -30,6 +31,9 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
         [Inject(Id = "Player1")]
         private Animator playerAnim;
 
+        [Inject]
+        private IStatConfig statConfig;
+
     #endregion
 
     #region Public Methods
@@ -38,7 +42,7 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
         {
             playerAnim.SetFloat(AttackSpeed , 1f / attackSpeed);
             skillController.CreateSkill("Player1" , "Skill1" , Mathf.Max(0.1f , attackSpeed - 0.2f) , 0);
-            statController.CreateStat("Enemy1" , "Health" , 200);
+            statController.CreateStat("Enemy1" , statConfig.GetStatHealthDataId() , 200);
         }
 
         public void Tick()

@@ -30,7 +30,7 @@ namespace rStar.RPGModules.Combat.Installer
         public override void InstallBindings()
         {
             Container.Bind<ICombatService>().To<CombatService>().AsSingle();
-            if (useOwnConfig == false) Container.Bind<ICombatConfig>().To<CombatConfig>().AsSingle();
+            if (useOwnConfig == false) Container.Bind<IStatConfig>().To<StatConfig>().AsSingle();
         }
 
     #endregion

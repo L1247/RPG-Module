@@ -15,7 +15,7 @@ namespace Modules.Tests.Editor.Combat
     {
     #region Private Variables
 
-        private          ICombatConfig   combatConfig;
+        private          IStatConfig     statConfig;
         private          IStatRepository statRepository;
         private          IStatController statController;
         private          CombatService   combatService;
@@ -30,7 +30,7 @@ namespace Modules.Tests.Editor.Combat
         [TestCase(-99 , Description = "Negative damage case")]
         public void Should_Succeed_DealDamage(int damageAmount)
         {
-            combatConfig.GetStatHealthDataId().Returns(healthDataId);
+            statConfig.GetStatHealthDataId().Returns(healthDataId);
             var statId = GivenHealthStatInRepository();
             combatService.DealDamage(id , damageAmount);
             statController.Received(1).AddAmount(statId , -99);
@@ -54,9 +54,9 @@ namespace Modules.Tests.Editor.Combat
             base.Setup();
             BindFromSubstitute<IStatRepository>();
             BindFromSubstitute<IStatController>();
-            BindFromSubstitute<ICombatConfig>();
+            BindFromSubstitute<IStatConfig>();
             BindAsSingle<CombatService>();
-            combatConfig   = Resolve<ICombatConfig>();
+            statConfig     = Resolve<IStatConfig>();
             statRepository = Resolve<IStatRepository>();
             statController = Resolve<IStatController>();
             combatService  = Resolve<CombatService>();

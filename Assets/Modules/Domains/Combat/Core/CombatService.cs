@@ -15,7 +15,7 @@ namespace rStar.RPGModules.Combat.Core
     #region Private Variables
 
         [Inject]
-        private ICombatConfig combatConfig;
+        private IStatConfig statConfig;
 
         [Inject]
         private IStatRepository statRepository;
@@ -31,7 +31,7 @@ namespace rStar.RPGModules.Combat.Core
         {
             Contract.RequireString(ownerId , "ownerId");
             var damage           = -Mathf.Abs(damageAmount);
-            var statHealthDataId = combatConfig.GetStatHealthDataId();
+            var statHealthDataId = statConfig.GetStatHealthDataId();
             if (string.IsNullOrEmpty(statHealthDataId)) return false;
             var enemyHealthStat  = statRepository.FindStat(ownerId , statHealthDataId);
             var addAmountSucceed = statController.AddAmount(enemyHealthStat.GetId() , damage);

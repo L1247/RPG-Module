@@ -9,7 +9,7 @@ using UnityEngine;
 namespace rStar.RPGModules.Combat.Example.Beginner1
 {
     [Serializable]
-    public class CombatConfig : ICombatConfig
+    public class StatConfig : IStatConfig
     {
     #region Private Variables
 

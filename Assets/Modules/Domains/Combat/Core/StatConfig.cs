@@ -6,7 +6,7 @@ using rStar.RPGModules.Combat.Infrastructure;
 
 namespace rStar.RPGModules.Combat.Core
 {
-    public class CombatConfig : ICombatConfig
+    public class StatConfig : IStatConfig
     {
     #region Public Methods
 

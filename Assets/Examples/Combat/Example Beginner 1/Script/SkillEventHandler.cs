@@ -15,12 +15,6 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
     {
     #region Private Variables
 
-        // [Inject]
-        // private IStatController statController;
-        //
-        // [Inject]
-        // private IStatRepository statRepository;
-
         [Inject(Id = "DamageText")]
         private GameObject damageTextPrefab;
 
@@ -47,8 +41,6 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
         {
             var damage = 10;
             combatService.DealDamage("Enemy1" , damage);
-            // var enemyStat = statRepository.FindStat("Enemy1" , "Health");
-            // statController.AddAmount(enemyStat.GetId() , damage);
             var healthBarPos = healthBar.transform.position;
             var damagePos    = healthBarPos + Random.onUnitSphere;
             var damageText   = Object.Instantiate(damageTextPrefab , damagePos , Quaternion.identity).GetComponent<DamageText>();

@@ -26,13 +26,14 @@ namespace Modules.Tests.Editor.Combat
     #region Test Methods
 
         [Test]
-        public void Should_Succeed_DealDamage()
+        [TestCase(99 ,  Description = "Positive damage case")]
+        [TestCase(-99 , Description = "Negative damage case")]
+        public void Should_Succeed_DealDamage(int damageAmount)
         {
-            var damageAmount = 99;
             combatConfig.GetStatHealthDataId().Returns(healthDataId);
             var statId = GivenHealthStatInRepository();
             combatService.DealDamage(id , damageAmount);
-            statController.Received(1).AddAmount(statId , -damageAmount);
+            statController.Received(1).AddAmount(statId , -99);
         }
 
         [Test]

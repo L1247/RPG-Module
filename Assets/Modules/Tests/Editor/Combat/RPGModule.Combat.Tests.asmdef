@@ -1,0 +1,28 @@
+{
+  "name": "RPGModule.Combat.Tests",
+  "rootNamespace": "",
+  "references": [
+    "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+    "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+    "GUID:ace74969ab64aa74ba1296499c7747dc",
+    "GUID:9adc886d9d4a2f04aad73edd4b5441a7",
+    "GUID:0087963d61e61254185e538303ce187b",
+    "GUID:9340a397c9597c24584620be21806e83",
+    "GUID:79c30704f8922d24bb101cc1297f71c9"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "NSubstitute.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

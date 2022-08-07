@@ -26,6 +26,7 @@ namespace rStar.RPGModules.Combat.Example.Beginner1
             EventBusInstaller.Install(Container);
             SkillInstaller.Install(Container);
             StatInstaller.Install(Container);
+
             Container.Bind<SkillEventHandler>().AsSingle().NonLazy();
             Container.Bind<StatEventHandler>().AsSingle().NonLazy();
             Container.BindInterfacesTo<CombatMain>().AsSingle();

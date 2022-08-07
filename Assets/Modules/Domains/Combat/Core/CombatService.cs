@@ -32,6 +32,7 @@ namespace Modules.Domains.Combat.Core
             Contract.RequireString(ownerId , "ownerId");
             var damage           = -Mathf.Abs(damageAmount);
             var statHealthDataId = combatConfig.GetStatHealthDataId();
+            if (string.IsNullOrEmpty(statHealthDataId)) return false;
             var enemyHealthStat  = statRepository.FindStat(ownerId , statHealthDataId);
             var addAmountSucceed = statController.AddAmount(enemyHealthStat.GetId() , damage);
             return addAmountSucceed;

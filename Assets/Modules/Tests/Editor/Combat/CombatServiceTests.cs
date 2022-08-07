@@ -28,15 +28,20 @@ namespace Modules.Tests.Editor.Combat
         [Test]
         public void Should_Succeed_DealDamage()
         {
-            combatConfig.GetStatHealthDataId().Returns(healthDataId);
-            var healthStat = Substitute.For<IStatReadModel>();
-            var statId     = NewGuid();
-            healthStat.GetId().Returns(statId);
-            statRepository.FindStat(id , healthDataId).Returns(healthStat);
-
             var damageAmount = 99;
+            combatConfig.GetStatHealthDataId().Returns(healthDataId);
+            var statId = GivenHealthStatInRepository();
             combatService.DealDamage(id , damageAmount);
             statController.Received(1).AddAmount(statId , -damageAmount);
+        }
+
+        [Test]
+        public void Should_Fail_DealDamage()
+        {
+            var damageAmount = 99;
+            var statId       = GivenHealthStatInRepository();
+            combatService.DealDamage(id , damageAmount);
+            statController.DidNotReceive().AddAmount(statId , -damageAmount);
         }
 
     #endregion
@@ -54,6 +59,19 @@ namespace Modules.Tests.Editor.Combat
             statRepository = Resolve<IStatRepository>();
             statController = Resolve<IStatController>();
             combatService  = Resolve<CombatService>();
+        }
+
+    #endregion
+
+    #region Private Methods
+
+        private string GivenHealthStatInRepository()
+        {
+            var healthStat = Substitute.For<IStatReadModel>();
+            var statId     = NewGuid();
+            healthStat.GetId().Returns(statId);
+            statRepository.FindStat(id , healthDataId).Returns(healthStat);
+            return statId;
         }
 
     #endregion

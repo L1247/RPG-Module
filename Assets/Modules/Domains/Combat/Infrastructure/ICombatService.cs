@@ -9,7 +9,7 @@ namespace rStar.RPGModules.Combat.Infrastructure
         /// </summary>
         /// <param name="ownerId">will be hurt stat owner's id</param>
         /// <param name="damageAmount">should be positive number</param>
-        /// <returns></returns>
+        /// <returns>command was successful</returns>
         bool DealDamage(string ownerId , int damageAmount);
 
     #endregion

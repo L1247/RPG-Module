@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace Modules.Domains.Combat.Core
+namespace rStar.RPGModules.Combat.Core
 {
     public class CombatService : ICombatService
     {

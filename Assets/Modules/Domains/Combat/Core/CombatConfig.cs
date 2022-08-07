@@ -1,6 +1,5 @@
 #region
 
-using System;
 using rStar.RPGModules.Combat.Infrastructure;
 
 #endregion
@@ -13,12 +12,12 @@ namespace rStar.RPGModules.Combat.Core
 
         public string GetStatAtkId()
         {
-            throw new NotImplementedException();
+            return "Atk";
         }
 
         public string GetStatHealthDataId()
         {
-            throw new NotImplementedException();
+            return "Health";
         }
 
     #endregion

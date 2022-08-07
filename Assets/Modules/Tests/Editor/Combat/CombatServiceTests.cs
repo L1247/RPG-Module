@@ -1,8 +1,8 @@
 #region
 
-using Modules.Domains.Combat.Core;
 using NSubstitute;
 using NUnit.Framework;
+using rStar.RPGModules.Combat.Core;
 using rStar.RPGModules.Combat.Infrastructure;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStarUtility.Generic.TestFrameWork;

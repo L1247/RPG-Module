@@ -12,6 +12,6 @@
 ### Added
 * Combat Example Beginner 1
 
-## [0.0.11] - 2022-08-007
+## [0.0.11] - 2022-08-07
 ### Added
 * Combat service

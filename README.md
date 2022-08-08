@@ -3,8 +3,7 @@
 ## [RPG系列影片](https://www.youtube.com/watch?v=edB5MRPdBsQ&list=PLGkS8CzB8N0HDGkyh0gjnjLStY1XOuPnO&index=15&ab_channel=rStar%E9%98%BF%E6%98%9F)
 ### 更多資訊 See [Wiki](https://github.com/L1247/RPG-Module/wiki)
 
-## ChangeLog 版本更新說明
-[CHANGELOG.md](https://github.com/L1247/RPG-Module/blob/main/Assets/Modules/CHANGELOG.md)
+## [ChangeLog 版本更新說明](https://github.com/L1247/RPG-Module/blob/main/Assets/Modules/CHANGELOG.md)
 
 ## add package from git URL
 ```

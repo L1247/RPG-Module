@@ -7,9 +7,6 @@ using rStar.RPGModules.Item.Infrastructure;
 namespace rStar.RPGModules.Item.Entity
 {
     public interface IItem : IItemReadModel
-
-#region Public Methods
-
     {
     #region Public Methods
 

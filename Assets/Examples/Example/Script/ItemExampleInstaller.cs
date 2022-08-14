@@ -1,0 +1,26 @@
+#region
+
+using RPGCore.Item.Installer;
+using rStarUtility.Generic.Installer;
+using Zenject;
+
+#endregion
+
+namespace RPGCore.Item.Example.Script
+{
+    public class ItemExampleInstaller : MonoInstaller<ItemExampleInstaller>
+    {
+    #region Public Methods
+
+        public override void InstallBindings()
+        {
+            EventBusInstaller.Install(Container);
+            ItemInstaller.Install(Container);
+
+            Container.Rebind<ItemEventHandler>().To<ItemEventHandlerExample>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<ItemExamplePresenter>().AsSingle();
+        }
+
+    #endregion
+    }
+}

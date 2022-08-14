@@ -1,11 +1,11 @@
 #region
 
-using RPGCore.Item.Entity;
-using RPGCore.Item.Infrastructure;
+using rStar.RPGModules.Item.Entity;
+using rStar.RPGModules.Item.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Item.UseCase.Extension
+namespace rStar.RPGModules.Item.UseCase.Extension
 {
     public static class ItemExtension
     {

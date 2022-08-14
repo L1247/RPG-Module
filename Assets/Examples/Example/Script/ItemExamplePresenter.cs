@@ -1,15 +1,15 @@
 #region
 
 using System.Collections.Generic;
-using RPGCore.Item.Infrastructure;
-using RPGCore.Item.Infrastructure.Adapter;
+using rStar.RPGModules.Item.Infrastructure;
+using rStar.RPGModules.Item.Infrastructure.Adapter;
 using rStarUtility.Util.Extensions;
 using TMPro;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Item.Example.Script
+namespace rStar.RPGModules.Item.Example.Script
 {
     public class ItemExamplePresenter : IInitializable
     {

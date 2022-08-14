@@ -1,12 +1,12 @@
 #region
 
-using RPGCore.Item.Infrastructure;
+using rStar.RPGModules.Item.Infrastructure;
 using rStarUtility.Generic.Infrastructure;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Item.UseCase
+namespace rStar.RPGModules.Item.UseCase
 {
     public class ItemController : IItemController
     {

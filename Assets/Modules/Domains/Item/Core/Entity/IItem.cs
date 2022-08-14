@@ -1,12 +1,15 @@
 #region
 
-using RPGCore.Item.Infrastructure;
+using rStar.RPGModules.Item.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Item.Entity
+namespace rStar.RPGModules.Item.Entity
 {
     public interface IItem : IItemReadModel
+
+#region Public Methods
+
     {
     #region Public Methods
 

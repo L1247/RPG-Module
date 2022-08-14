@@ -2,12 +2,12 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using RPGCore.Item.Infrastructure;
+using rStar.RPGModules.Item.Infrastructure;
 using rStarUtility.Generic.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Item.UseCase
+namespace rStar.RPGModules.Item.UseCase
 {
     public class ItemRepository : GenericRepository<IItemReadModel> , IItemRepository
     {

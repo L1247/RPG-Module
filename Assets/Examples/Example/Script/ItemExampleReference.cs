@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace RPGCore.Item.Example.Script
+namespace rStar.RPGModules.Item.Example.Script
 {
     public class ItemExampleReference : MonoBehaviour
     {

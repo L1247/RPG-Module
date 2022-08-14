@@ -1,0 +1,16 @@
+{
+  "name": "RPGModule.Item.Infrastructure",
+  "rootNamespace": "RPGModule.Item.Infrastructure",
+  "references": [
+    "GUID:ace74969ab64aa74ba1296499c7747dc"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

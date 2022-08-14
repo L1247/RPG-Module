@@ -1,12 +1,12 @@
 #region
 
-using RPGCore.Item.Installer;
+using rStar.RPGModules.Item.Installer;
 using rStarUtility.Generic.Installer;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Item.Example.Script
+namespace rStar.RPGModules.Item.Example.Script
 {
     public class ItemExampleInstaller : MonoInstaller<ItemExampleInstaller>
     {

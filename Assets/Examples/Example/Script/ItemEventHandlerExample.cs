@@ -1,13 +1,13 @@
 #region
 
-using RPGCore.Item.Installer;
+using rStar.RPGModules.Item.Installer;
 using rStarUtility.Generic.Infrastructure;
 using UnityEngine;
 using Zenject;
 
 #endregion
 
-namespace RPGCore.Item.Example.Script
+namespace rStar.RPGModules.Item.Example.Script
 {
     public class ItemEventHandlerExample : ItemEventHandler
     {

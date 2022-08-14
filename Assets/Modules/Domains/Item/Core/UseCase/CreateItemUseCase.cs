@@ -1,12 +1,12 @@
 #region
 
-using RPGCore.Item.Infrastructure;
+using rStar.RPGModules.Item.Infrastructure;
 using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 
 #endregion
 
-namespace RPGCore.Item.UseCase
+namespace rStar.RPGModules.Item.UseCase
 {
     public class CreateItemUseCase : UseCase<CreateItemInput , Result , IItemRepository>
     {

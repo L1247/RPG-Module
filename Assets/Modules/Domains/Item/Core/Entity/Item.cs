@@ -1,11 +1,11 @@
 #region
 
-using RPGCore.Item.Infrastructure.Event;
+using rStar.RPGModules.Item.Infrastructure.Event;
 using rStarUtility.Generic.Infrastructure;
 
 #endregion
 
-namespace RPGCore.Item.Entity
+namespace rStar.RPGModules.Item.Entity
 {
     public class Item : AggregateRoot , IItem
     {

@@ -1,5 +1,6 @@
 #region
 
+using rStarUtility.Generic.Infrastructure;
 using Zenject;
 
 #endregion
@@ -17,7 +18,7 @@ namespace rStar.RPGModules.Item.Infrastructure.Adapter
 
     #region Public Methods
 
-        public bool CreateNonStackableItem(string ownerId , string dataId)
+        public Result CreateNonStackableItem(string ownerId , string dataId)
         {
             return controller.CreateItem(ownerId , dataId , false);
         }

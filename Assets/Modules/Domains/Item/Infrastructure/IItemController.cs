@@ -1,3 +1,9 @@
+#region
+
+using rStarUtility.Generic.Infrastructure;
+
+#endregion
+
 namespace rStar.RPGModules.Item.Infrastructure
 {
     public interface IItemController
@@ -12,7 +18,7 @@ namespace rStar.RPGModules.Item.Infrastructure
         /// <param name="dataId"></param>
         /// <param name="stackable"></param>
         /// <returns>item's id</returns>
-        bool CreateItem(string ownerId , string dataId , bool stackable);
+        Result CreateItem(string ownerId , string dataId , bool stackable);
 
     #endregion
     }

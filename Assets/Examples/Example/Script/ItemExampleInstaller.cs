@@ -17,7 +17,7 @@ namespace rStar.RPGModules.Item.Example.Script
             EventBusInstaller.Install(Container);
             ItemInstaller.Install(Container);
 
-            Container.Rebind<ItemEventHandler>().To<ItemEventHandlerExample>().AsSingle().NonLazy();
+            Container.Bind<ItemEventHandlerExample>().AsSingle().NonLazy();
             Container.BindInterfacesAndSelfTo<ItemExamplePresenter>().AsSingle();
         }
 

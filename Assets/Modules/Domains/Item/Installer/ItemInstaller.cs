@@ -18,7 +18,6 @@ namespace rStar.RPGModules.Item.Installer
             Container.Bind<CreateItemUseCase>().AsSingle();
             Container.Bind<ChangeOwnerUseCase>().AsSingle();
 
-            Container.Bind<ItemEventHandler>().AsSingle().NonLazy();
             Container.Bind<IItemController>().To<ItemController>().AsSingle();
             Container.Bind<IItemRepository>().To<ItemRepository>().AsSingle();
             Container.Bind<ItemProvider>().AsSingle();

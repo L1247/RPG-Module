@@ -43,7 +43,7 @@ namespace rStar.RPGModules.Item.Entity
         public void ChangeOwner(string newOwner)
         {
             OwnerId = newOwner;
-            AddDomainEvent(new OwnerChanged(GetId() , OwnerId));
+            AddDomainEvent(new OwnerChanged(GetId() , OwnerId , DataId));
         }
 
     #endregion

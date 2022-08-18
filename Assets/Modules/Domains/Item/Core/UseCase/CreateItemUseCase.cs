@@ -30,9 +30,9 @@ namespace rStar.RPGModules.Item.UseCase
             var item = new Entity.Item(id , ownerId , dataId , input.stackable);
             repository.Save(id , item);
 
-            domainEventBus.PostAll(item);
             output.SetId(id);
             output.SetExitCode(ExitCode.SUCCESS);
+            domainEventBus.PostAll(item);
         }
 
     #endregion

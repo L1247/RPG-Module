@@ -41,10 +41,10 @@ namespace rStar.RPGModules.Item.UseCase
                 item.ChangeOwner(ownerId);
             }
 
-            domainEventBus.PostAll(item);
-
-            output.SetId(id);
             output.SetExitCode(ExitCode.SUCCESS);
+            output.SetId(id);
+
+            domainEventBus.PostAll(item);
         }
 
     #endregion

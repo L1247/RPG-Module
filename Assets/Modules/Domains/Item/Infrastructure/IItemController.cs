@@ -10,7 +10,7 @@ namespace rStar.RPGModules.Item.Infrastructure
     {
     #region Public Methods
 
-        void ChangeOwner(string id , string ownerId);
+        Result ChangeOwner(string id , string ownerId);
 
         /// <summary>
         /// </summary>

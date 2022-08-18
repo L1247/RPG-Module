@@ -27,10 +27,12 @@ namespace rStar.RPGModules.Item.UseCase
             Contract.RequireString(ownerId , "ownerId");
             var itemReadModel = repository.FindById(id);
             Contract.RequireNotNull(itemReadModel , "itemReadModel");
+            var exitCode        = ExitCode.SUCCESS;
             var item            = itemReadModel.TransformToDomain();
             var dataId          = item.DataId;
             var sameDataIdItems = repository.GetAllItemByDataId(dataId);
-            if (sameDataIdItems.Count > 1)
+            // todo: Test - stackable == false
+            if (sameDataIdItems.Count > 1 && item.Stackable)
             {
                 repository.DeleteById(id);
                 item = sameDataIdItems[0].TransformToDomain();
@@ -38,13 +40,16 @@ namespace rStar.RPGModules.Item.UseCase
             }
             else
             {
-                item.ChangeOwner(ownerId);
+                // SameOwnerId
+                if (ownerId.Equals(item.OwnerId))
+                    exitCode = ExitCode.FAILURE;
+                else item.ChangeOwner(ownerId);
             }
 
-            output.SetExitCode(ExitCode.SUCCESS);
+            output.SetExitCode(exitCode);
             output.SetId(id);
-
-            domainEventBus.PostAll(item);
+            if (exitCode == ExitCode.SUCCESS)
+                domainEventBus.PostAll(item);
         }
 
     #endregion

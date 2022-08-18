@@ -12,7 +12,7 @@ namespace rStar.RPGModules.Item.Infrastructure
         /// <param name="dataId"></param>
         /// <param name="stackable"></param>
         /// <returns>item's id</returns>
-        string CreateItem(string ownerId , string dataId , bool stackable);
+        bool CreateItem(string ownerId , string dataId , bool stackable);
 
     #endregion
     }

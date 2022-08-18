@@ -35,13 +35,13 @@ namespace rStar.RPGModules.Item.UseCase
             changeOwnerUseCase.Execute(changeOwnerInput , changeOwnerOutput);
         }
 
-        public string CreateItem(string ownerId , string dataId , bool stackable)
+        public bool CreateItem(string ownerId , string dataId , bool stackable)
         {
             createItemInput.ownerId   = ownerId;
             createItemInput.dataId    = dataId;
             createItemInput.stackable = stackable;
             createItemUseCase.Execute(createItemInput , createItemOutput);
-            return createItemOutput.GetId();
+            return createItemOutput.GetExitCode() == ExitCode.SUCCESS;
         }
 
     #endregion

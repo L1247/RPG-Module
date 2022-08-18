@@ -17,7 +17,7 @@ namespace rStar.RPGModules.Item.Infrastructure.Adapter
 
     #region Public Methods
 
-        public string CreateNonStackableItem(string ownerId , string dataId)
+        public bool CreateNonStackableItem(string ownerId , string dataId)
         {
             return controller.CreateItem(ownerId , dataId , false);
         }

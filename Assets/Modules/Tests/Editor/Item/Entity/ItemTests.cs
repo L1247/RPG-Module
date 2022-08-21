@@ -71,8 +71,9 @@ public class ItemTests : DIUnitTestFixture_With_EventBus
             {
                 var ownerChanged = item.FindDomainEvent<OwnerChanged>();
                 Assert.NotNull(ownerChanged , "OwnerChanged is null");
-                Assert.AreEqual(id ,       ownerChanged.Id ,      "id is not equal");
-                Assert.AreEqual(newOwner , ownerChanged.OwnerId , "OwnerId is not equal");
+                Assert.AreEqual(id ,       ownerChanged.Id ,          "id is not equal");
+                Assert.AreEqual(newOwner , ownerChanged.OwnerId ,     "OwnerId is not equal");
+                Assert.AreEqual(ownerId ,  ownerChanged.LastOwnerId , "LastOwnerId is not equal");
             });
     }
 

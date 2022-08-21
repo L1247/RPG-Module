@@ -35,8 +35,9 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
 
         public void AddModifier()
         {
-            var statId = GetStatId();
-            statController.AddModifier(statId , ModifierType.Flat , 5);
+            var statId  = GetStatId();
+            var ownerId = "OwnerId";
+            statController.AddModifier(ownerId , statId , ModifierType.Flat , 5);
         }
 
         public void Initialize()
@@ -46,8 +47,10 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
 
         public void RemoveModifier()
         {
-            var stat               = GetStat();
-            var statId             = stat.GetId();
+            var stat   = GetStat();
+            var statId = stat.GetId();
+            statController.RemoveModifierByOwnerId(statId , "OwnerId");
+            return;
             var modifiersCount     = stat.Modifiers.Count;
             var isNoModifierOnStat = modifiersCount == 0;
             if (isNoModifierOnStat) return;

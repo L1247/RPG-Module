@@ -68,9 +68,10 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
             return addAmountOutput.GetExitCode() == ExitCode.SUCCESS;
         }
 
-        public void AddModifier(string statId , ModifierType modifierType , int amount)
+        public void AddModifier(string ownerId , string statId , ModifierType modifierType , int amount)
         {
             addModifiersInput.id            = statId;
+            addModifiersInput.ownerId       = ownerId;
             addModifiersInput.modifierTypes = new List<ModifierType>() { modifierType };
             addModifiersInput.amounts       = new List<int>() { amount };
             addModifiersInput.modifierIds   = new List<string>() { GUID.NewGUID() };

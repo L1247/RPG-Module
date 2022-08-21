@@ -8,11 +8,11 @@ namespace rStar.RPGModules.Stat.Infrastructure
     {
     #region Public Methods
 
-        bool AddAmount(string               statId ,  int          amount);
-        void AddModifier(string             statId ,  ModifierType modifierType , int amount);
-        void CreateStat(string              ownerId , string       dataId ,       int amount);
-        void RemoveModifier(string          statId ,  string       modifierId);
-        void RemoveModifierByOwnerId(string statId ,  string       ownerId);
+        bool AddAmount(string               statId ,  int    amount);
+        void AddModifier(string             ownerId , string statId , ModifierType modifierType , int amount);
+        void CreateStat(string              ownerId , string dataId , int          amount);
+        void RemoveModifier(string          statId ,  string modifierId);
+        void RemoveModifierByOwnerId(string statId ,  string ownerId);
         bool RemoveStat(string              id);
         bool RemoveStatsByOwner(string      ownerId);
 

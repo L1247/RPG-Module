@@ -1,5 +1,6 @@
 #region
 
+using System;
 using rStar.RPGModules.Stat.Infrastructure;
 using Zenject;
 
@@ -35,8 +36,9 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
 
         public void AddModifier()
         {
-            var statId = GetStatId();
-            statController.AddModifier(statId , ModifierType.Flat , 5);
+            var statId  = GetStatId();
+            var ownerId = Guid.NewGuid().ToString();
+            statController.AddModifier(ownerId , statId , ModifierType.Flat , 5);
         }
 
         public void Initialize()

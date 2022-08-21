@@ -1,6 +1,5 @@
 #region
 
-using System;
 using rStar.RPGModules.Stat.Infrastructure;
 using Zenject;
 
@@ -37,7 +36,7 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
         public void AddModifier()
         {
             var statId  = GetStatId();
-            var ownerId = Guid.NewGuid().ToString();
+            var ownerId = "OwnerId";
             statController.AddModifier(ownerId , statId , ModifierType.Flat , 5);
         }
 
@@ -48,8 +47,10 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
 
         public void RemoveModifier()
         {
-            var stat               = GetStat();
-            var statId             = stat.GetId();
+            var stat   = GetStat();
+            var statId = stat.GetId();
+            statController.RemoveModifierByOwnerId(statId , "OwnerId");
+            return;
             var modifiersCount     = stat.Modifiers.Count;
             var isNoModifierOnStat = modifiersCount == 0;
             if (isNoModifierOnStat) return;

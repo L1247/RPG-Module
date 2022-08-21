@@ -1,10 +1,10 @@
 #region
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using rStar.RPGModules.Stat.Infrastructure;
 using rStar.RPGModules.Stat.UseCase;
+using rStar.RPGModules.Stat.UseCase.Extensions;
 using rStarUtility.Generic.Infrastructure;
 using rStarUtility.Util;
 using Zenject;
@@ -56,6 +56,9 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
 
         private readonly Result removeModifierOutput = new Result();
 
+        [Inject]
+        private IDomainEventBus domainEventBus;
+
     #endregion
 
     #region Public Methods
@@ -95,7 +98,12 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
 
         public void RemoveModifierByOwnerId(string statId , string ownerId)
         {
-            throw new NotImplementedException();
+            var stat = repository.FindStat(statId);
+            var modifiers = stat.Modifiers.Where(modifier => modifier.OwnerId.Equals(ownerId))
+                                .Select(modifier => modifier.GetId())
+                                .ToList();
+            stat.TransformToDomain().RemoveModifiers(modifiers);
+            domainEventBus.PostAll(stat);
         }
 
         public bool RemoveStat(string id)

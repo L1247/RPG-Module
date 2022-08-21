@@ -37,7 +37,7 @@ namespace rStar.RPGModules.Stat.Example.Beginner1
         {
             var statId  = GetStatId();
             var ownerId = "OwnerId";
-            statController.AddModifier(ownerId , statId , ModifierType.Flat , 5);
+            statController.AddModifier(statId , ownerId , ModifierType.Flat , 5);
         }
 
         public void Initialize()

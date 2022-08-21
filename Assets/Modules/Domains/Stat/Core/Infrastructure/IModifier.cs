@@ -10,8 +10,9 @@ namespace rStar.RPGModules.Stat.Infrastructure
     {
     #region Public Variables
 
-        int          Amount { get; }
-        ModifierType Type   { get; }
+        int          Amount  { get; }
+        ModifierType Type    { get; }
+        string       OwnerId { get; }
 
     #endregion
     }

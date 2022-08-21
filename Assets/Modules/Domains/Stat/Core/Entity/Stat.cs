@@ -45,7 +45,7 @@ namespace rStar.RPGModules.Stat.Entity
             SetBaseAmount(BaseAmount + amount);
         }
 
-        public void AddModifiers(List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts)
+        public void AddModifiers(string ownerId , List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts)
         {
             var wantToAddCount = modifierIds.Count;
             Contract.Require(0 != wantToAddCount ,                   "modifierId's count is zero");
@@ -60,7 +60,7 @@ namespace rStar.RPGModules.Stat.Entity
                 var modifierId   = modifierIds[i];
                 var modifierType = modifierTypes[i];
                 var amount       = amounts[i];
-                AddModifier(modifierId , modifierType , amount);
+                AddModifier(ownerId , modifierId , modifierType , amount);
             }
 
             Contract.Ensure(Modifiers.Count - modifiersCount == wantToAddCount , "modifier count is not equal.");
@@ -102,9 +102,9 @@ namespace rStar.RPGModules.Stat.Entity
 
     #region Private Methods
 
-        private void AddModifier(string modifierId , ModifierType modifierType , int amount)
+        private void AddModifier(string ownerId , string modifierId , ModifierType modifierType , int amount)
         {
-            var modifier = new Modifier(modifierId , modifierType , amount);
+            var modifier = new Modifier(modifierId , ownerId , modifierType , amount);
             Modifiers.Add(modifier);
             AddDomainEvent(new ModifierAdded(GetId() , modifierId));
         }

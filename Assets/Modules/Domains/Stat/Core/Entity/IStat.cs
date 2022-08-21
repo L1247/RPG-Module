@@ -17,7 +17,7 @@ namespace rStar.RPGModules.Stat.Entity
         /// <param name="amount"></param>
         void AddBaseAmount(int amount);
 
-        void AddModifiers(List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts);
+        void AddModifiers(string ownerId , List<string> modifierIds , List<ModifierType> modifierTypes , List<int> amounts);
 
         void RemoveModifiers(List<string> modifierIds);
 

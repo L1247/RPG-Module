@@ -85,16 +85,16 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
             createStatUseCase.Execute(createStatInput , createStatOutput);
         }
 
-        public void RemoveAllModifier(string statId)
-        {
-            throw new NotImplementedException();
-        }
-
         public void RemoveModifier(string statId , string modifierId)
         {
             removeModifierInput.id          = statId;
             removeModifierInput.modifierIds = new List<string>() { modifierId };
             removeModifiersUseCase.Execute(removeModifierInput , removeModifierOutput);
+        }
+
+        public void RemoveModifierByOwnerId(string statId , string ownerId)
+        {
+            throw new NotImplementedException();
         }
 
         public bool RemoveStat(string id)

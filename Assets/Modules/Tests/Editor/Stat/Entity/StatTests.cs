@@ -57,7 +57,7 @@ public class StatTests : DIUnitTestFixture_With_EventBus
             .Given("give a Stat" , () => { stat = new Stat(id , ownerId , dataId , amount); })
             .When("modify the Stat" , () => stat.AddBaseAmount(10))
             .Then("stat amount will be modified" ,
-                  () => { Assert.AreEqual(110 , stat.BaseAmount , "stat's amount is not equal"); })
+                () => { Assert.AreEqual(110 , stat.BaseAmount , "stat's amount is not equal"); })
             .And("stat will have modifyAmount event" , () =>
             {
                 Assert.AreEqual(1 , stat.FindDomainEvents<BaseAmountModified>().Count() , "event count is not equal");
@@ -80,7 +80,7 @@ public class StatTests : DIUnitTestFixture_With_EventBus
             .Given("give a Stat" , () => { stat = new Stat(id , ownerId , dataId , amount); })
             .When("modify the Stat" , () => stat.SetBaseAmount(baseAmount))
             .Then("stat amount will be modified" ,
-                  () => { Assert.AreEqual(expectedAmount , stat.BaseAmount , "stat's amount is not equal"); })
+                () => { Assert.AreEqual(expectedAmount , stat.BaseAmount , "stat's amount is not equal"); })
             .And("stat will have modifyAmount event" , () =>
             {
                 var amountModified = stat.FindDomainEvent<BaseAmountModified>();
@@ -110,15 +110,16 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                     ModifierType.PercentMulti , ModifierType.PercentMulti
                 };
                 var amounts = new List<int>() { 33 , 34 , 31 , 26 , 3 , 10 };
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
             })
             .Then("stat's CalculateAmount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(expectedModifierCount , stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount ,            stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(130 ,                   stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(ownerId ,               stat.Modifiers[0].OwnerId , "ownerId is not equal");
+                    Assert.AreEqual(expectedModifierCount , stat.Modifiers.Count ,      "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount ,            stat.BaseAmount ,           "BaseAmount is not equal");
+                    Assert.AreEqual(130 ,                   stat.CalculatedAmount ,     "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
     }
 
@@ -136,15 +137,15 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                 var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
                 var modifierTypes = new List<ModifierType> { ModifierType.Flat , ModifierType.Flat };
                 var amounts       = new List<int>() { 33 , 34 };
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
             })
             .Then("stat's CalculateAmount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                    Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
     }
 
@@ -162,15 +163,15 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                 var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
                 var modifierTypes = new List<ModifierType> { ModifierType.PercentAdd , ModifierType.PercentAdd };
                 var amounts       = new List<int>() { 31 , 26 };
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
             })
             .Then("stat's CalculateAmount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                    Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
     }
 
@@ -188,15 +189,15 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                 var modifierIds   = new List<string>() { NewGuid() , NewGuid() };
                 var modifierTypes = new List<ModifierType> { ModifierType.PercentMulti , ModifierType.PercentMulti };
                 var amounts       = new List<int>() { 3 , 10 };
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
             })
             .Then("stat's CalculateAmount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(expectedModifierCount ,   stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount ,              stat.BaseAmount ,       "BaseAmount is not equal");
+                    Assert.AreEqual(exceptedCalculateAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () => AssertModiferAddEvent(stat , expectedModifierCount));
     }
 
@@ -217,7 +218,7 @@ public class StatTests : DIUnitTestFixture_With_EventBus
             .Given("give a Stat and modifiers" , () =>
             {
                 stat = new Stat(id , ownerId , dataId , baseAmount);
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
                 Assert.AreEqual(2 ,          stat.Modifiers.Count ,  "modifier count is not equal");
                 Assert.AreEqual(baseAmount , stat.BaseAmount ,       "BaseAmount is not equal");
                 Assert.AreEqual(16 ,         stat.CalculatedAmount , "CalculatedAmount is not equal");
@@ -228,12 +229,12 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                 stat.RemoveModifiers(modifierIds);
             })
             .Then("stat amount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(0 ,          stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount , stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(baseAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(0 ,          stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount , stat.BaseAmount ,       "BaseAmount is not equal");
+                    Assert.AreEqual(baseAmount , stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () =>
             {
                 var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();
@@ -259,15 +260,15 @@ public class StatTests : DIUnitTestFixture_With_EventBus
                 var modifierTypes = new List<ModifierType>();
                 modifierTypes.Add(ModifierType.Flat);
                 var amounts = new List<int>() { -10 };
-                stat.AddModifiers(modifierIds , modifierTypes , amounts);
+                stat.AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
             })
             .Then("stat amount will be modified" ,
-                  () =>
-                  {
-                      Assert.AreEqual(1 ,          stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
-                      Assert.AreEqual(baseAmount , stat.BaseAmount ,       "BaseAmount is not equal");
-                      Assert.AreEqual(0 ,          stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
-                  })
+                () =>
+                {
+                    Assert.AreEqual(1 ,          stat.Modifiers.Count ,  "stat's Modifiers count is not equal");
+                    Assert.AreEqual(baseAmount , stat.BaseAmount ,       "BaseAmount is not equal");
+                    Assert.AreEqual(0 ,          stat.CalculatedAmount , "stat's CalculatedAmount is not equal");
+                })
             .And("stat will have CalculatedAmountModified event" , () =>
             {
                 var calculatedAmountModified = stat.FindDomainEvent<CalculatedAmountModified>();

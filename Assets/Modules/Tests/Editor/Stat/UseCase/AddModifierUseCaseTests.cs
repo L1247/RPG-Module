@@ -26,6 +26,7 @@ public class AddModifierUseCaseTests : DIUnitTestFixture_With_EventBus
         var output              = new Result();
 
         var statId        = NewGuid();
+        var ownerId       = NewGuid();
         var stat          = Substitute.For<IStat>();
         var modifierIds   = new List<string>();
         var modifierTypes = new List<ModifierType>();
@@ -38,15 +39,16 @@ public class AddModifierUseCaseTests : DIUnitTestFixture_With_EventBus
                 input.id            = statId;
                 input.modifierIds   = modifierIds;
                 input.modifierTypes = modifierTypes;
+                input.ownerId       = ownerId;
                 input.amounts       = amounts;
             })
             .When("call the usecase" , () => { addModifiersUsecase.Execute(input , output); })
             .Then("stat's addModifiers will receive a call." ,
-                  () =>
-                  {
-                      stat.Received(1).AddModifiers(modifierIds , modifierTypes , amounts);
-                      domainEventBus.Received(1).PostAll(stat);
-                  })
+                () =>
+                {
+                    stat.Received(1).AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
+                    domainEventBus.Received(1).PostAll(stat);
+                })
             .And("the result is success" , () =>
             {
                 Assert.AreEqual(statId ,           output.GetId() ,       "Id is not equal");

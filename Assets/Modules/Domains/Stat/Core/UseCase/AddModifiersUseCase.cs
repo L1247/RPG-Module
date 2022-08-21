@@ -36,7 +36,9 @@ namespace rStar.RPGModules.Stat.UseCase
                 Contract.RequireNotNull(modifierTypes , "modifierTypes");
                 var amounts = input.amounts;
                 Contract.RequireNotNull(amounts , "amounts");
-                statReadModel.TransformToDomain().AddModifiers(modifierIds , modifierTypes , amounts);
+                var ownerId = input.ownerId;
+                Contract.RequireString(ownerId , "ownerId");
+                statReadModel.TransformToDomain().AddModifiers(ownerId , modifierIds , modifierTypes , amounts);
                 domainEventBus.PostAll(statReadModel);
                 output.SetExitCode(ExitCode.SUCCESS);
             }
@@ -59,6 +61,7 @@ namespace rStar.RPGModules.Stat.UseCase
         public List<ModifierType> modifierTypes;
         public List<string>       modifierIds;
         public string             id;
+        public string             ownerId;
 
     #endregion
     }

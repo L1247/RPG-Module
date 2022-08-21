@@ -11,17 +11,19 @@ namespace rStar.RPGModules.Stat.Entity
     {
     #region Public Variables
 
-        public int          Amount { get; }
-        public ModifierType Type   { get; }
+        public int          Amount  { get; }
+        public ModifierType Type    { get; }
+        public string       OwnerId { get; }
 
     #endregion
 
     #region Constructor
 
-        public Modifier(string id , ModifierType type , int amount) : base(id)
+        public Modifier(string id , string ownerId , ModifierType type , int amount) : base(id)
         {
-            Amount = amount;
-            Type   = type;
+            Amount  = amount;
+            OwnerId = ownerId;
+            Type    = type;
         }
 
     #endregion

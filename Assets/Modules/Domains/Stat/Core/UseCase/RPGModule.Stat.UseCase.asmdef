@@ -1,19 +1,19 @@
 {
-  "name": "RPGModule.Stat.UseCase",
-  "rootNamespace": "",
-  "references": [
-    "GUID:ace74969ab64aa74ba1296499c7747dc",
-    "GUID:f22f718b9b174a74d89f976a69f9dd2a",
-    "GUID:d3fb8bff81294c54fbfaefec2ecd3d74",
-    "GUID:79c30704f8922d24bb101cc1297f71c9"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "RPGModule.Stat.UseCase",
+    "rootNamespace": "",
+    "references": [
+        "rStarUtility.Generic.Infrastructure",
+        "rStarUtility.Util.Runtime",
+        "RPGModule.Stat.Entity",
+        "RPGModule.Stat.Infrastructure"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

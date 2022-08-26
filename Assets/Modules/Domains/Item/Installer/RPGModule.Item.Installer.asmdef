@@ -1,19 +1,19 @@
 {
-  "name": "RPGModule.Item.Installer",
-  "rootNamespace": "RPGModule.Item.Installer",
-  "references": [
-    "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-    "GUID:eed2085e3d919e6408fa0a5053e6172a",
-    "GUID:c12e9b9c60e0dfd4ea3e69329cb00bb7",
-    "GUID:ace74969ab64aa74ba1296499c7747dc"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "RPGModule.Item.Installer",
+    "rootNamespace": "RPGModule.Item.Installer",
+    "references": [
+        "Zenject",
+        "RPGModule.Item.Infrastructure",
+        "RPGModule.Item.UseCase",
+        "rStarUtility.Generic.Infrastructure"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

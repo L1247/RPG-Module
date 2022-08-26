@@ -1,16 +1,16 @@
 {
-  "name": "RPGModule.Skill.Infrastructure",
-  "rootNamespace": "",
-  "references": [
-    "GUID:ace74969ab64aa74ba1296499c7747dc"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": false,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "RPGModule.Skill.Infrastructure",
+    "rootNamespace": "",
+    "references": [
+        "rStarUtility.Generic.Infrastructure"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

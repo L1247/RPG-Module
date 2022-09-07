@@ -46,6 +46,12 @@ namespace rStar.RPGModules.Skill.Core
             repository.DeleteById(id);
         }
 
+        public void RemoveSkillsByOwner(string ownerId)
+        {
+            foreach (var skill in repository.FindSkillsByOwner(ownerId))
+                RemoveSkill(skill.GetId());
+        }
+
         public void TickSkill(string id , float time)
         {
             GetSkill(id).Tick(time);

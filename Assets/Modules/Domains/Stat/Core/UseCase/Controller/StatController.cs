@@ -116,10 +116,9 @@ namespace rStar.RPGModules.Stat.Core.UseCase.Controller
         public bool RemoveStatsByOwner(string ownerId)
         {
             Contract.RequireString(ownerId , $"ownerId: {ownerId}");
-            var stats = repository.FindStatsByOwnerId(ownerId);
-            var count = stats.Count();
+            var stats = repository.FindStatsByOwnerId(ownerId).ToList();
             foreach (var stat in stats) RemoveStat(stat.GetId());
-            return count == 0;
+            return repository.FindStatsByOwnerId(ownerId).Any() == false;
         }
 
 

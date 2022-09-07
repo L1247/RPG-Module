@@ -15,14 +15,11 @@ namespace rStar.RPGModules.Stat.Infrastructure
 
         IModifier FindModifer(string statId , string modifierId);
 
-        public IStatReadModel FindStat(string statId)
-        {
-            return FindById(statId);
-        }
+        IStatReadModel FindStat(string statId);
 
         IStatReadModel FindStat(string ownerId , string dataId);
 
-        public IEnumerable<IStatReadModel> FindStatsByOwnerId(string ownerId);
+        IEnumerable<IStatReadModel> FindStatsByOwnerId(string ownerId);
 
     #endregion
     }

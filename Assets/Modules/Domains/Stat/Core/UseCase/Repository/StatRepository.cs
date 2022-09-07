@@ -29,6 +29,12 @@ namespace rStar.RPGModules.Stat.UseCase.Repository
             return modifier;
         }
 
+        public IStatReadModel FindStat(string statId)
+        {
+            return FindById(statId);
+        }
+
+
         public IStatReadModel FindStat(string ownerId , string dataId)
         {
             return GetAll().FirstOrDefault(stat => stat.OwnerId.Equals(ownerId) && stat.DataId.Equals(dataId));

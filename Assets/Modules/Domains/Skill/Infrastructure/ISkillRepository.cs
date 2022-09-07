@@ -1,5 +1,6 @@
 #region
 
+using System.Collections.Generic;
 using rStarUtility.Generic.Infrastructure;
 
 #endregion
@@ -10,7 +11,8 @@ namespace rStar.RPGModules.Skill.Infrastructure
     {
     #region Public Methods
 
-        ISkillReadModel FindSkillByOwner(string ownerId);
+        ISkillReadModel              FindSkillByOwner(string  ownerId);
+        IEnumerable<ISkillReadModel> FindSkillsByOwner(string ownerId);
 
     #endregion
     }

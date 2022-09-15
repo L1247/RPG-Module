@@ -740,6 +740,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8538094451557212142, guid: 0378c56e25df5f647b8582d2ce5c2889, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4841409092833791354, guid: ef18e51ba4d1df849870784986109c9c, type: 3}
     - target: {fileID: 8538094451557212143, guid: 0378c56e25df5f647b8582d2ce5c2889, type: 3}
       propertyPath: m_Controller
       value: 
@@ -897,9 +901,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 1649915399}
+  projectilePrefab: {fileID: 2049890149212194567, guid: 25ded2985595e9347902b8888eeccfea, type: 3}
   coolDownImage: {fileID: 1863084262}
   mainImage: {fileID: 583878437}
-  projectilePrefab: {fileID: 2049890149212194567, guid: 25ded2985595e9347902b8888eeccfea, type: 3}
   info: {fileID: 1739153717}
   shootPoint: {fileID: 1988509623}
 --- !u!1 &2105136261

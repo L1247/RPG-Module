@@ -61,7 +61,7 @@ namespace rStar.RPGModules.Skill.Core
         {
             Cast   = DefaultCast;
             IsCast = true;
-            domainEventBus.Post(new CastEntered(GetId() , OwnerId));
+            domainEventBus.Post(new CastEntered(GetId() , OwnerId , DataId));
         }
 
         public void EnterCd()

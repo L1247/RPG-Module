@@ -1,0 +1,23 @@
+{
+  "name": "Item.Example",
+  "rootNamespace": "",
+  "references": [
+    "Zenject",
+    "rStarUtility.Util.Runtime",
+    "rStarUtility.Generic.Installer",
+    "rStarUtility.Generic.Infrastructure",
+    "rStar.Utility.UniRxExtension",
+    "Unity.TextMeshPro",
+    "RPGModule.Item.Infrastructure",
+    "RPGModule.Item.Installer"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

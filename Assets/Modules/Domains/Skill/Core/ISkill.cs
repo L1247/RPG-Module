@@ -12,7 +12,9 @@ namespace rStar.RPGModules.Skill.Core
 
         void Execute();
         void Init(string ownerId , string dataId , float cast , float cd);
-        void Tick(float  time);
+
+        void Interrupt();
+        void Tick(float time);
         void UseSkill();
 
     #endregion

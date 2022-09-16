@@ -38,6 +38,13 @@ namespace rStar.RPGModules.Skill.Core
             GetSkill(id).Execute();
         }
 
+        public void Interrupt(string id)
+        {
+            Contract.RequireString(id , "id");
+            var skill = GetSkill(id);
+            skill?.Interrupt();
+        }
+
         public void RemoveSkill(string id)
         {
             Contract.RequireString(id , $"id , {id}");

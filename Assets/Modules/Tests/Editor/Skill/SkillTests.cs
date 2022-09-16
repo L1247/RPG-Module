@@ -62,6 +62,18 @@ public class SkillTests : DIUnitTestFixture_With_EventBus
         Assert.AreEqual(dataId ,        skillCreated.DataId , "DataId is not equal");
     }
 
+    [Test(Description = "中斷詠唱中的技能")]
+    public void InterruptSkill()
+    {
+        BindSkill(2 , 2);
+        CacheExecuted();
+        UseSkill();
+        skill.Interrupt();
+        skill.Tick(3);
+        Assert.AreEqual(false , skill.IsCast , "cast is not equal");
+        Assert.IsNull(executed);
+    }
+
     [Test(Description = "執行技能")]
     public void ExecuteSkill()
     {

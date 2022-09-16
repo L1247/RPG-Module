@@ -57,13 +57,6 @@ namespace rStar.RPGModules.Skill.Core
             pool.Despawn(this);
         }
 
-        public void EnterCast()
-        {
-            Cast   = DefaultCast;
-            IsCast = true;
-            domainEventBus.Post(new CastEntered(GetId() , OwnerId , DataId));
-        }
-
         public void EnterCd()
         {
             IsCd = true;
@@ -74,12 +67,6 @@ namespace rStar.RPGModules.Skill.Core
         public void Execute()
         {
             domainEventBus.Post(new Executed(GetId() , OwnerId , DataId));
-        }
-
-        public void ExitCast()
-        {
-            IsCast = false;
-            Execute();
         }
 
         public void ExitCd()
@@ -104,6 +91,11 @@ namespace rStar.RPGModules.Skill.Core
             IsCd        = false;
             IsCast      = false;
             domainEventBus.Post(new SkillCreated(GetId() , DataId));
+        }
+
+        public void Interrupt()
+        {
+            IsCast = false;
         }
 
         public void OnDespawned()
@@ -136,6 +128,23 @@ namespace rStar.RPGModules.Skill.Core
             if (DefaultCast <= 0) Execute();
             else if (IsCast == false) EnterCast();
             if (DefaultCd > 0) EnterCd();
+        }
+
+    #endregion
+
+    #region Private Methods
+
+        private void EnterCast()
+        {
+            Cast   = DefaultCast;
+            IsCast = true;
+            domainEventBus.Post(new CastEntered(GetId() , OwnerId , DataId));
+        }
+
+        private void ExitCast()
+        {
+            IsCast = false;
+            Execute();
         }
 
     #endregion

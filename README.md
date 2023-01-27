@@ -1,3 +1,7 @@
+[![](https://img.shields.io/github/v/release/L1247/RPG-Module)](https://github.com/L1247/RPG-Module/releases)
+[![](https://img.shields.io/github/release-date/L1247/RPG-Module)](https://github.com/L1247/RPG-Module/releases)
+![](https://img.shields.io/badge/unity-2020.1%20or%20later-green.svg)
+
 # RPG Module
 ## `RPGModule` is module that quick production for making RPG
 ## [RPG系列影片](https://www.youtube.com/watch?v=edB5MRPdBsQ&list=PLGkS8CzB8N0HDGkyh0gjnjLStY1XOuPnO&index=15&ab_channel=rStar%E9%98%BF%E6%98%9F)
